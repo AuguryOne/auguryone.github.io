@@ -1,29 +1,49 @@
 # Site settings
-title: Grayscale
-email: your-email@domain.com
-url: https://example.github.io
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+name: Shh Services
+url: https://shh.services
+meta_description: ""
+
+# Section settings
+sections:
+  intro:
+    title: Shh
+    tagline: "todo"
+  services:
+    title: Services
+    description: "todo"
+    list:
+    - title: "Scoping"
+      description: "Service description"
+      icon: crosshairs
+    - title: "Vendor alignment"
+      description: "Another service"
+      icon: align-center
+    - title: "Deliverable management"
+      description: "Another service"
+      icon: flag-checkered
+    - title: "Finding prioritization"
+      description: "another service"
+      icon: bug
+  about:
+    title: About
+    description: "todo"
+  contact:
+    title: "contact"
+    description: "todo"
+    email: inquiry@shh.services
+    social:
+      - title: twitter
+        url: https://twitter.com/shhservices
+      - title: github
+        url: https://github.com/shh-services
+  footer:
+    content: Shh Services
 
 # Color settings (hex-codes without the leading hash-tag)
-color:
-  primary-dark: '#000000'
-  links: '#219ab3'
-
-# Footer settings
-footer: Your Website
-
-# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
-social:
-  - title: twitter
-    url: https://twitter.com/SBootstrap
-  - title: facebook
-    url:
-  - title: stack-overflow
-    url: http://stackoverflow.com/questions/tagged/jekyll
-  - title: bitbucket
-    url: http://bitbucket.org/jekyll
-  - title: github
-    url: https://github.com/IronSummitMedia/startbootstrap
+css:
+  color:
+    primary-dark: '#000000'
+    links: '#219ab3'
 
 # Build settings
 markdown: kramdown

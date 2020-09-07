@@ -1,0 +1,27 @@
+<section id="services" class="content-section">
+    <div class="services-section">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>{{ site.sections.services.title }}</h2>
+                    <p>{{ site.sections.services.description }}</p>
+                </div>
+            </div>
+            <div class="row">
+                {% for entry in site.sections.services.list %}
+                    <div class="col-lg-6">
+                        <div class="media text-center">
+                            <div class="media-left">
+                                <i class="fa fa-{{ entry.icon }}" style="font-size: 5em; color: {{ site.css.color.links }}"></i>
+                            </div>
+                            <div class="media-body">
+                                <h3 class="media-heading">{{ entry.title }}</h4>
+                                <p>{{ entry.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
