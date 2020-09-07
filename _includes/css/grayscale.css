@@ -251,6 +251,7 @@ a:focus {
 
 .about-background {
     background: url(/img/pexels-cat-crawford-1488401.jpg) no-repeat center center scroll;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.178), rgb(0, 0, 0)), linear-gradient(to top, rgba(0, 0, 0, 0), rgb(0, 0, 0)), url(/img/pexels-cat-crawford-1488401.jpg);
     background-color: {{ site.css.color.primary-dark }};
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -261,8 +262,8 @@ a:focus {
 
 @media(min-width:767px) {
     .content-section {
-        padding-top: 100px;
-        padding-bottom: 100px;
+        padding-top: 150px;
+        padding-bottom: 150px;
     }
 
     .download-section {
