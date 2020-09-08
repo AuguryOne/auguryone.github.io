@@ -138,13 +138,6 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(/img/pexels-kendall-hoopes-1096958.jpg) no-repeat bottom center scroll;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.178), rgb(0, 0, 0)), url(/img/pexels-kendall-hoopes-1096958.jpg);
-    background-color: {{ site.css.color.primary-dark }};
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
 }
 
 .intro .intro-body {
@@ -249,9 +242,23 @@ a:focus {
     }
 }
 
-.about-background {
+.intro-background {
+    background: url(/img/pexels-kendall-hoopes-1096958.jpg) no-repeat bottom center scroll;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.178), rgb(0, 0, 0)), url(/img/pexels-kendall-hoopes-1096958.jpg);
+}
+
+.vendors-background {
     background: url(/img/pexels-cat-crawford-1488401.jpg) no-repeat center center scroll;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.178), rgb(0, 0, 0)), linear-gradient(to top, rgba(0, 0, 0, 0), rgb(0, 0, 0)), url(/img/pexels-cat-crawford-1488401.jpg);
+}
+
+.contact-background {
+    background: url(/img/pexels-emre-can-2422066.jpg) no-repeat center center scroll;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.178), rgb(0, 0, 0)), linear-gradient(to top, rgba(0, 0, 0, 0), rgb(0, 0, 0)), url(/img/pexels-emre-can-2422066.jpg);
+}
+
+
+.bg-settings {
     background-color: {{ site.css.color.primary-dark }};
     -webkit-background-size: cover;
     -moz-background-size: cover;

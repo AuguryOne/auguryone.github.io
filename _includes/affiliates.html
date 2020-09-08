@@ -1,0 +1,29 @@
+<section id="trusted_vendors" class="bg-settings vendors-background content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>{{ site.sections.affiliates.title }}</h2>
+                <p>{{ site.sections.affiliates.description }}</p>
+            </div>
+        </div>
+        <div class="row">
+            {% for affiliate in site.sections.affiliates.vendors %}
+                <div class="col-lg-6">
+                    <div class="media">
+                        <div class="media-left">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">{{ affiliate.name }}</h4>
+                            <p>{{ affiliate.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <p>{{ site.sections.affiliates.invitation}}</p>
+            </div>
+        </div>
+    </div>
+</section>

@@ -10,12 +10,12 @@
             <div class="row">
                 {% for entry in site.sections.services.list %}
                     <div class="col-lg-6">
-                        <div class="media text-center">
+                        <div class="media">
                             <div class="media-left">
-                                <i class="fa fa-{{ entry.icon }}" style="font-size: 5em; color: {{ site.css.color.links }}"></i>
+                                <i class="fa fa-{{ entry.icon }}" style="font-size: 4em; color: {{ site.css.color.links }};"></i>
                             </div>
                             <div class="media-body">
-                                <h3 class="media-heading">{{ entry.title }}</h4>
+                                <h4 class="media-heading">{{ entry.title }}</h4>
                                 <p>{{ entry.description }}</p>
                             </div>
                         </div>

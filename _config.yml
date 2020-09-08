@@ -7,29 +7,57 @@ meta_description: ""
 sections:
   intro:
     title: Shh
-    tagline: "todo"
+    tagline: >
+      Worry less. Secure more.
   services:
     title: Services
-    description: "todo"
+    description: >
+      
     list:
     - title: "Scoping"
-      description: "Service description"
+      description: >
+        Don't know what to prioritize in a security review? Our scope review can
+        help identify areas of concern for futher assessment by a vendor.
       icon: crosshairs
     - title: "Vendor alignment"
-      description: "Another service"
+      description: >
+        Have your scope but don't know which vendor to choose? We can help you
+        identify the perfect vendor for each component.
       icon: align-center
-    - title: "Deliverable management"
-      description: "Another service"
-      icon: flag-checkered
     - title: "Finding prioritization"
-      description: "another service"
-      icon: bug
+      description: >
+        Have the vendor report but don't know what to fix first? We can help you
+        review each finding and build a plan for remediation.
+      icon: list-ol
+    - title: "Deliverable management"
+      description: >
+        Not sure how to share the results of an assessment? We will work with
+        you and the vendor to properly convey findings and remediations.
+      icon: flag-checkered
+  affiliates:
+    title: Trusted vendors
+    description: >
+      While Shh is open to working with any vendor at the client's request,
+      there are a set of vendors we trust to provide excellent services in their
+      area of expertise. We work directly with these vendors to determine
+      pricing, scheduling, and similar project details on our client's behalf.
+    invitation: >
+      Interested in becoming a trusted vendor? <a class="page-scroll"
+      href="#contact">We would love to chat</a>.
+    vendors:
   about:
     title: About
-    description: "todo"
+    description: >
+      <strong>Our objective is to keep our clients safe.</strong> Shh was
+      founded to improve the process of performing 3rd party security assessments
+      by pairing our clients with the best vendors for their needs. We do the
+      heavy lifting, identifying each vendor's strengths so our clients can
+      engage them with the appropriate scope and budget. As a result our clients
+      get better results, and vendors get the work they prefer.
   contact:
     title: "contact"
-    description: "todo"
+    description: >
+      Want to know more? Lets chat.
     email: inquiry@shh.services
     social:
       - title: twitter
