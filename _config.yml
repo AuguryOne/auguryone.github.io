@@ -16,23 +16,23 @@ sections:
     list:
     - title: "Scoping"
       description: >
-        Don't know what to prioritize in a security review? Our scope review can
-        help identify areas of concern for futher assessment by a vendor.
+        Don't know what to prioritize in a security review? We will work with
+        you to tailor a scope that prioritizes your security concerns.
       icon: crosshairs
     - title: "Vendor alignment"
       description: >
         Have you defined your scope but don't know which vendor to choose? We
-        can help you choose the best vendors to perform the assessment.
+        can help you choose the perfect vendor to perform the assessment.
       icon: align-center
     - title: "Finding prioritization"
       description: >
-        Have the vendor report but don't know what to fix first? We can help you
-        review each finding and build a plan for remediation.
+        Have you completed an assesment but don't know how to proceed? We can
+        help you review the findings and build a plan for remediation.
       icon: list-ol
     - title: "Deliverable management"
       description: >
-        Not sure how to share the results of an assessment? We will work with
-        you and the vendor to properly convey findings and remediations.
+        Not sure how to share the results of an assessment? We work with our
+        clients and the vendor to help properly convey findings and remediations.
       icon: flag-checkered
   affiliates:
     title: Trusted vendors
