@@ -5,11 +5,12 @@
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2>{{ site.sections.services.title }}</h2>
                     <p>{{ site.sections.services.description }}</p>
+                    <hr>
                 </div>
             </div>
             <div class="row">
                 {% for entry in site.sections.services.list %}
-                    <div class="col-lg-6">
+                    <div class="col-lg-4">
                         <div class="media">
                             <div class="media-left">
                                 <i class="fa fa-{{ entry.icon }}" style="font-size: 4em; color: {{ site.css.color.links }};"></i>

@@ -8,53 +8,117 @@ sections:
   intro:
     title: Shh
     tagline: >
-      Brokering better security assessments.
+      Deliver safer software.
   services:
     title: Services
     description: >
-      
+      Shh Services specializes in three arieas: Rapid Risk
+      Assessment, Code Review, and Software Vulnerability Management. These
+      services are available through a tailored platform allowing customers a
+      configurable pricing and avaialability model for security engineering
+      resources specializing in each of our service offerings.
     list:
-    - title: "Scoping"
+    - title: "Rapid Risk Assessment"
       description: >
-        Don't know what to prioritize in a security review? We will work with
-        you to tailor a scope that prioritizes your security concerns.
+        Rapid risk assessments led by experienced security engineers
+        help to identify high-risk software components for enhanced research and
+        review before they are exploited and abused.
       icon: crosshairs
-    - title: "Vendor alignment"
+    - title: "Code review"
       description: >
-        Have you defined your scope but don't know which vendor to choose? We
-        can help you choose the perfect vendor to perform the assessment.
+        Code review led by experienced software security engineers
+        identifies flaws and prevents exploitation as software is
+        developed over time.
       icon: align-center
-    - title: "Finding prioritization"
+    - title: "Software Vulnerability Management"
       description: >
-        Have you completed an assessment but don't know how to proceed? We can
-        help you review the findings and build a plan for remediation.
-      icon: list-ol
-    - title: "Deliverable management"
-      description: >
-        Not sure how to share the results of an assessment? We work with you and
-        the vendor to help properly convey findings and remediations. 
-      icon: flag-checkered
-  affiliates:
-    title: Trusted vendors
+        Security engineers are available 24/7 to assist with the
+        intake, triage and remediation of vulnerabilities found within customer
+        codebases. 
+      icon: bug
+
+  platform:
+    title: Platform Features
     description: >
-      While <strong>Shh</strong> is open to working with any vendor at the
-      client's request, we also curate a set of trusted vendors known to provide
-      excellent results in their area of expertise. We work directly with these
-      vendors on our client's behalf when scoping and budgeting to ensure
-      deliverables are tailored to our client's needs.
-    invitation: >
-      Interested in becoming a trusted vendor? <a class="page-scroll"
-      href="#contact">We would love to chat</a>.
-    vendors:
+      Our platform allows for streamlined on-boarding, only
+      requiring our customers to install a version control system provider
+      integration to get started. Once integrated, our customers have immediate
+      access to on-demand security engineering resources across all of our
+      service offerings, and are able to configure how they are used by their
+      organization.
+    subsections:
+    - title: Continuous Code Review
+      features:
+        - name: Native version control provider integration
+          description: >
+            Native integration allows for faster time-to-review, and simple
+            onboarding of services. All feedback within our platform can be
+            forwarded to the version control provider, such as GitHub issues,
+            discussions, and pull requests. 
+          icon: github
+        - name: Scope-guided engineering resources
+          description:
+            Our customers define scope for each review, ensuring appropriate
+            staffing every time. Don’t want to manually approve scope every
+            time? Create pre-configured scopes for common requests.
+          icon: users
+        - name: Customer-specified availability
+          description: >
+            Security engineers can be requested for reviews as-needed or placed in
+            a dedicated reserve. When problems are arise, the assigned engineers will
+            work with you to identify a solution and ensure remediation. 
+          icon: calendar
+        - name: Avoid unsafe changes
+          description: >
+            Concerned about merging dangerous code? Our provider integrations
+            allow you to configure merge requirements, allowing you to balance
+            security and release velocity.
+          icon: code-fork
+    - title: Software Vulnerability Management
+      features:
+        - name: Vulnerability intake
+          description: >
+            Stop fussing with bug bounty program management. Our engineers staff
+            a 24/7 on-call to handle responsible disclosure on your behalf,
+            helping to reproduce and confirm the validity of reported findings.
+          icon: bug
+        - name: Root cause analysis
+          description: >
+            Once a vulnerability has been identified, our engineers perform root
+            cause analysis to identify the implementation or design flaw
+            allowing the vulnerability to exist.
+          icon: search
+        - name: Patching and remediation
+          description: >
+            Our engineers work directly with our customer's engineering teams to
+            patch and remediate identified vulnerabilities. Paired with our code
+            review offerings, this helps to prevent vulnerability regressions.
+          icon: code
+        - name: Detection engineering
+          description: >
+            After remediation is complete, our engineers help to engineer
+            signatures to detect the exploitation of the vulnerability in the
+            past, present, and future.
+          icon: shield
   about:
     title: About
     description: >
-      <strong>Our objective is to keep our clients safe.</strong> Shh was
-      founded to improve the process of performing 3rd party security assessments
-      by pairing our clients with the best vendors for their needs. We do the
+      <strong>Our objective is to keep our clients safe.</strong> Shh Services
+      was founded to improve the state of software security by lowering the
+      barrier of entry to traditionally expensive services. Instead of providing
+      point-in-time assessments, Shh Services provides our customers continous
+      security advisory and engineering support, augmenting their existing
+      engineering staff. 
+      <br>
+      <br>
+      When our customers are ready to engage with boutique firms to perform
+      security assessments, Shh Services can assist with matching a customer
+      with a firm specializing in their areas of need. We do the
       heavy lifting, identifying each vendor's strengths so our clients can
-      engage them with the appropriate scope and budget. As a result our clients
-      get better results, and vendors get the work they prefer.
+      engage them with the appropriate scope and budget. Additionally, we 
+      provide the assesment teams with materials to improve the efficiency and
+      coverage within the assessment. As a result our clients get better
+      results, and vendors get the work they prefer. 
   contact:
     title: "contact"
     description: >
@@ -72,7 +136,7 @@ sections:
 css:
   color:
     primary-dark: '#000000'
-    links: '#219ab3'
+    links: '#cfa7a7'
 
 # Build settings
 markdown: kramdown
