@@ -47,6 +47,21 @@ sections:
       service offerings, and are able to configure how they are used by their
       organization.
     subsections:
+    - title: Rapid Risk Assessment
+      features:
+        - name: Proactive risk identification
+          description: >
+            Identify design- and service-level risks through engineer-led rapid
+            risk assessments. Our engineers work directly with service teams to
+            map a wide variety of service attributes to produce design and
+            implementation recommendations.
+          icon: map-marker
+        - name: Risk-based prioritization
+          description: >
+            There are always improvements that can be made to a serivce's
+            security posture. Our security engineers can help you prioritize
+            these risks in relation to your environment and goals.
+          icon: sort-numeric-asc
     - title: Continuous Code Review
       features:
         - name: Native version control provider integration
@@ -65,7 +80,7 @@ sections:
         - name: Customer-specified availability
           description: >
             Security engineers can be requested for reviews as-needed or placed in
-            a dedicated reserve. When problems are arise, the assigned engineers will
+            a dedicated reserve. When problems arise, the assigned engineers will
             work with you to identify a solution and ensure remediation. 
           icon: calendar
         - name: Avoid unsafe changes
@@ -100,6 +115,18 @@ sections:
             signatures to detect the exploitation of the vulnerability in the
             past, present, and future.
           icon: shield
+  pricing:
+    title: "Pricing"
+    subsections:
+      - title: Rapid Risk Assessment
+        on_demand: $500/hr
+        reserved: $400/hr
+      - title: Continuous Code Review
+        on_demand: $600/hr
+        reserved: $400/hr
+      - title: Software Vulnerability Management
+        on_demand: $1125/hr
+        reserved: $750/hr
   about:
     title: About
     description: >
