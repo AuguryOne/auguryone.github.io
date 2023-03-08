@@ -1,159 +1,159 @@
 # Site settings
-name: Shh Services
-url: https://shh.services
+name: Augury One
+url: https://augury.one
 meta_description: "Deliver safer software."
 
 # Section settings
 sections:
   intro:
-    title: Shh
+    title: Augury One
     tagline: >
       Deliver safer software.
   services:
     title: Services
     description: >
-      Shh Services specializes in three arieas: Rapid Risk
-      Assessment, Code Review, and Software Vulnerability Management. These
-      services are available through a tailored platform allowing customers a
-      configurable pricing and avaialability model for security engineering
-      resources specializing in each of our service offerings.
+      Augury One specializes in software security advisory services across
+      Emergency Response, Code Review, and Vulnerability Triage.
     list:
-    - title: "Rapid Risk Assessment"
+    - title: "Emergency Response"
       description: >
-        Rapid risk assessments led by experienced security engineers
-        help to identify high-risk software components for enhanced research and
-        review before they are exploited and abused.
-      icon: crosshairs
+        We augment your software security incident response process, helping to
+        ensure exploitable vulnerabilities are properly investigated and remediated
+        when identified.
+      icon: flash
     - title: "Code review"
       description: >
-        Code review led by experienced software security engineers
-        identifies flaws and prevents exploitation as software is
-        developed over time.
-      icon: align-center
-    - title: "Software Vulnerability Management"
+        Throughout the software development lifecycle, we continuously review 
+        the code written by your organization to identify exploitable vulnerabilities.
+      icon: terminal
+    - title: "Vulnerability Triage"
       description: >
-        Security engineers are available 24/7 to assist with the
-        intake, triage and remediation of vulnerabilities found within customer
-        codebases. 
+        We analyze publicly disclosed software vulnerabilities, performing root cause 
+        analysis and developing detections, remediations, and reproductions as part of 
+        the triage process.
       icon: bug
 
   platform:
     title: Platform Features
     description: >
-      Our platform allows for streamlined on-boarding, only
-      requiring our customers to install a version control system provider
-      integration to get started. Once integrated, our customers have immediate
-      access to on-demand security engineering resources across all of our
-      service offerings, and are able to configure how they are used by their
-      organization.
+      The Augury One platform streamlines the engagement model for security
+      advisory services. Once integrated, our customers have immediate
+      access to on-demand advisory resources across all service offerings, 
+      and can configure the platform's use for their organization.
     subsections:
-    - title: Rapid Risk Assessment
+    - title: Code Review
       features:
-        - name: Proactive risk identification
+        - name: Version control integration
           description: >
-            Identify design- and service-level risks through engineer-led rapid
-            risk assessments. Our engineers work directly with service teams to
-            map a wide variety of service attributes to produce design and
-            implementation recommendations.
-          icon: map-marker
-        - name: Risk-based prioritization
-          description: >
-            There are always improvements that can be made to a serivce's
-            security posture. Our security engineers can help you prioritize
-            these risks in relation to your environment and goals.
-          icon: sort-numeric-asc
-    - title: Continuous Code Review
-      features:
-        - name: Native version control provider integration
-          description: >
-            Native integration allows for faster time-to-review, and simple
-            onboarding of services. All feedback within our platform can be
-            forwarded to the version control provider, such as GitHub issues,
-            discussions, and pull requests. 
+            Any engineers can request a security review directly from their version
+            control system.
           icon: github
         - name: Scope-guided engineering resources
           description:
-            Our customers define scope for each review, ensuring appropriate
-            staffing every time. Don’t want to manually approve scope every
-            time? Create pre-configured scopes for common requests.
-          icon: users
-        - name: Customer-specified availability
+            Your engineers provide the scope for each review. We triage these requests to
+            ensure appropriate and consistent staffing each time.
+          icon: crosshairs
+        - name: Customer-specified priority
           description: >
-            Security engineers can be requested for reviews as-needed or placed in
-            a dedicated reserve. When problems arise, the assigned engineers will
-            work with you to identify a solution and ensure remediation. 
-          icon: calendar
-        - name: Avoid unsafe changes
-          description: >
-            Concerned about merging dangerous code? Our provider integrations
-            allow you to configure merge requirements, allowing you to balance
-            security and release velocity.
-          icon: code-fork
-    - title: Software Vulnerability Management
+            The requestor sets the appropriate priority for the review. We use this 
+            to ensure SLAs are met.
+          icon: sort-numeric-asc
+        - name: Share findings
+          description:
+            Reviews and their associated findings can be shared, allowing for 
+            public-facing communication of any identified vulnerabilities that may result 
+            from a code review.
+          icon: share
+    - title: Vulnerability Triage
       features:
-        - name: Vulnerability intake
+        - name: Central Advisory Directory
           description: >
-            Stop fussing with bug bounty program management. Our engineers staff
-            a 24/7 on-call to handle responsible disclosure on your behalf,
-            helping to reproduce and confirm the validity of reported findings.
-          icon: bug
-        - name: Root cause analysis
+            From cloud CI breach advisories, to the latest software vulnerabilities,
+            we organize advisories in a central and searchable location.
+          icon: folder-open
+        - name: Root Cause
           description: >
-            Once a vulnerability has been identified, our engineers perform root
-            cause analysis to identify the implementation or design flaw
-            allowing the vulnerability to exist.
+            We review each advisory to provide appropriate root cause context,
+            and verify the impact it could have to affected systems.
+            systems.
           icon: search
-        - name: Patching and remediation
+        - name: Detections
           description: >
-            Our engineers work directly with our customer's engineering teams to
-            patch and remediate identified vulnerabilities. Paired with our code
-            review offerings, this helps to prevent vulnerability regressions.
-          icon: code
-        - name: Detection engineering
+            For each triaged advisory, we provide guidance on how to detect affected 
+            systems, as well how to search for prior exploitation within the affected
+            system.
+          icon: eye
+        - name: Mitigations & Remediation
           description: >
-            After remediation is complete, our engineers help to engineer
-            signatures to detect the exploitation of the vulnerability in the
-            past, present, and future.
-          icon: shield
+            When possible, we provide detailed guidance on how to ensure mitigations
+            and remediations are implemented for affected systems.
+          icon: wrench
+    - title: Emergency Response
+      features:
+        - name: Embedded Response Team
+          description: >
+            Our response team embedds directly with your organization's response, providing
+            advisory services and engineering support throughout the duration of the event.
+          icon: group
+        - name: Impact Investigations
+          description: >
+            Embedded engineers work with responders to identify evidence of impact, helping
+            to advise next steps.
+          icon: fire
+        - name: Fix Verification
+          description: >
+            When a mitigation or remediation is implemented, we help verify it is correct and 
+            complete.
+          icon: fire-extinguisher
+        - name: Direct Engagement
+          description: >
+            Page us when you need us - we maintain an on-call rotation to ensure your 
+            organization has appropriate support whenever an emergency may arise.
+          icon: phone
   pricing:
     title: "Pricing"
+    description:
+      We believe in price transparency and fairness. Regardless of the size of your 
+      organization, our advertised prices are what you will pay. We do not negotiate.
+      Although our billing model is slightly different within our platform, we have 
+      translated this to hourly rates to make our offerings easy to reason about. 
     subsections:
-      - title: Rapid Risk Assessment
-        on_demand: $500/hr
-        reserved: $400/hr
-      - title: Continuous Code Review
+      - title: Code Review
         on_demand: $600/hr
         reserved: $400/hr
-      - title: Software Vulnerability Management
+      - title: Vulnerability Triage
+        on_demand: $500/hr
+        reserved: $400/hr
+      - title: Emergency Response
         on_demand: $1125/hr
         reserved: $750/hr
   about:
     title: About
     description: >
-      <strong>Our objective is to keep our clients safe.</strong> Shh Services
+      <strong>Our objective is to keep our clients safe.</strong> Augury One
       was founded to improve the state of software security by lowering the
-      barrier of entry to traditionally expensive services. Instead of providing
-      point-in-time assessments, Shh Services provides our customers continous
+      barrier of entry to security services. Instead of providing
+      point-in-time assessments, Augury One provides our customers continous
       security advisory and engineering support, augmenting their existing
       engineering staff.
   contact:
     title: "contact"
     description: >
       Want to know more? Lets chat.
-    email: inquiry@shh.services
+    email: inquiry@augury.one
     social:
       - title: twitter
         url: https://twitter.com/shhservices
       - title: github
-        url: https://github.com/shh-services
+        url: https://github.com/AuguryOne
   footer:
-    content: Shh Services
+    content: Augury One
 
 # Color settings (hex-codes without the leading hash-tag)
 css:
   color:
     primary-dark: '#000000'
-    links: '#cfa7a7'
+    links:  rgb(147 197 253);
 
 # Build settings
 markdown: kramdown
