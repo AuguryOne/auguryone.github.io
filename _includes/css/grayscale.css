@@ -39,8 +39,8 @@ p {
 @media(min-width:767px) {
     p {
         margin: 0 0 35px;
-        font-size: 20px;
-        line-height: 1.6;
+        font-size: 18px;
+        line-height: 1.25;
     }
 }
 
@@ -245,11 +245,6 @@ a:focus {
 .intro-background {
     background: url(/img/pexels-kendall-hoopes-1096958.jpg) no-repeat bottom center scroll;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.178), rgb(0, 0, 0)), url(/img/pexels-kendall-hoopes-1096958.jpg);
-}
-
-.platform-background {
-    background: url(/img/pexels-cat-crawford-1488401.jpg) no-repeat center center scroll;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.178), rgb(0, 0, 0)), linear-gradient(to top, rgba(0, 0, 0, 0), rgb(0, 0, 0)), url(/img/pexels-cat-crawford-1488401.jpg);
 }
 
 .about-background {

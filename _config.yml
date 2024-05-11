@@ -12,103 +12,83 @@ sections:
   services:
     title: Services
     description: >
-      Augury One specializes in software security advisory services across
-      Emergency Response, Code Review, and Vulnerability Triage.
+      Augury One is a boutique software security firm that specializing in Code Review, Software Vulnerability Intelligence, and Emergency Response. From vulnerability advisories with root cause analysis, to native repository integrations supporting code review and incident resolution verification. 
     list:
-    - title: "Emergency Response"
-      description: >
-        We augment your software security incident response process, helping to
-        ensure exploitable vulnerabilities are properly investigated and remediated
-        when identified.
-      icon: flash
-    - title: "Code review"
-      description: >
-        Throughout the software development lifecycle, we continuously review 
-        the code written by your organization to identify exploitable vulnerabilities.
-      icon: terminal
-    - title: "Vulnerability Triage"
-      description: >
-        We analyze publicly disclosed software vulnerabilities, performing root cause 
-        analysis and developing detections, remediations, and reproductions as part of 
-        the triage process.
-      icon: bug
+      - title: "Code Review"
+        description: >
+          On-demand code review embeds expert security engineers into the software development lifecycle, supporting engagements initiated directly within GitHub. Through partnering with customers, Augury One security engineers proactively find, triage, and advise on mitigation and remediation of the vulnerabilities in your software, as it’s developed.
+        icon: code-fork
+      - title: "Software Vulnerability Intelligence"
+        description: >
+          Software vulnerability intelligence enhances your vulnerability management program by turning  identifiable disclosures into advisories. Augury One eliminates the need to spend time gathering intelligence and performing technical analysis through timely curated advisories, enriched detailed root cause analysis, mitigations, community knowledge, and remediations.
+        icon: shield
+      - title: "Emergency Response"
+        description: >
+          When a vulnerability in the software you develop is suspected or known to be exploited, Augury One will be there. We offer timely direct support for core incident response activities, accelerating and ensuring the path to resolution is correct and complete through vulnerability identification and resolution verification.
+        icon: life-buoy
 
   platform:
     title: Platform Features
     description: >
-      The Augury One platform streamlines the engagement model for security
-      advisory services. Once integrated, our customers have immediate
-      access to on-demand advisory resources across all service offerings, 
-      and can configure the platform's use for their organization.
+      Augury One breaks away from the traditional consultancy model, offering continuous service delivery through our immediate and on-demand service model allowing your company access to our security expertise when it's needed the most, 24/7.
     subsections:
     - title: Code Review
       features:
-        - name: Version control integration
+        - name: Native GitHub Integration
           description: >
-            Any engineers can request a security review directly from their version
-            control system.
+            When merging a feature, or branch you can request code reviews directly from GitHub Issues and Pull Requests.
           icon: github
-        - name: Scope-guided engineering resources
-          description:
-            Your engineers provide the scope for each review. We triage these requests to
-            ensure appropriate and consistent staffing each time.
+        - name: Scope-guided Reviews
+          description: >
+            Customer guided review that is scoped collaboratively to ensure timely, cost-effective coverage.
           icon: crosshairs
-        - name: Customer-specified priority
+        - name: Immediate Vulnerability Delivery
           description: >
-            The requestor sets the appropriate priority for the review. We use this 
-            to ensure SLAs are met.
-          icon: sort-numeric-asc
-        - name: Share findings
+            Each vulnerability identified during a code review is disclosed immediately, allowing for prompt mitigation and remediation instead of having to wait for a final report. 
+          icon: fast-forward
+        - name: Built-in Collaboration
           description:
-            Reviews and their associated findings can be shared, allowing for 
-            public-facing communication of any identified vulnerabilities that may result 
-            from a code review.
-          icon: share
-    - title: Vulnerability Triage
+            Whether you are in GitHub or the Augury One platform, you can engage directly with your reviewer on identified vulnerabilities, proposed mitigations, and remediations.
+          icon: comments-o
+    - title: Software Vulnerability Intelligence
       features:
-        - name: Central Advisory Directory
+        - name: Timely Advisories
           description: >
-            From cloud CI breach advisories, to the latest software vulnerabilities,
-            we organize advisories in a central and searchable location.
-          icon: folder-open
-        - name: Root Cause
+            Augury One will issue curated and digestible advisories for emerging software security vulnerabilities, regardless of CVE issuance.
+          icon: clock-o
+        - name: Advisory Update Notifications
           description: >
-            We review each advisory to provide appropriate root cause context,
-            and verify the impact it could have to affected systems.
-            systems.
+            Customers can subscribe to updates on advisory changes to stay informed about new information and modifications.
+          icon: rss
+        - name: Root-cause Analysis and Detection Guidance
+          description: >
+            Each advisory includes a detailed information allowing customers to better understand the technical details and search for related abuses within their organization.
           icon: search
-        - name: Detections
+        - name: Mitigation and Remediation
           description: >
-            For each triaged advisory, we provide guidance on how to detect affected 
-            systems, as well how to search for prior exploitation within the affected
-            system.
-          icon: eye
-        - name: Mitigations & Remediation
-          description: >
-            When possible, we provide detailed guidance on how to ensure mitigations
-            and remediations are implemented for affected systems.
+            When official remediation guidance is unable to be followed  (e.g. version-locked), Augury One provides direction on available mitigations, helping customers reduce their risk of exposure until full remediation can be achieved.
           icon: wrench
+        - name: Community Discussions
+          description: >
+            Augury One customers can discuss each advisory through a private dedicated customer discussion section within the Augury One platform, contributing to and benefiting from the community knowledge of advisory details where applicable.
+          icon: users
     - title: Emergency Response
       features:
+        - name: Vulnerability Identification
+          description: >
+            Augury One will help identify suspected software vulnerabilities during an incident, accelerating the pursuit of mitigation and remediation.
+          icon: eye
+        - name: Resolution Verification
+          description: >
+            When a mitigation or remediation is implemented, Augury One will provide guidance and testing through analysis of the remediation, relative to the identified vulnerability, helping ensure it is correct and complete.
+          icon: fire-extinguisher
         - name: Embedded Response Team
           description: >
-            Our response team embedds directly with your organization's response, providing
-            advisory services and engineering support throughout the duration of the event.
-          icon: group
-        - name: Impact Investigations
+            Our flexible response team embeds directly within your incident’s response structure, augmenting your existing staff capabilities.
+          icon: plus-square-o
+        - name: Timely On-Call Support
           description: >
-            Embedded engineers work with responders to identify evidence of impact, helping
-            to advise next steps.
-          icon: fire
-        - name: Fix Verification
-          description: >
-            When a mitigation or remediation is implemented, we help verify it is correct and 
-            complete.
-          icon: fire-extinguisher
-        - name: Direct Engagement
-          description: >
-            Page us when you need us - we maintain an on-call rotation to ensure your 
-            organization has appropriate support whenever an emergency may arise.
+            Call, text or email when you need us. An on-call rotation is maintained to ensure your organization has appropriate and timely support when an incident may arise.
           icon: phone
   pricing:
     title: "Pricing"
@@ -130,12 +110,11 @@ sections:
   about:
     title: About
     description: >
-      <strong>Our objective is to keep our clients safe.</strong> Augury One
-      was founded to improve the state of software security by lowering the
-      barrier of entry to security services. Instead of providing
-      point-in-time assessments, Augury One provides our customers continous
-      security advisory and engineering support, augmenting their existing
-      engineering staff.
+      Augury One was founded to improve the state of software security, 
+      lowering the barrier of entry to security services. Staffed by expert 
+      software security engineers, Augury One provides customers continous 
+      security advisory and engineering support, augmenting and extending 
+      existing customer capabilities.
   contact:
     title: "contact"
     description: >
@@ -143,7 +122,7 @@ sections:
     email: inquiry@augury.one
     social:
       - title: twitter
-        url: https://twitter.com/shhservices
+        url: https://x.com/augury_one
       - title: github
         url: https://github.com/AuguryOne
   footer:
