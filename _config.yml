@@ -10,9 +10,9 @@ sections:
     tagline: >
       Deliver safer software.
   services:
-    title: Services
+    title: Services`
     description: >
-      Augury One is a boutique software security firm that specializing in Code Review, Software Vulnerability Intelligence, and Emergency Response with a goal of enabling organizations to deliver safe software.
+      Augury One is a boutique software security firm specializing in Code Review, Software Vulnerability Intelligence, and Emergency Response with a goal of enabling organizations to deliver safe software.
     list:
       - title: "Code Review"
         description: >
