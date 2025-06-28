@@ -1,28 +1,28 @@
-<section id="services" class="content-section">
-    <div class="services-section">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>{{ site.sections.services.title }}</h2>
-                    <p>{{ site.sections.services.description }}</p>
-                    <hr>
-                </div>
-            </div>
-            <div class="row">
-                {% for entry in site.sections.services.list %}
-                    <div class="col-lg-4">
-                        <div class="media">
-                            <div class="media-left">
-                                <i class="fa fa-{{ entry.icon }}" style="font-size: 4em; color: {{ site.css.color.links }};"></i>
+<section id="services" class="services-section">
+    <div class="container">
+        <div class="section-heading">
+            <h2>{{ site.sections.services.title }}</h2>
+            <p>{{ site.sections.services.description }}</p>
+        </div>
+        <div class="row">
+            {% assign service_links = "#guidance,#intelligence,#response" | split: "," %}
+            {% for entry in site.sections.services.list %}
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="{{ service_links[forloop.index0] }}" class="service-card-link page-scroll">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fa fa-{{ entry.icon }}"></i>
                             </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">{{ entry.title }}</h4>
-                                <p>{{ entry.description }}</p>
+                            <h4>{{ entry.title }}</h4>
+                            <p class="service-summary">Learn more about our {{ entry.title | downcase }} services and platform features.</p>
+                            <div class="learn-more">
+                                <span>Learn More</span>
+                                <i class="fa fa-arrow-right"></i>
                             </div>
                         </div>
-                    </div>
-                {% endfor %}
-            </div>
+                    </a>
+                </div>
+            {% endfor %}
         </div>
     </div>
 </section>

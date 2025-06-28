@@ -1,0 +1,228 @@
+<section id="guidance" class="content-section guidance-background">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <div class="service-hero">
+                    <div class="service-icon-large animate-float">
+                        <i class="fa fa-code-fork"></i>
+                    </div>
+                    <h2 class="animate-fadeInUp">Guidance</h2>
+                    <p class="service-description animate-fadeInUp delay-1">{{ site.sections.services.list[0].description }}</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="guidance-features-container">
+            <!-- Native GitHub Integration -->
+            <div class="guidance-feature animate-slideInLeft delay-2">
+                <div class="feature-content">
+                    <h3>Native GitHub Integration</h3>
+                    <p>When merging a feature or branch, engineers can request code reviews directly from GitHub Issues and Pull Requests.</p>
+                </div>
+                <div class="feature-animation">
+                    <svg class="github-integration-svg" viewBox="0 0 660 460" xmlns="http://www.w3.org/2000/svg">
+                        <!-- GitHub PR Comment Box -->
+                        <defs>
+                            <linearGradient id="githubGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- PR Comment Container -->
+                        <rect x="2" y="2" width="656" height="456" rx="12" fill="url(#githubGradient)" stroke="#64748b" stroke-width="3"/>
+                        
+                        <!-- Avatar -->
+                        <circle cx="70" cy="120" r="25" fill="rgb(147, 197, 253)"/>
+                        <text x="70" y="127" font-family="system-ui" font-size="14" fill="#0f172a" text-anchor="middle">DEV</text>
+                        
+                        <!-- Comment Box -->
+                        <rect x="110" y="80" width="520" height="300" rx="8" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+                        
+                        <!-- Typing Text Animation -->
+                        <text x="130" y="120" font-family="Monaco, monospace" font-size="16" fill="#e2e8f0">
+                            <tspan class="typing-text" x="130" dy="0" data-text="/augury_one request review 'Can you review how we"></tspan>
+                            <tspan class="typing-text-line2" x="130" dy="24" data-text="implemented authorization for the new money"></tspan>
+                            <tspan class="typing-text-line3" x="130" dy="24" data-text="movement endpoint?'"></tspan>
+                        </text>
+                        
+
+                        
+                        <!-- Comment Button -->
+                        <rect x="520" y="320" width="90" height="40" rx="8" fill="rgb(147, 197, 253)"/>
+                        <text x="565" y="345" font-family="system-ui" font-size="14" fill="#0f172a" text-anchor="middle">Comment</text>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Scope-guided Reviews -->
+            <div class="guidance-feature animate-slideInRight delay-3">
+                <div class="feature-animation">
+                    <svg class="scope-review-svg" viewBox="0 0 660 460" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Scope Discussion Container -->
+                        <rect x="2" y="2" width="656" height="456" rx="12" fill="#1e293b" stroke="rgb(147, 197, 253)" stroke-width="3"/>
+                        
+                        <!-- Developer Initial Description -->
+                        <g class="scope-question fade-in-scope" style="animation-delay: 0.5s">
+                            <circle cx="60" cy="70" r="20" fill="rgb(147, 197, 253)"/>
+                            <text x="60" y="77" font-family="system-ui" font-size="12" fill="#0f172a" text-anchor="middle">DEV</text>
+                            <rect x="100" y="45" width="530" height="60" rx="8" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+                            <text x="115" y="67" font-family="system-ui" font-size="13" fill="#cbd5e1">This PR adds a new payment processing endpoint that handles direct bank</text>
+                            <text x="115" y="87" font-family="system-ui" font-size="13" fill="#cbd5e1">transfers. I think we should focus on problems with input validation & authorization.</text>
+                        </g>
+                        
+                        <!-- Security Engineer Response -->
+                        <g class="scope-response fade-in-scope" style="animation-delay: 1.5s">
+                            <circle cx="60" cy="140" r="20" fill="#94a3b8"/>
+                            <text x="60" y="147" font-family="system-ui" font-size="12" fill="#0f172a" text-anchor="middle">SEC</text>
+                            <rect x="100" y="115" width="530" height="75" rx="8" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+                            <text x="115" y="137" font-family="system-ui" font-size="13" fill="#cbd5e1">That sounds good. I think we should also take a look at error handling to ensure</text>
+                            <text x="115" y="157" font-family="system-ui" font-size="13" fill="#cbd5e1">there are no unexpected failure modes, given this is a money movement endpoint.</text>
+                        </g>
+                        
+                        <!-- Developer Agreement -->
+                        <g class="dev-agreement fade-in-scope" style="animation-delay: 2.5s">
+                            <circle cx="60" cy="220" r="20" fill="rgb(147, 197, 253)"/>
+                            <text x="60" y="227" font-family="system-ui" font-size="12" fill="#0f172a" text-anchor="middle">DEV</text>
+                            <rect x="100" y="205" width="530" height="40" rx="8" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+                            <text x="115" y="227" font-family="system-ui" font-size="13" fill="#cbd5e1">Sure, that makes sense.</text>
+                        </g>
+                        
+                        <!-- Security Engineer Summary -->
+                        <g class="scope-summary fade-in-scope" style="animation-delay: 3.5s">
+                            <circle cx="60" cy="310" r="20" fill="#94a3b8"/>
+                            <text x="60" y="317" font-family="system-ui" font-size="12" fill="#0f172a" text-anchor="middle">SEC</text>
+                            <rect x="100" y="270" width="530" height="170" rx="8" fill="#0c1420" stroke="rgb(147, 197, 253)" stroke-width="2"/>
+                            <text x="115" y="292" font-family="system-ui" font-size="13" fill="#cbd5e1">Great. I've summarized the review's scope below. If everything looks good, feel free</text>
+                            <text x="115" y="312" font-family="system-ui" font-size="13" fill="#cbd5e1">to accept the scope and we can get the review started.</text>
+                            <text x="115" y="332" font-family="system-ui" font-size="13" fill="#cbd5e1">This pull request introduces a new payment processing endpoint responsible for</text>
+                            <text x="115" y="352" font-family="system-ui" font-size="13" fill="#cbd5e1">handling direct bank transfers. The new endpoint will be reviewed for input</text>
+                            <text x="115" y="372" font-family="system-ui" font-size="13" fill="#cbd5e1">validation and authorization correctness, with error handling tested to help ensure</text>
+                            <text x="115" y="392" font-family="system-ui" font-size="13" fill="#cbd5e1">failure modes are known and result in expected behavior.</text>
+                        </g>
+                    </svg>
+                </div>
+                <div class="feature-content">
+                    <h3>Scope-guided Reviews</h3>
+                    <p>Engineer-guided reviews are scoped collaboratively to ensure timely, cost-effective coverage.</p>
+                </div>
+            </div>
+
+            <!-- Immediate Vulnerability Delivery -->
+            <div class="guidance-feature animate-slideInLeft delay-4">
+                <div class="feature-content">
+                    <h3>Immediate Vulnerability Delivery</h3>
+                    <p>Each vulnerability identified during a code review is disclosed immediately, allowing for prompt mitigation and remediation instead of having to wait for a final report.</p>
+                </div>
+                <div class="feature-animation">
+                    <svg class="vulnerability-svg" viewBox="0 0 660 460" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Vulnerability Report Container -->
+                        <rect x="0" y="0" width="660" height="460" rx="12" fill="#1e293b" stroke="#64748b" stroke-width="3" class="vulnerability-container"/>
+                        
+                        <!-- Vulnerability Details -->
+                        <g class="vuln-details slide-in-content">
+                            <!-- Vulnerability Title -->
+                            <text x="30" y="50" font-family="system-ui" font-size="16" fill="#f1f5f9" font-weight="600">Race Condition in Fund Transfer Endpoint</text>
+                            
+                            <!-- Severity and Impact Ratings -->
+                            <text x="30" y="75" font-family="system-ui" font-size="11" fill="#94a3b8" font-weight="500">SEVERITY</text>
+                            <text x="30" y="95" font-family="system-ui" font-size="13" fill="#ef4444" font-weight="600">CRITICAL</text>
+                            <text x="150" y="75" font-family="system-ui" font-size="11" fill="#94a3b8" font-weight="500">IMPACT</text>
+                            <text x="150" y="95" font-family="system-ui" font-size="13" fill="#ef4444" font-weight="600">CRITICAL</text>
+                            <text x="250" y="75" font-family="system-ui" font-size="11" fill="#94a3b8" font-weight="500">CATEGORY</text>
+                            <text x="250" y="95" font-family="system-ui" font-size="13" fill="#e2e8f0" font-weight="600">Timing</text>
+                            
+                            <!-- Description -->
+                            <text x="30" y="125" font-family="system-ui" font-size="14" fill="rgb(147, 197, 253)" font-weight="600">Description</text>
+                            <text x="30" y="150" font-family="system-ui" font-size="12" fill="#cbd5e1">Concurrent requests to /api/transfer can bypass balance checks, allowing unauthorized fund transfers</text>
+                            <text x="30" y="170" font-family="system-ui" font-size="12" fill="#cbd5e1">exceeding account balance.</text>
+                            
+                            <!-- Vulnerable Code Block -->
+                            <rect x="30" y="190" width="600" height="95" rx="8" fill="#0c1420" stroke="#334155" stroke-width="2"/>
+                            <text x="45" y="215" font-family="Monaco, monospace" font-size="11" fill="#e2e8f0">def transfer_funds(from_account, to_account, amount):</text>
+                            <text x="65" y="235" font-family="Monaco, monospace" font-size="11" fill="#e2e8f0">balance = </text>
+                            <text x="130" y="235" font-family="Monaco, monospace" font-size="11" fill="#ef4444">get_balance</text>
+                            <text x="210" y="235" font-family="Monaco, monospace" font-size="11" fill="#e2e8f0">(from_account)</text>
+                            <text x="65" y="255" font-family="Monaco, monospace" font-size="11" fill="#e2e8f0">if balance >= amount: </text>
+                            <text x="215" y="255" font-family="Monaco, monospace" font-size="11" fill="#ef4444">deduct_funds</text>
+                            <text x="300" y="255" font-family="Monaco, monospace" font-size="11" fill="#e2e8f0">(from_account, amount)</text>
+                            <text x="65" y="275" font-family="Monaco, monospace" font-size="11" fill="#64748b">...</text>
+                            
+                            <!-- Remediation -->
+                            <text x="30" y="315" font-family="system-ui" font-size="14" fill="rgb(147, 197, 253)" font-weight="600">Remediation</text>
+                            <text x="30" y="340" font-family="system-ui" font-size="12" fill="#cbd5e1">Implement atomic database transactions with row-level locking for ledger updates. For example:</text>
+                            
+                            <!-- Fix Code Block -->
+                            <rect x="30" y="360" width="600" height="60" rx="8" fill="#0c1420" stroke="#334155" stroke-width="2"/>
+                            <text x="45" y="385" font-family="Monaco, monospace" font-size="11" fill="#22c55e">UPDATE accounts SET balance = balance - ? WHERE id = ? AND balance >= ? FOR UPDATE;</text>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Built-in Collaboration -->
+            <div class="guidance-feature animate-slideInRight delay-5">
+                <div class="feature-animation">
+                    <svg class="collaboration-svg" viewBox="0 0 660 460" xmlns="http://www.w3.org/2000/svg">
+                        <!-- PR Thread Container -->
+                        <rect x="2" y="2" width="656" height="456" rx="12" fill="#1e293b" stroke="rgb(147, 197, 253)" stroke-width="3"/>
+                        
+                        <!-- Security Engineer Comment -->
+                        <g class="comment-1 fade-in-comment" style="animation-delay: 0.5s">
+                            <circle cx="60" cy="70" r="20" fill="#94a3b8"/>
+                            <text x="60" y="77" font-family="system-ui" font-size="12" fill="#0f172a" text-anchor="middle">SEC</text>
+                            <rect x="100" y="45" width="530" height="55" rx="8" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+                            <text x="115" y="67" font-family="system-ui" font-size="13" fill="#cbd5e1">I found a critical race condition in the transfer_funds function. Concurrent</text>
+                            <text x="115" y="87" font-family="system-ui" font-size="13" fill="#cbd5e1">requests can bypass balance checks and allow unauthorized transfers.</text>
+                        </g>
+                        
+                        <!-- Software Engineer Response -->
+                        <g class="comment-2 fade-in-comment" style="animation-delay: 1.5s">
+                            <circle cx="60" cy="135" r="20" fill="rgb(147, 197, 253)"/>
+                            <text x="60" y="142" font-family="system-ui" font-size="12" fill="#0f172a" text-anchor="middle">DEV</text>
+                            <rect x="100" y="110" width="530" height="55" rx="8" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+                            <text x="115" y="132" font-family="system-ui" font-size="13" fill="#cbd5e1">Great catch! I'll go ahead and implement the atomic transaction with</text>
+                            <text x="115" y="152" font-family="system-ui" font-size="13" fill="#cbd5e1">row-level locking as you suggested, and follow up with you to validate it.</text>
+                        </g>
+                        
+                        <!-- Security Engineer Follow-up -->
+                        <g class="comment-3 fade-in-comment" style="animation-delay: 2.5s">
+                            <circle cx="60" cy="200" r="20" fill="#94a3b8"/>
+                            <text x="60" y="207" font-family="system-ui" font-size="12" fill="#0f172a" text-anchor="middle">SEC</text>
+                            <rect x="100" y="175" width="530" height="55" rx="8" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+                            <text x="115" y="197" font-family="system-ui" font-size="13" fill="#cbd5e1">Sounds good. Feel free to tag me in the PR when you are ready for me to review</text>
+                            <text x="115" y="217" font-family="system-ui" font-size="13" fill="#cbd5e1">your proposed fix.</text>
+                        </g>
+                        
+                        <!-- Dev Follow-up -->
+                        <g class="comment-4 fade-in-comment" style="animation-delay: 3.5s">
+                            <circle cx="60" cy="265" r="20" fill="rgb(147, 197, 253)"/>
+                            <text x="60" y="272" font-family="system-ui" font-size="12" fill="#0f172a" text-anchor="middle">DEV</text>
+                            <rect x="100" y="240" width="530" height="55" rx="8" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+                            <text x="115" y="262" font-family="system-ui" font-size="13" fill="#cbd5e1">@sec okay, new commit is pushed to the current PR branch. Can you take a look</text>
+                            <text x="115" y="282" font-family="system-ui" font-size="13" fill="#cbd5e1">and make sure it resolves the race condition issue?</text>
+                        </g>
+                        
+                        <!-- Security Engineer Final Response -->
+                        <g class="comment-5 fade-in-comment" style="animation-delay: 4.5s">
+                            <circle cx="60" cy="330" r="20" fill="#94a3b8"/>
+                            <text x="60" y="337" font-family="system-ui" font-size="12" fill="#0f172a" text-anchor="middle">SEC</text>
+                            <rect x="100" y="310" width="530" height="40" rx="8" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+                            <text x="115" y="335" font-family="system-ui" font-size="13" fill="#cbd5e1">This looks good to me!</text>
+                        </g>
+                        
+                        <!-- Resolved Badge -->
+                        <g class="resolved-badge fade-in-comment" style="animation-delay: 5.5s">
+                            <rect x="280" y="393" width="100" height="25" rx="12" fill="rgb(147, 197, 253)"/>
+                            <text x="330" y="410" font-family="system-ui" font-size="11" fill="#0f172a" text-anchor="middle">✓ Resolved</text>
+                        </g>
+                    </svg>
+                </div>
+                <div class="feature-content">
+                    <h3>Built-in Collaboration</h3>
+                    <p>Whether engineers are in GitHub or the Augury One platform, they can engage directly with their reviewer on identified vulnerabilities, proposed mitigations, and remediations.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> 
