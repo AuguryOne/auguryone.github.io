@@ -1,4 +1,3 @@
-version: '2.1'
 services:
   web:
     build:
@@ -6,5 +5,12 @@ services:
     command: jekyll serve --host 0.0.0.0 --livereload
     ports:
       - 4000:4000
+    volumes:
+      - .:/auguryone.github.io
+  dev:
+    image: ruby:3.3.4-bullseye
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    links:
+      - web
     volumes:
       - .:/auguryone.github.io
