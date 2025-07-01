@@ -1,0 +1,63 @@
+<!-- Built-in Collaboration -->
+<div class="guidance-feature scroll-animate" data-animation="slideInRight">
+    <div class="feature-animation">
+        <svg class="collaboration-svg" viewBox="0 0 660 460" xmlns="http://www.w3.org/2000/svg">
+            <!-- PR Thread Container -->
+            <rect x="2" y="2" width="656" height="456" rx="12" fill="#1e293b" stroke="rgb(147, 197, 253)" stroke-width="3"/>
+            
+            <!-- Security Engineer Comment -->
+            <g class="comment-1 fade-in-comment" style="animation-delay: 0.5s">
+                <circle cx="60" cy="70" r="20" fill="#94a3b8"/>
+                <text x="60" y="77" font-family="system-ui" font-size="12" fill="#0f172a" text-anchor="middle">SEC</text>
+                <rect x="100" y="45" width="530" height="55" rx="8" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+                <text x="115" y="67" font-family="system-ui" font-size="13" fill="#cbd5e1">I found a critical race condition in the transfer_funds function. Concurrent</text>
+                <text x="115" y="87" font-family="system-ui" font-size="13" fill="#cbd5e1">requests can bypass balance checks and allow unauthorized transfers.</text>
+            </g>
+            
+            <!-- Software Engineer Response -->
+            <g class="comment-2 fade-in-comment" style="animation-delay: 1.5s">
+                <circle cx="60" cy="135" r="20" fill="rgb(147, 197, 253)"/>
+                <text x="60" y="142" font-family="system-ui" font-size="12" fill="#0f172a" text-anchor="middle">DEV</text>
+                <rect x="100" y="110" width="530" height="55" rx="8" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+                <text x="115" y="132" font-family="system-ui" font-size="13" fill="#cbd5e1">Great catch! I'll go ahead and implement the atomic transaction with</text>
+                <text x="115" y="152" font-family="system-ui" font-size="13" fill="#cbd5e1">row-level locking as you suggested, and follow up with you to validate it.</text>
+            </g>
+            
+            <!-- Security Engineer Follow-up -->
+            <g class="comment-3 fade-in-comment" style="animation-delay: 2.5s">
+                <circle cx="60" cy="200" r="20" fill="#94a3b8"/>
+                <text x="60" y="207" font-family="system-ui" font-size="12" fill="#0f172a" text-anchor="middle">SEC</text>
+                <rect x="100" y="175" width="530" height="55" rx="8" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+                <text x="115" y="197" font-family="system-ui" font-size="13" fill="#cbd5e1">Sounds good. Feel free to tag me in the PR when you are ready for me to review</text>
+                <text x="115" y="217" font-family="system-ui" font-size="13" fill="#cbd5e1">your proposed fix.</text>
+            </g>
+            
+            <!-- Dev Follow-up -->
+            <g class="comment-4 fade-in-comment" style="animation-delay: 3.5s">
+                <circle cx="60" cy="265" r="20" fill="rgb(147, 197, 253)"/>
+                <text x="60" y="272" font-family="system-ui" font-size="12" fill="#0f172a" text-anchor="middle">DEV</text>
+                <rect x="100" y="240" width="530" height="55" rx="8" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+                <text x="115" y="262" font-family="system-ui" font-size="13" fill="#cbd5e1">@sec okay, new commit is pushed to the current PR branch. Can you take a look</text>
+                <text x="115" y="282" font-family="system-ui" font-size="13" fill="#cbd5e1">and make sure it resolves the race condition issue?</text>
+            </g>
+            
+            <!-- Security Engineer Final Response -->
+            <g class="comment-5 fade-in-comment" style="animation-delay: 4.5s">
+                <circle cx="60" cy="330" r="20" fill="#94a3b8"/>
+                <text x="60" y="337" font-family="system-ui" font-size="12" fill="#0f172a" text-anchor="middle">SEC</text>
+                <rect x="100" y="310" width="530" height="40" rx="8" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+                <text x="115" y="335" font-family="system-ui" font-size="13" fill="#cbd5e1">This looks good to me!</text>
+            </g>
+            
+            <!-- Resolved Badge -->
+            <g class="resolved-badge fade-in-comment" style="animation-delay: 5.5s">
+                <rect x="280" y="393" width="100" height="25" rx="12" fill="rgb(147, 197, 253)"/>
+                <text x="330" y="410" font-family="system-ui" font-size="11" fill="#0f172a" text-anchor="middle">✓ Resolved</text>
+            </g>
+        </svg>
+    </div>
+    <div class="feature-content">
+        <h3>Built-in Collaboration</h3>
+        <p>Whether engineers are in GitHub or the Augury One platform, they can engage directly with their reviewer on identified vulnerabilities, proposed mitigations, and remediations.</p>
+    </div>
+</div> 
