@@ -1,0 +1,937 @@
+<section class="guidance-hero-section">
+    <div class="guidance-hero-container">
+        <!-- Background Logo Watermark -->
+        <div class="guidance-hero-logo-bg">
+            <img src="/img/shh.png" alt="Augury One" class="guidance-logo-watermark">
+        </div>
+        <!-- Floating Particles -->
+        <div class="floating-particles">
+            <div class="particle" style="top: 12%; left: 14%; animation-delay: 0s"></div>
+            <div class="particle" style="top: 22%; right: 18%; animation-delay: 1.5s"></div>
+            <div class="particle" style="bottom: 28%; left: 24%; animation-delay: 3s"></div>
+            <div class="particle" style="bottom: 18%; right: 28%; animation-delay: 0.7s"></div>
+            <div class="particle" style="top: 62%; right: 12%; animation-delay: 2.2s"></div>
+        </div>
+        
+        <!-- Code Editor Background -->
+        <div class="code-editor-background">
+            <!-- Row 1: Top Row Code Snippets (Left to Right) -->
+            <div class="code-row-1">
+                <!-- Django SQL Injection -->
+                <div class="code-block code-snippet row-1-snippet-1" data-direction="left-to-right" style="display: none;">
+                    <div class="code-line">
+                        <span class="code-keyword">from</span> <span class="code-variable">django</span><span class="code-punctuation">.</span><span class="code-variable">shortcuts</span> <span class="code-keyword">import</span> <span class="code-function">render</span><span class="code-punctuation">,</span> <span class="code-function">redirect</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-keyword">from</span> <span class="code-variable">django</span><span class="code-punctuation">.</span><span class="code-variable">db</span> <span class="code-keyword">import</span> <span class="code-variable">connection</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-keyword">from</span> <span class="code-variable">django</span><span class="code-punctuation">.</span><span class="code-variable">contrib</span><span class="code-punctuation">.</span><span class="code-variable">auth</span><span class="code-punctuation">.</span><span class="code-variable">decorators</span> <span class="code-keyword">import</span> <span class="code-function">login_required</span>
+                    </div>
+                    <div class="code-line"></div>
+                    <div class="code-line">
+                        <span class="code-function">@login_required</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-keyword">def</span> <span class="code-function">get_user_profile</span><span class="code-punctuation">(</span><span class="code-parameter">request</span><span class="code-punctuation">):</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-indent">    </span><span class="code-variable">user_id</span> <span class="code-operator">=</span> <span class="code-variable">request</span><span class="code-punctuation">.</span><span class="code-property">GET</span><span class="code-punctuation">.</span><span class="code-function">get</span><span class="code-punctuation">(</span><span class="code-string">'id'</span><span class="code-punctuation">,</span> <span class="code-variable">request</span><span class="code-punctuation">.</span><span class="code-variable">user</span><span class="code-punctuation">.</span><span class="code-property">id</span><span class="code-punctuation">)</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-indent">    </span><span class="code-variable">query</span> <span class="code-operator">=</span> <span class="code-string">f"SELECT * FROM auth_user WHERE id = {user_id}"</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-indent">    </span><span class="code-keyword">with</span> <span class="code-function">connection</span><span class="code-punctuation">.</span><span class="code-function">cursor</span><span class="code-punctuation">()</span> <span class="code-keyword">as</span> <span class="code-variable">cursor</span><span class="code-punctuation">:</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-indent">        </span><span class="code-variable">cursor</span><span class="code-punctuation">.</span><span class="code-function">execute</span><span class="code-punctuation">(</span><span class="code-variable">query</span><span class="code-punctuation">)</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-indent">        </span><span class="code-variable">user_data</span> <span class="code-operator">=</span> <span class="code-variable">cursor</span><span class="code-punctuation">.</span><span class="code-function">fetchone</span><span class="code-punctuation">()</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-indent">        </span><span class="code-keyword">return</span> <span class="code-variable">user_data</span>
+                    </div>
+                </div>
+
+                <!-- Java Deserialization -->
+                <div class="code-block code-snippet row-1-snippet-2" data-direction="left-to-right" style="display: none;">
+                    <div class="code-line">
+                        <span class="code-keyword">package</span> <span class="code-variable">com</span><span class="code-punctuation">.</span><span class="code-variable">example</span><span class="code-punctuation">.</span><span class="code-variable">api</span><span class="code-punctuation">.</span><span class="code-variable">controller</span><span class="code-punctuation">;</span>
+                    </div>
+                    <div class="code-line"></div>
+                    <div class="code-line">
+                        <span class="code-keyword">import</span> <span class="code-variable">org</span><span class="code-punctuation">.</span><span class="code-variable">springframework</span><span class="code-punctuation">.</span><span class="code-variable">web</span><span class="code-punctuation">.</span><span class="code-variable">bind</span><span class="code-punctuation">.</span><span class="code-variable">annotation</span><span class="code-punctuation">.*;</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-keyword">import</span> <span class="code-variable">java</span><span class="code-punctuation">.</span><span class="code-variable">io</span><span class="code-punctuation">.*;</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-keyword">import</span> <span class="code-variable">java</span><span class="code-punctuation">.</span><span class="code-variable">util</span><span class="code-punctuation">.</span><span class="code-variable">Base64</span><span class="code-punctuation">;</span>
+                    </div>
+                    <div class="code-line"></div>
+                    <div class="code-line">
+                        <span class="code-function">@RestController</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-function">@RequestMapping</span><span class="code-punctuation">(</span><span class="code-string">"/api/user"</span><span class="code-punctuation">)</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-keyword">public</span> <span class="code-keyword">class</span> <span class="code-function">UserController</span> <span class="code-punctuation">{</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-indent">    </span><span class="code-function">@PostMapping</span><span class="code-punctuation">(</span><span class="code-string">"/preferences"</span><span class="code-punctuation">)</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-indent">    </span><span class="code-keyword">public</span> <span class="code-variable">String</span> <span class="code-function">updatePreferences</span><span class="code-punctuation">(</span><span class="code-function">@RequestBody</span> <span class="code-variable">String</span> <span class="code-variable">data</span><span class="code-punctuation">)</span> <span class="code-punctuation">{</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-indent">        </span><span class="code-keyword">try</span> <span class="code-punctuation">{</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-indent">            </span><span class="code-keyword">byte</span><span class="code-punctuation">[]</span> <span class="code-variable">decoded</span> <span class="code-operator">=</span> <span class="code-variable">Base64</span><span class="code-punctuation">.</span><span class="code-function">getDecoder</span><span class="code-punctuation">().</span><span class="code-function">decode</span><span class="code-punctuation">(</span><span class="code-variable">data</span><span class="code-punctuation">);</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-indent">            </span><span class="code-variable">ObjectInputStream</span> <span class="code-variable">ois</span> <span class="code-operator">=</span> <span class="code-keyword">new</span> <span class="code-function">ObjectInputStream</span><span class="code-punctuation">(</span><span class="code-keyword">new</span> <span class="code-function">ByteArrayInputStream</span><span class="code-punctuation">(</span><span class="code-variable">decoded</span><span class="code-punctuation">));</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 2: Middle Row Code Snippets (Right to Left) -->
+            <div class="code-row-2">
+                <!-- Node.js Path Traversal -->
+                <div class="code-block code-snippet row-2-snippet-1" data-direction="right-to-left" style="display: none;">
+                    <div class="code-line">
+                        <span class="code-keyword">const</span> <span class="code-variable">express</span> <span class="code-operator">=</span> <span class="code-function">require</span><span class="code-punctuation">(</span><span class="code-string">'express'</span><span class="code-punctuation">);</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-keyword">const</span> <span class="code-variable">fs</span> <span class="code-operator">=</span> <span class="code-function">require</span><span class="code-punctuation">(</span><span class="code-string">'fs'</span><span class="code-punctuation">);</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-keyword">const</span> <span class="code-variable">path</span> <span class="code-operator">=</span> <span class="code-function">require</span><span class="code-punctuation">(</span><span class="code-string">'path'</span><span class="code-punctuation">);</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-keyword">const</span> <span class="code-variable">router</span> <span class="code-operator">=</span> <span class="code-variable">express</span><span class="code-punctuation">.</span><span class="code-function">Router</span><span class="code-punctuation">();</span>
+                    </div>
+                    <div class="code-line"></div>
+                    <div class="code-line">
+                        <span class="code-variable">router</span><span class="code-punctuation">.</span><span class="code-function">get</span><span class="code-punctuation">(</span><span class="code-string">'/download/:filename'</span><span class="code-punctuation">,</span> <span class="code-keyword">async</span> <span class="code-punctuation">(</span><span class="code-parameter">req</span><span class="code-punctuation">,</span> <span class="code-parameter">res</span><span class="code-punctuation">)</span> <span class="code-operator">=></span> <span class="code-punctuation">{</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-indent">    </span><span class="code-keyword">try</span> <span class="code-punctuation">{</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-indent">        </span><span class="code-keyword">const</span> <span class="code-punctuation">{</span> <span class="code-variable">filename</span> <span class="code-punctuation">}</span> <span class="code-operator">=</span> <span class="code-variable">req</span><span class="code-punctuation">.</span><span class="code-variable">params</span><span class="code-punctuation">;</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-indent">        </span><span class="code-keyword">const</span> <span class="code-variable">filePath</span> <span class="code-operator">=</span> <span class="code-variable">path</span><span class="code-punctuation">.</span><span class="code-function">join</span><span class="code-punctuation">(</span><span class="code-string">'/var/uploads'</span><span class="code-punctuation">,</span> <span class="code-variable">filename</span><span class="code-punctuation">);</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-indent">        </span><span class="code-keyword">if</span> <span class="code-punctuation">(</span><span class="code-variable">fs</span><span class="code-punctuation">.</span><span class="code-function">existsSync</span><span class="code-punctuation">(</span><span class="code-variable">filePath</span><span class="code-punctuation">))</span> <span class="code-punctuation">{</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-indent">            </span><span class="code-variable">res</span><span class="code-punctuation">.</span><span class="code-function">download</span><span class="code-punctuation">(</span><span class="code-variable">filePath</span><span class="code-punctuation">);</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-indent">        </span><span class="code-punctuation">}</span> <span class="code-keyword">else</span> <span class="code-punctuation">{</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-indent">            </span><span class="code-variable">res</span><span class="code-punctuation">.</span><span class="code-function">status</span><span class="code-punctuation">(</span><span class="code-number">404</span><span class="code-punctuation">).</span><span class="code-function">send</span><span class="code-punctuation">(</span><span class="code-string">'File not found'</span><span class="code-punctuation">);</span>
+                    </div>
+                </div>
+
+                <!-- Go Authorization Bypass -->
+                <div class="code-block code-snippet row-2-snippet-2" data-direction="right-to-left" style="display: none;">
+                    <div class="code-line">
+                        <span class="code-keyword">package</span> <span class="code-variable">main</span>
+                    </div>
+                    <div class="code-line"></div>
+                    <div class="code-line">
+                        <span class="code-keyword">import</span> <span class="code-punctuation">(</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-indent">    </span><span class="code-string">"net/http"</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-indent">    </span><span class="code-string">"encoding/json"</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-indent">    </span><span class="code-string">"strconv"</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-punctuation">)</span>
+                    </div>
+                    <div class="code-line"></div>
+                    <div class="code-line">
+                        <span class="code-keyword">func</span> <span class="code-function">updateUserRole</span><span class="code-punctuation">(</span><span class="code-variable">w</span> <span class="code-variable">http</span><span class="code-punctuation">.</span><span class="code-variable">ResponseWriter</span><span class="code-punctuation">,</span> <span class="code-variable">r</span> <span class="code-operator">*</span><span class="code-variable">http</span><span class="code-punctuation">.</span><span class="code-variable">Request</span><span class="code-punctuation">)</span> <span class="code-punctuation">{</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-indent">    </span><span class="code-variable">userID</span><span class="code-punctuation">,</span> <span class="code-variable">_</span> <span class="code-operator">:=</span> <span class="code-variable">strconv</span><span class="code-punctuation">.</span><span class="code-function">Atoi</span><span class="code-punctuation">(</span><span class="code-variable">r</span><span class="code-punctuation">.</span><span class="code-function">FormValue</span><span class="code-punctuation">(</span><span class="code-string">"user_id"</span><span class="code-punctuation">))</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-indent">    </span><span class="code-variable">newRole</span> <span class="code-operator">:=</span> <span class="code-variable">r</span><span class="code-punctuation">.</span><span class="code-function">FormValue</span><span class="code-punctuation">(</span><span class="code-string">"role"</span><span class="code-punctuation">)</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-indent">    </span><span class="code-function">updateRole</span><span class="code-punctuation">(</span><span class="code-variable">userID</span><span class="code-punctuation">,</span> <span class="code-variable">newRole</span><span class="code-punctuation">)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 3: Bottom Row Code Snippets (Left to Right) -->
+            <div class="code-row-3">
+                <!-- C Buffer Overflow -->
+                <div class="code-block code-snippet row-3-snippet-1" data-direction="left-to-right" style="display: none;">
+                    <div class="code-line">
+                        <span class="code-keyword">#include</span> <span class="code-string">&lt;stdio.h&gt;</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-keyword">#include</span> <span class="code-string">&lt;string.h&gt;</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-keyword">#include</span> <span class="code-string">&lt;stdlib.h&gt;</span>
+                    </div>
+                    <div class="code-line"></div>
+                    <div class="code-line">
+                        <span class="code-keyword">void</span> <span class="code-function">processUserInput</span><span class="code-punctuation">(</span><span class="code-keyword">char</span> <span class="code-operator">*</span><span class="code-variable">input</span><span class="code-punctuation">)</span> <span class="code-punctuation">{</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-indent">    </span><span class="code-keyword">char</span> <span class="code-variable">buffer</span><span class="code-punctuation">[</span><span class="code-number">100</span><span class="code-punctuation">]</span><span class="code-punctuation">;</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-indent">    </span><span class="code-function">strcpy</span><span class="code-punctuation">(</span><span class="code-variable">buffer</span><span class="code-punctuation">,</span> <span class="code-variable">input</span><span class="code-punctuation">)</span><span class="code-punctuation">;</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-indent">    </span><span class="code-function">printf</span><span class="code-punctuation">(</span><span class="code-string">"Processing: %s\n"</span><span class="code-punctuation">,</span> <span class="code-variable">buffer</span><span class="code-punctuation">)</span><span class="code-punctuation">;</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-punctuation">}</span>
+                    </div>
+                    <div class="code-line"></div>
+                    <div class="code-line">
+                        <span class="code-keyword">int</span> <span class="code-function">main</span><span class="code-punctuation">(</span><span class="code-keyword">int</span> <span class="code-variable">argc</span><span class="code-punctuation">,</span> <span class="code-keyword">char</span> <span class="code-operator">*</span><span class="code-variable">argv</span><span class="code-punctuation">[</span><span class="code-punctuation">]</span><span class="code-punctuation">)</span> <span class="code-punctuation">{</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-indent">    </span><span class="code-keyword">if</span> <span class="code-punctuation">(</span><span class="code-variable">argc</span> <span class="code-operator">&gt;</span> <span class="code-number">1</span><span class="code-punctuation">)</span> <span class="code-punctuation">{</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-indent">        </span><span class="code-function">processUserInput</span><span class="code-punctuation">(</span><span class="code-variable">argv</span><span class="code-punctuation">[</span><span class="code-number">1</span><span class="code-punctuation">]</span><span class="code-punctuation">)</span><span class="code-punctuation">;</span>
+                    </div>
+                </div>
+
+                <!-- Python File Upload -->
+                <div class="code-block code-snippet row-3-snippet-2" data-direction="left-to-right" style="display: none;">
+                    <div class="code-line">
+                        <span class="code-keyword">from</span> <span class="code-variable">flask</span> <span class="code-keyword">import</span> <span class="code-function">Flask</span><span class="code-punctuation">,</span> <span class="code-function">request</span><span class="code-punctuation">,</span> <span class="code-function">redirect</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-keyword">import</span> <span class="code-variable">os</span>
+                    </div>
+                    <div class="code-line"></div>
+                    <div class="code-line">
+                        <span class="code-variable">app</span> <span class="code-operator">=</span> <span class="code-function">Flask</span><span class="code-punctuation">(</span><span class="code-variable">__name__</span><span class="code-punctuation">)</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-variable">UPLOAD_FOLDER</span> <span class="code-operator">=</span> <span class="code-string">'/uploads'</span>
+                    </div>
+                    <div class="code-line"></div>
+                    <div class="code-line">
+                        <span class="code-function">@app.route</span><span class="code-punctuation">(</span><span class="code-string">'/upload'</span><span class="code-punctuation">,</span> <span class="code-variable">methods</span><span class="code-operator">=</span><span class="code-punctuation">[</span><span class="code-string">'POST'</span><span class="code-punctuation">]</span><span class="code-punctuation">)</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-keyword">def</span> <span class="code-function">upload_file</span><span class="code-punctuation">(</span><span class="code-punctuation">)</span><span class="code-punctuation">:</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-indent">    </span><span class="code-keyword">if</span> <span class="code-string">'file'</span> <span class="code-keyword">not</span> <span class="code-keyword">in</span> <span class="code-variable">request</span><span class="code-punctuation">.</span><span class="code-property">files</span><span class="code-punctuation">:</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-indent">        </span><span class="code-keyword">return</span> <span class="code-function">redirect</span><span class="code-punctuation">(</span><span class="code-variable">request</span><span class="code-punctuation">.</span><span class="code-property">url</span><span class="code-punctuation">)</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-indent">    </span><span class="code-variable">file</span> <span class="code-operator">=</span> <span class="code-variable">request</span><span class="code-punctuation">.</span><span class="code-property">files</span><span class="code-punctuation">[</span><span class="code-string">'file'</span><span class="code-punctuation">]</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-indent">    </span><span class="code-variable">filename</span> <span class="code-operator">=</span> <span class="code-variable">file</span><span class="code-punctuation">.</span><span class="code-property">filename</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-indent">    </span><span class="code-variable">file</span><span class="code-punctuation">.</span><span class="code-function">save</span><span class="code-punctuation">(</span><span class="code-variable">os</span><span class="code-punctuation">.</span><span class="code-variable">path</span><span class="code-punctuation">.</span><span class="code-function">join</span><span class="code-punctuation">(</span><span class="code-variable">UPLOAD_FOLDER</span><span class="code-punctuation">,</span> <span class="code-variable">filename</span><span class="code-punctuation">))</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Code Flow Lines -->
+        <div class="code-flow-lines">
+            <div class="flow-line flow-line-1"></div>
+            <div class="flow-line flow-line-2"></div>
+            <div class="flow-line flow-line-3"></div>
+        </div>
+        
+
+        
+        <!-- Hero Content -->
+        <div class="guidance-hero-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="guidance-hero-title animate-fadeInUp">
+                            Software Security
+                            <span class="guidance-highlight">Guidance</span>
+                        </h1>
+                        
+                        <p class="guidance-hero-subtitle animate-fadeInUp delay-1">
+                            Expert security guidance integrated directly into your development workflow
+                        </p>
+                        
+                        <div class="guidance-see-more animate-fadeInUp delay-2">
+                            <a href="#guidance" class="btn-see-more page-scroll">
+                                <div class="chevron-double">
+                                    <i class="fa fa-chevron-down chevron-1"></i>
+                                    <i class="fa fa-chevron-down chevron-2"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .guidance-hero-section {
+        height: 100vh;
+        min-height: 600px;
+        background: linear-gradient(135deg, 
+            #0c1420 0%, 
+            #0f1b26 25%, 
+            #1a2332 50%, 
+            #0a1017 75%, 
+            #050b0f 100%);
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 120px 0 80px; /* Match intelligence hero padding */
+    }
+    
+    .guidance-hero-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        z-index: 5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Background Logo Watermark */
+    .guidance-hero-logo-bg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        pointer-events: none;
+    }
+    
+    .guidance-logo-watermark {
+        width: 400px;
+        height: auto;
+        filter: invert(1) brightness(1.5);
+        opacity: 0.15;
+        /* animation: subtle-float 8s ease-in-out infinite; */
+    }
+    
+    @keyframes subtle-float {
+        0%, 100% {
+            transform: translateY(0px) rotate(0deg);
+            opacity: 0.15;
+        }
+        50% {
+            transform: translateY(-10px) rotate(2deg);
+            opacity: 0.22;
+        }
+    }
+    
+    /* Code Editor Background */
+    .code-editor-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 3;
+        overflow: hidden;
+        mask: radial-gradient(circle at 50% 50%, transparent 200px, rgba(0,0,0,0.1) 250px, rgba(0,0,0,0.3) 300px, rgba(0,0,0,0.6) 350px, rgba(0,0,0,0.8) 400px, black 450px);
+        -webkit-mask: radial-gradient(circle at 50% 50%, transparent 200px, rgba(0,0,0,0.1) 250px, rgba(0,0,0,0.3) 300px, rgba(0,0,0,0.6) 350px, rgba(0,0,0,0.8) 400px, black 450px);
+    }
+    
+    .code-block {
+        position: absolute;
+        font-family: 'Monaco', 'Menlo', 'Consolas', monospace;
+        font-size: 11px;
+        line-height: 1.5;
+        background: rgba(15, 27, 38, 0.08);
+        border: 1px solid rgba(16, 185, 129, 0.02);
+        border-radius: 6px;
+        padding: 10px 14px;
+        backdrop-filter: blur(20px);
+        filter: blur(3px);
+        opacity: 0;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    
+    /* Scrolling Animation Classes */
+    .scroll-left-to-right {
+        animation: scrollLeftToRight 30s linear infinite;
+    }
+    
+    .scroll-right-to-left {
+        animation: scrollRightToLeft 35s linear infinite;
+    }
+    
+    /* Code Row Positioning */
+    .code-row-1 {
+        position: absolute;
+        top: 5%;
+        width: 100%;
+        height: auto;
+    }
+    
+    .code-row-2 {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        height: auto;
+    }
+    
+    .code-row-3 {
+        position: absolute;
+        top: 85%;
+        width: 100%;
+        height: auto;
+    }
+    
+    /* Code Snippet Positioning and Animation */
+    .code-snippet {
+        width: 550px;
+        opacity: 0;
+        transform: translateX(-100vw);
+    }
+    
+    .code-snippet[data-direction="left-to-right"] {
+        animation: scrollLeftToRight 30s linear;
+    }
+    
+    .code-snippet[data-direction="right-to-left"] {
+        animation: scrollRightToLeft 35s linear;
+    }
+    
+
+    
+    .code-line {
+        margin: 2px 0;
+        white-space: nowrap;
+    }
+    
+    .code-indent {
+        display: inline-block;
+        white-space: pre;
+        color: rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Code Syntax Highlighting - Very Subtle */
+    .code-keyword {
+        color: rgba(100, 116, 139, 0.6);
+        font-weight: 500;
+    }
+    
+    .code-function {
+        color: rgba(5, 150, 105, 0.6);
+        font-weight: normal;
+    }
+    
+    .code-variable {
+        color: rgba(203, 213, 225, 0.5);
+    }
+    
+    .code-parameter {
+        color: rgba(120, 113, 108, 0.6);
+    }
+    
+    .code-property {
+        color: rgba(8, 145, 178, 0.6);
+    }
+    
+    .code-punctuation {
+        color: rgba(107, 114, 128, 0.5);
+    }
+    
+    .code-operator {
+        color: rgba(107, 114, 128, 0.5);
+    }
+    
+    .code-boolean {
+        color: rgba(124, 58, 237, 0.6);
+    }
+    
+    .code-string {
+        color: rgba(4, 120, 87, 0.6);
+    }
+    
+    .code-number {
+        color: rgba(220, 38, 38, 0.6);
+    }
+    
+    .code-comment {
+        color: rgba(75, 85, 99, 0.5);
+        font-style: italic;
+    }
+    
+    @keyframes scrollLeftToRight {
+        0% {
+            transform: translateX(-100vw);
+            opacity: 0;
+        }
+        5% {
+            opacity: 0.6;
+        }
+        95% {
+            opacity: 0.6;
+        }
+        100% {
+            transform: translateX(100vw);
+            opacity: 0;
+        }
+    }
+    
+    @keyframes scrollRightToLeft {
+        0% {
+            transform: translateX(100vw);
+            opacity: 0;
+        }
+        5% {
+            opacity: 0.6;
+        }
+        95% {
+            opacity: 0.6;
+        }
+        100% {
+            transform: translateX(-100vw);
+            opacity: 0;
+        }
+    }
+    
+    /* Code Flow Lines - Subtle */
+    .code-flow-lines {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 2;
+    }
+    
+    .flow-line {
+        position: absolute;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.1), transparent);
+        animation: flowPulse 6s ease-in-out infinite;
+    }
+    
+    .flow-line-1 {
+        top: 25%;
+        left: 0;
+        width: 40%;
+        animation-delay: 0s;
+    }
+    
+    .flow-line-2 {
+        top: 50%;
+        right: 0;
+        width: 35%;
+        animation-delay: 2s;
+    }
+    
+    .flow-line-3 {
+        bottom: 30%;
+        left: 0;
+        width: 30%;
+        animation-delay: 4s;
+    }
+    
+    @keyframes flowPulse {
+        0%, 100% {
+            opacity: 0.1;
+            transform: scaleX(1);
+        }
+        50% {
+            opacity: 0.3;
+            transform: scaleX(1.02);
+        }
+    }
+    
+
+    
+    /* Hero Content */
+    .guidance-hero-content {
+        position: relative;
+        z-index: 15;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    .guidance-hero-title {
+        font-size: 4rem;
+        font-weight: 700;
+        color: #f1f5f9;
+        margin-bottom: 30px;
+        line-height: 1.1;
+    }
+    
+    .guidance-highlight {
+        color: #10b981;
+        text-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+        animation: guidancePulse 3s ease-in-out infinite;
+    }
+    
+    @keyframes guidancePulse {
+        0%, 100% { 
+            text-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+        }
+        50% { 
+            text-shadow: 0 0 30px rgba(16, 185, 129, 0.8), 0 0 40px rgba(16, 185, 129, 0.4);
+        }
+    }
+    
+    .guidance-hero-subtitle {
+        font-size: 1.3rem;
+        color: #cbd5e1;
+        max-width: 700px;
+        margin: 0 auto 50px;
+        line-height: 1.6;
+    }
+    
+    /* See More Button */
+    .guidance-see-more {
+        margin-bottom: 50px;
+    }
+
+    .btn-see-more {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        height: 80px;
+        background: rgba(255, 255, 255, 0.9);
+        border: 3px solid rgba(255, 255, 255, 0.9);
+        border-radius: 50%;
+        text-decoration: none;
+        transition: all 0.4s ease;
+        cursor: pointer;
+        position: relative;
+        backdrop-filter: blur(10px);
+    }
+
+    .btn-see-more:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 35px rgba(16, 185, 129, 0.3);
+        background: rgba(255, 255, 255, 1);
+        border-color: rgba(255, 255, 255, 1);
+        text-decoration: none;
+    }
+
+    .chevron-double {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: -4px;
+    }
+
+    .chevron-1,
+    .chevron-2 {
+        color: #1e293b;
+        font-size: 16px;
+        transition: transform 0.3s ease;
+        animation: bounce-chevrons 2s ease-in-out infinite;
+    }
+
+    .chevron-2 {
+        margin-top: -8px;
+        animation-delay: 0.1s;
+    }
+
+    .btn-see-more:hover .chevron-1,
+    .btn-see-more:hover .chevron-2 {
+        transform: translateY(2px);
+    }
+
+    @keyframes bounce-chevrons {
+        0%, 100% {
+            transform: translateY(0);
+            opacity: 0.8;
+        }
+        50% {
+            transform: translateY(4px);
+            opacity: 1;
+        }
+    }
+
+    /* Animation classes */
+    .animate-fadeInUp {
+        animation: fadeInUp 1s ease-out;
+        opacity: 0;
+        animation-fill-mode: forwards;
+    }
+
+    .delay-1 {
+        animation-delay: 0.2s;
+        opacity: 0;
+        animation-fill-mode: forwards;
+    }
+
+    .delay-2 {
+        animation-delay: 0.4s;
+        opacity: 0;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .guidance-hero-title {
+            font-size: 2.5rem;
+        }
+        
+        .guidance-hero-subtitle {
+            font-size: 1.1rem;
+        }
+        
+        .guidance-logo-watermark {
+            width: 250px;
+        }
+        
+        .btn-see-more {
+            width: 60px;
+            height: 60px;
+        }
+        
+        .chevron-1,
+        .chevron-2 {
+            font-size: 14px;
+        }
+        
+        /* Adjust code blocks for mobile */
+        .code-block {
+            font-size: 10px;
+            padding: 8px 12px;
+        }
+        
+        .code-snippet {
+            width: 350px;
+        }
+        
+        /* Adjusted animations on mobile */
+        .code-snippet[data-direction="left-to-right"] {
+            animation: scrollLeftToRight 35s linear;
+        }
+        
+        .code-snippet[data-direction="right-to-left"] {
+            animation: scrollRightToLeft 40s linear;
+        }
+        
+        /* Adjust logo mask for mobile */
+        .code-editor-background {
+            mask: radial-gradient(circle at 50% 50%, transparent 150px, rgba(0,0,0,0.2) 200px, rgba(0,0,0,0.5) 250px, rgba(0,0,0,0.8) 300px, black 350px);
+            -webkit-mask: radial-gradient(circle at 50% 50%, transparent 150px, rgba(0,0,0,0.2) 200px, rgba(0,0,0,0.5) 250px, rgba(0,0,0,0.8) 300px, black 350px);
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .guidance-hero-title {
+            font-size: 2rem;
+        }
+        
+        .guidance-hero-subtitle {
+            font-size: 1rem;
+        }
+        
+        .guidance-logo-watermark {
+            width: 250px;
+        }
+        
+        /* Further adjust code blocks for small screens */
+        .code-block {
+            font-size: 9px;
+            padding: 6px 10px;
+            filter: blur(4px);
+        }
+        
+        .code-snippet {
+            width: 250px;
+        }
+        
+        .flow-line {
+            opacity: 0.4;
+        }
+        
+        /* Further adjust logo mask for small mobile */
+        .code-editor-background {
+            mask: radial-gradient(circle at 50% 50%, transparent 120px, rgba(0,0,0,0.3) 160px, rgba(0,0,0,0.6) 200px, rgba(0,0,0,0.8) 240px, black 280px);
+            -webkit-mask: radial-gradient(circle at 50% 50%, transparent 120px, rgba(0,0,0,0.3) 160px, rgba(0,0,0,0.6) 200px, rgba(0,0,0,0.8) 240px, black 280px);
+        }
+    }
+
+    .floating-particles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 4;
+    }
+    .particle {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: #10b981;
+        border-radius: 50%;
+        animation: float-particle 6s ease-in-out infinite;
+        opacity: 0.7;
+    }
+    @keyframes float-particle {
+        0%, 100% {
+            transform: translateY(0px) rotate(0deg);
+            opacity: 0.5;
+        }
+        50% {
+            transform: translateY(-20px) rotate(180deg);
+            opacity: 1;
+        }
+    }
+
+    .guidance-logo-watermark:hover {
+        filter: invert(1) brightness(1.5) drop-shadow(0 0 32px #10b981) drop-shadow(0 0 64px #10b981);
+        box-shadow: 0 0 40px 10px #10b981;
+        opacity: 0.22;
+        transition: filter 0.3s, box-shadow 0.3s, opacity 0.3s;
+    }
+</style>
+
+<script>
+// Intelligent code snippet queuing system - only one snippet per row at a time
+document.addEventListener('DOMContentLoaded', function() {
+    // Define snippet groups for each row
+    const snippetRows = {
+        1: [
+            document.querySelector('.row-1-snippet-1'),
+            document.querySelector('.row-1-snippet-2')
+        ],
+        2: [
+            document.querySelector('.row-2-snippet-1'),
+            document.querySelector('.row-2-snippet-2')
+        ],
+        3: [
+            document.querySelector('.row-3-snippet-1'),
+            document.querySelector('.row-3-snippet-2')
+        ]
+    };
+
+    // Track current snippet index for each row
+    const currentIndex = { 1: 0, 2: 0, 3: 0 };
+
+    // Continuous animation system - always visible code
+    function startContinuousAnimation(rowNum) {
+        const snippets = snippetRows[rowNum];
+        if (!snippets || snippets.length === 0) return;
+        
+        function animateNextSnippet() {
+            const snippet = snippets[currentIndex[rowNum]];
+            if (!snippet) return;
+            
+            // Show and start animation
+            snippet.style.display = 'block';
+            snippet.style.opacity = '0.6';
+            
+            // Get animation direction and duration
+            const direction = snippet.getAttribute('data-direction');
+            const isMobile = window.innerWidth <= 768;
+            let animationDuration;
+            
+            if (direction === 'left-to-right') {
+                snippet.style.transform = 'translateX(-100vw)';
+                animationDuration = isMobile ? 35000 : 30000;
+                snippet.style.animation = isMobile ? 
+                    'scrollLeftToRight 35s linear' : 
+                    'scrollLeftToRight 30s linear';
+            } else {
+                snippet.style.transform = 'translateX(100vw)';
+                animationDuration = isMobile ? 40000 : 35000;
+                snippet.style.animation = isMobile ? 
+                    'scrollRightToLeft 40s linear' : 
+                    'scrollRightToLeft 35s linear';
+            }
+            
+            // Schedule next snippet to start when current is 80% complete (overlapping)
+            const overlapTime = animationDuration * 0.8; // Start next when 80% done
+            setTimeout(() => {
+                // Move to next snippet for the next cycle
+                currentIndex[rowNum] = (currentIndex[rowNum] + 1) % snippets.length;
+                animateNextSnippet(); // Start next snippet
+            }, overlapTime);
+            
+            // Clean up current snippet when it's fully done
+            setTimeout(() => {
+                snippet.style.display = 'none';
+                snippet.style.animation = '';
+                snippet.style.transform = '';
+                snippet.style.opacity = '0';
+            }, animationDuration + 100);
+        }
+        
+        // Start the continuous cycle
+        animateNextSnippet();
+    }
+
+    // Initialize continuous animations immediately with minimal stagger
+    setTimeout(() => startContinuousAnimation(1), 0);     // Row 1: immediate
+    setTimeout(() => startContinuousAnimation(2), 100);   // Row 2: 0.1 seconds  
+    setTimeout(() => startContinuousAnimation(3), 200);   // Row 3: 0.2 seconds
+
+    // Smooth scroll functionality for the "See More" button
+    const seeMoreButton = document.querySelector('.btn-see-more');
+    
+    if (seeMoreButton) {
+        seeMoreButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector('#guidance');
+            if (target) {
+                target.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    }
+});
+</script> 
