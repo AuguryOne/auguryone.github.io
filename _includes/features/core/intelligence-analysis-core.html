@@ -1,0 +1,60 @@
+<!-- Root-cause Analysis Core Content -->
+<div class="feature-content">
+    <h3>Root-cause Analysis and Detection Guidance</h3>
+    <p>Each advisory includes detailed technical analysis and guidance, allowing customers to properly assess, mitigate, and remediate impact.</p>
+</div>
+<div class="feature-animation">
+    <svg class="analysis-svg" viewBox="0 0 660 520" xmlns="http://www.w3.org/2000/svg">
+        <!-- Analysis Container -->
+        <rect x="0" y="0" width="660" height="520" rx="12" fill="#1e293b" stroke="rgb(147, 197, 253)" stroke-width="3" class="vulnerability-container"/>
+        
+        <!-- Vulnerability Details -->
+        <g class="vuln-details">
+            <!-- Vulnerability Title -->
+            <text x="30" y="40" font-family="system-ui" font-size="14" fill="#f1f5f9" font-weight="600">Remote code injection in Log4j</text>
+            
+            <!-- Severity and Impact Ratings -->
+            <text x="30" y="60" font-family="system-ui" font-size="9" fill="#94a3b8" font-weight="500">SEVERITY</text>
+            <text x="30" y="75" font-family="system-ui" font-size="10" fill="#ef4444" font-weight="600">CRITICAL</text>
+            <text x="120" y="60" font-family="system-ui" font-size="9" fill="#94a3b8" font-weight="500">IMPACT</text>
+            <text x="120" y="75" font-family="system-ui" font-size="10" fill="#ef4444" font-weight="600">CRITICAL</text>
+            <text x="200" y="60" font-family="system-ui" font-size="9" fill="#94a3b8" font-weight="500">CATEGORY</text>
+            <text x="200" y="75" font-family="system-ui" font-size="10" fill="#e2e8f0" font-weight="600">Injection</text>
+            
+            <!-- Description -->
+            <text x="30" y="100" font-family="system-ui" font-size="12" fill="rgb(147, 197, 253)" font-weight="600">Description</text>
+            <text x="30" y="120" font-family="system-ui" font-size="10" fill="#cbd5e1">Log4j's StrSubstitutor.substitute() method processes ${} lookup patterns without validation. The JndiLookup.lookup()</text>
+            <text x="30" y="135" font-family="system-ui" font-size="10" fill="#cbd5e1">method directly passes user input to context.lookup() with no sanitization, enabling remote code execution through</text>
+            <text x="30" y="150" font-family="system-ui" font-size="10" fill="#cbd5e1">malicious JNDI references.</text>
+            
+            <!-- Vulnerable Code Block -->
+            <rect x="30" y="165" width="600" height="55" rx="6" fill="#0c1420" stroke="#334155" stroke-width="1"/>
+            <text x="45" y="185" font-family="Monaco, monospace" font-size="10" fill="#e2e8f0">public String lookup(LogEvent event, String key) {</text>
+            <text x="65" y="200" font-family="Monaco, monospace" font-size="10" fill="#e2e8f0">return context.lookup(key);</text>
+            <text x="45" y="215" font-family="Monaco, monospace" font-size="10" fill="#e2e8f0">}</text>
+            
+            <!-- Detection Methods -->
+            <text x="30" y="245" font-family="system-ui" font-size="12" fill="rgb(147, 197, 253)" font-weight="600">Detection</text>
+            
+            <!-- Detection 1: File System Search -->
+            <text x="30" y="265" font-family="system-ui" font-size="10" fill="#f1f5f9" font-weight="600">File System Detection</text>
+            <text x="30" y="280" font-family="system-ui" font-size="9" fill="#cbd5e1">Search for Log4j JAR files containing vulnerable JndiLookup class</text>
+            <rect x="30" y="290" width="600" height="25" rx="4" fill="#0c1420" stroke="#334155" stroke-width="1"/>
+            <text x="45" y="305" font-family="Monaco, monospace" font-size="9" fill="#22c55e">find . -name "*.jar" -exec grep -l "JndiLookup.class" {} \;</text>
+            
+            <!-- Detection 2: Log Analysis -->
+            <text x="30" y="330" font-family="system-ui" font-size="10" fill="#f1f5f9" font-weight="600">Log Analysis</text>
+            <text x="30" y="345" font-family="system-ui" font-size="9" fill="#cbd5e1">Look for JNDI lookup patterns indicating exploitation attempts</text>
+            <rect x="30" y="355" width="600" height="25" rx="4" fill="#0c1420" stroke="#334155" stroke-width="1"/>
+            <text x="45" y="370" font-family="Monaco, monospace" font-size="9" fill="#22c55e">grep -r "\${jndi:" /var/log/ --include="*.log"</text>
+            
+            <!-- Mitigation -->
+            <text x="30" y="400" font-family="system-ui" font-size="12" fill="rgb(147, 197, 253)" font-weight="600">Mitigation</text>
+            <text x="30" y="420" font-family="system-ui" font-size="10" fill="#cbd5e1">Set -Dlog4j2.formatMsgNoLookups=true or remove JndiLookup.class</text>
+            
+            <!-- Remediation -->
+            <text x="30" y="450" font-family="system-ui" font-size="12" fill="rgb(147, 197, 253)" font-weight="600">Remediation</text>
+            <text x="30" y="470" font-family="system-ui" font-size="10" fill="#cbd5e1">Upgrade to Log4j 2.17.1+ (Java 8) or 2.12.4+ (Java 7)</text>
+        </g>
+    </svg>
+</div> 
