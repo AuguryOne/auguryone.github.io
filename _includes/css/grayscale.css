@@ -140,7 +140,10 @@ a:focus {
 
 .navbar-custom a {
     color: rgba(255,255,255,0.9);
-    font-weight: 500;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     transition: color 0.4s ease;
 }
 
@@ -148,14 +151,10 @@ a:focus {
     outline: none;
 }
 
-.navbar-custom .nav li a {
-    transition: color 0.3s ease;
-}
-
 .navbar-custom .nav li a:hover,
 .navbar-custom .nav li a:focus {
-    outline: 0;
     color: rgb(147, 197, 253);
+    background: transparent !important;
 }
 
 .navbar-custom .nav li a.active {
