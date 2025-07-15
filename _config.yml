@@ -14,15 +14,15 @@ sections:
     description: >
               Augury One is a boutique software security firm specializing in Guidance, Intelligence, and Response with a goal of enabling organizations to deliver safe software.
     list:
-      - title: "Guidance"
+      - title: "Augury One - Guidance"
         description: >
           On-demand code review embeds expert security engineers into the software development lifecycle, supporting engagements initiated directly within GitHub. By partnering directly with software engineers, Augury One security engineers proactively find, triage, and advise on mitigation and remediation of the vulnerabilities in software as it’s developed.
         icon: code-fork
-      - title: "Intelligence"
+      - title: "Augury One - Intelligence"
         description: >
           Software vulnerability intelligence enhances vulnerability management capabilities by turning identifiable disclosures into advisories. Augury One eliminates the need to spend time gathering intelligence and performing technical analysis through timely curated advisories, enriched with detailed root cause analysis, mitigations, remediations, and community knowledge.
         icon: shield
-      - title: "Response"
+      - title: "Augury One - Response"
         description: >
           When a vulnerability in an organization's software is suspected or known to be exploited, Augury One will be there. We offer timely and direct support for core incident response activities, accelerating and ensuring the path to resolution is correct and complete through vulnerability identification and resolution verification.
         icon: life-buoy

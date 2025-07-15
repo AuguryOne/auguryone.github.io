@@ -1,8 +1,25 @@
 <section id="intelligence" class="content-section intelligence-background">
     <div class="container">        
         <div class="intelligence-features-container">
+            <!-- Headline Section 1 -->
+            <div class="intelligence-headline-section">
+                <div class="headline-content">
+                    <h2>Stay ahead of emerging vulnerabilities with curated intelligence</h2>
+                    <p>Get comprehensive security advisories and analysis from our team of researchers, providing deep technical insights and actionable guidance to protect your systems.</p>
+                </div>
+            </div>
+            
             {% include features/intelligence-advisories.html %}
             {% include features/intelligence-analysis.html %}
+            
+            <!-- Headline Section 2 -->
+            <div class="intelligence-headline-section mobile-margin">
+                <div class="headline-content">
+                    <h2>Join an intelligence-sharing community</h2>
+                    <p>Subscribe to notifications for changes to advisories, and participate in discussions with security researchers and organizations worldwide, leveraging collective expertise to better understand and respond to security challenges.</p>
+                </div>
+            </div>
+            
             {% include features/intelligence-discussions.html %}
             {% include features/intelligence-updates.html %}
         </div>
@@ -10,6 +27,114 @@
 </section>
 
 <style>
+    /* Headline Section Styles */
+    .intelligence-headline-section {
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+        background: linear-gradient(135deg, rgba(147, 197, 253, 0.1) 0%, rgba(15, 23, 42, 0.95) 100%);
+        border-top: 1px solid rgba(147, 197, 253, 0.2);
+        border-bottom: 1px solid rgba(147, 197, 253, 0.2);
+        padding: 4rem 0;
+        margin-bottom: 3rem;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .intelligence-headline-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(90deg, 
+            transparent 0%, 
+            rgba(147, 197, 253, 0.05) 25%, 
+            rgba(147, 197, 253, 0.1) 50%, 
+            rgba(147, 197, 253, 0.05) 75%, 
+            transparent 100%);
+        animation: headlineShimmer 3s ease-in-out infinite;
+    }
+    
+    @keyframes headlineShimmer {
+        0%, 100% { transform: translateX(-100%); }
+        50% { transform: translateX(100%); }
+    }
+    
+    .headline-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+    }
+    
+    .headline-content h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #f1f5f9;
+        margin-bottom: 1rem;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        letter-spacing: -0.02em;
+    }
+    
+    .headline-content p {
+        font-size: 1.25rem;
+        color: #cbd5e1;
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+    
+    /* Responsive adjustments for headline sections */
+    @media (max-width: 768px) {
+        .intelligence-headline-section {
+            padding: 3rem 0;
+            margin-bottom: 2rem;
+        }
+        
+        .headline-content {
+            padding: 0 1rem;
+        }
+        
+        .headline-content h2 {
+            font-size: 2rem;
+        }
+        
+        .headline-content p {
+            font-size: 1.125rem;
+        }
+        .intelligence-headline-section.mobile-margin {
+            margin-top: 2rem;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .intelligence-headline-section {
+            padding: 2.5rem 0;
+        }
+        
+        .headline-content h2 {
+            font-size: 1.75rem;
+        }
+        
+        .headline-content p {
+            font-size: 1rem;
+        }
+    }
+
+    /* Remove top padding above the first headline section on the intelligence page */
+    .intelligence-background {
+        padding-top: 0 !important;
+    }
+    /* Remove top padding from the intelligence feature container */
+    .intelligence-features-container {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
     /* Scroll-triggered animation styles */
     .scroll-animate {
         opacity: 0;

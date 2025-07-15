@@ -1,22 +1,22 @@
 <header class="response-hero">
     <div class="response-hero-background">
         <div class="response-grid">
-            <div class="grid-line vertical" style="left: 25%"></div>
-            <div class="grid-line vertical" style="left: 50%"></div>
-            <div class="grid-line vertical" style="left: 75%"></div>
-            <div class="grid-line horizontal" style="top: 33%"></div>
-            <div class="grid-line horizontal" style="top: 66%"></div>
+            <div class="grid-line vertical grid-line-25"></div>
+            <div class="grid-line vertical grid-line-50"></div>
+            <div class="grid-line vertical grid-line-75"></div>
+            <div class="grid-line horizontal grid-line-top-33"></div>
+            <div class="grid-line horizontal grid-line-top-66"></div>
         </div>
         <div class="pulse-rings">
-            <div class="pulse-ring" style="top: 40%; left: 30%; animation-delay: 0s"></div>
-            <div class="pulse-ring" style="top: 60%; left: 70%; animation-delay: 1.5s"></div>
+            <div class="pulse-ring pulse-ring-1"></div>
+            <div class="pulse-ring pulse-ring-2"></div>
         </div>
         <div class="floating-particles">
-            <div class="particle" style="top: 15%; left: 12%; animation-delay: 0s"></div>
-            <div class="particle" style="top: 25%; right: 18%; animation-delay: 1.2s"></div>
-            <div class="particle" style="bottom: 22%; left: 22%; animation-delay: 2.1s"></div>
-            <div class="particle" style="bottom: 18%; right: 28%; animation-delay: 0.7s"></div>
-            <div class="particle" style="top: 62%; right: 10%; animation-delay: 2.7s"></div>
+            <div class="particle particle-response-1"></div>
+            <div class="particle particle-response-2"></div>
+            <div class="particle particle-response-3"></div>
+            <div class="particle particle-response-4"></div>
+            <div class="particle particle-response-5"></div>
         </div>
     </div>
     <div class="response-hero-content">
@@ -28,7 +28,7 @@
                         <span class="response-highlight">Response</span>
                     </h1>
                     <p class="response-hero-subtitle animate-fadeInUp delay-1">
-                        Rapid, expert-driven incident response and remediation for critical vulnerabilities and breaches.
+                        Rapid, expert-driven vulnerability response and remediation.
                     </p>
                     <div class="response-see-more animate-fadeInUp delay-2">
                         <a href="#response" class="btn-see-more page-scroll">
@@ -47,129 +47,4 @@
     </div>
 </header>
 
-<style>
-.response-hero {
-    position: relative;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 120px 0 80px;
-}
-.response-hero-background {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    opacity: 0.22;
-    z-index: 1;
-}
-.response-grid {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-}
-.grid-line {
-    position: absolute;
-    background: linear-gradient(90deg, transparent, #ff3b3b, transparent);
-    opacity: 0.55;
-    box-shadow: 0 0 12px 2px #ef4444aa;
-}
-.grid-line.vertical {
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(180deg, transparent, #ff3b3b, transparent);
-}
-.grid-line.horizontal {
-    width: 100%; height: 2px;
-}
-.pulse-rings {
-    position: absolute; width: 100%; height: 100%; top: 0; left: 0;
-    pointer-events: none;
-}
-.pulse-ring {
-    position: absolute;
-    width: 160px; height: 160px;
-    border-radius: 50%;
-    border: 3px solid #ff3b3b;
-    opacity: 0.32;
-    box-shadow: 0 0 32px 8px #ef4444aa;
-    animation: pulse-ring 3.5s cubic-bezier(0.4,0,0.2,1) infinite;
-}
-@keyframes pulse-ring {
-    0% { transform: scale(0.7); opacity: 0.32; }
-    60% { opacity: 0.5; }
-    100% { transform: scale(1.7); opacity: 0; }
-}
-.floating-particles {
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 2;
-}
-.particle {
-    position: absolute; width: 8px; height: 8px; background: #ff3b3b; border-radius: 50%; animation: float-particle 6s ease-in-out infinite; opacity: 0.85; box-shadow: 0 0 8px 2px #ef4444aa;
-}
-@keyframes float-particle {
-    0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.5; }
-    50% { transform: translateY(-20px) rotate(180deg); opacity: 1; }
-}
-.response-hero-content {
-    position: relative; z-index: 10; width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px;
-}
-.response-hero-title {
-    font-size: 4rem; font-weight: 700; color: #f1f5f9; margin-bottom: 30px; line-height: 1.1;
-}
-.response-highlight {
-    color: #ef4444;
-    text-shadow: 0 0 20px rgba(239, 68, 68, 0.5);
-    animation: responsePulse 3s ease-in-out infinite;
-}
-@keyframes responsePulse {
-    0%, 100% { text-shadow: 0 0 20px rgba(239, 68, 68, 0.5); }
-    50% { text-shadow: 0 0 30px rgba(239, 68, 68, 0.8), 0 0 40px rgba(239, 68, 68, 0.4); }
-}
-.response-hero-subtitle {
-    font-size: 1.3rem; color: #cbd5e1; max-width: 700px; margin: 0 auto 50px; line-height: 1.6;
-}
-.response-see-more { margin-bottom: 50px; }
-.btn-see-more {
-    display: inline-flex; align-items: center; justify-content: center; width: 80px; height: 80px; background: rgba(255,255,255,0.9); border: 3px solid rgba(255,255,255,0.9); border-radius: 50%; text-decoration: none; transition: all 0.4s ease; cursor: pointer; position: relative; backdrop-filter: blur(10px);
-}
-.btn-see-more:hover {
-    transform: translateY(-3px); box-shadow: 0 12px 35px rgba(239,68,68,0.3); background: rgba(255,255,255,1); border-color: rgba(255,255,255,1); text-decoration: none;
-}
-.chevron-double { display: flex; flex-direction: column; align-items: center; gap: -4px; }
-.chevron-1, .chevron-2 {
-    color: #1e293b; font-size: 16px; transition: transform 0.3s ease; animation: bounce-chevrons 2s ease-in-out infinite;
-}
-.chevron-2 { margin-top: -8px; animation-delay: 0.1s; }
-.btn-see-more:hover .chevron-1, .btn-see-more:hover .chevron-2 { transform: translateY(2px); }
-@keyframes bounce-chevrons {
-    0%, 100% { transform: translateY(0); opacity: 0.8; }
-    50% { transform: translateY(4px); opacity: 1; }
-}
-.response-hero-logo-bg {
-    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1; opacity: 0.15; pointer-events: none;
-}
-.response-logo-watermark {
-    width: 400px;
-    height: auto;
-    filter: invert(1) brightness(1.5);
-    /* animation: subtle-float 8s ease-in-out infinite; */
-}
-.response-logo-watermark:hover {
-    filter: invert(1) brightness(1.5) drop-shadow(0 0 32px #ef4444) drop-shadow(0 0 64px #ef4444);
-    box-shadow: 0 0 40px 10px #ef4444;
-    opacity: 0.22;
-    transition: filter 0.3s, box-shadow 0.3s, opacity 0.3s;
-}
-@media (max-width: 768px) {
-    .response-hero-title { font-size: 2.5rem; }
-    .response-hero-subtitle { font-size: 1.1rem; }
-    .response-logo-watermark { width: 250px; }
-    .btn-see-more { width: 60px; height: 60px; }
-    .chevron-1, .chevron-2 { font-size: 14px; }
-}
-@media (max-width: 480px) {
-    .response-hero-title { font-size: 2rem; }
-    .response-hero-subtitle { font-size: 1rem; }
-    .response-logo-watermark { width: 180px; }
-}
-</style> 
+ 
