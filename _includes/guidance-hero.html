@@ -6,11 +6,11 @@
         </div>
         <!-- Floating Particles -->
         <div class="floating-particles">
-            <div class="particle" style="top: 12%; left: 14%; animation-delay: 0s"></div>
-            <div class="particle" style="top: 22%; right: 18%; animation-delay: 1.5s"></div>
-            <div class="particle" style="bottom: 28%; left: 24%; animation-delay: 3s"></div>
-            <div class="particle" style="bottom: 18%; right: 28%; animation-delay: 0.7s"></div>
-            <div class="particle" style="top: 62%; right: 12%; animation-delay: 2.2s"></div>
+            <div class="particle particle-1-alt"></div>
+            <div class="particle particle-2-alt"></div>
+            <div class="particle particle-3-alt"></div>
+            <div class="particle particle-4-alt"></div>
+            <div class="particle particle-5-alt"></div>
         </div>
         
         <!-- Code Editor Background -->
@@ -18,7 +18,7 @@
             <!-- Row 1: Top Row Code Snippets (Left to Right) -->
             <div class="code-row-1">
                 <!-- Django SQL Injection -->
-                <div class="code-block code-snippet row-1-snippet-1" data-direction="left-to-right" style="display: none;">
+                <div class="code-block code-snippet row-1-snippet-1 code-snippet-hidden" data-direction="left-to-right">
                     <div class="code-line">
                         <span class="code-keyword">from</span> <span class="code-variable">django</span><span class="code-punctuation">.</span><span class="code-variable">shortcuts</span> <span class="code-keyword">import</span> <span class="code-function">render</span><span class="code-punctuation">,</span> <span class="code-function">redirect</span>
                     </div>
@@ -56,7 +56,7 @@
                 </div>
 
                 <!-- Java Deserialization -->
-                <div class="code-block code-snippet row-1-snippet-2" data-direction="left-to-right" style="display: none;">
+                <div class="code-block code-snippet row-1-snippet-2 code-snippet-hidden" data-direction="left-to-right">
                     <div class="code-line">
                         <span class="code-keyword">package</span> <span class="code-variable">com</span><span class="code-punctuation">.</span><span class="code-variable">example</span><span class="code-punctuation">.</span><span class="code-variable">api</span><span class="code-punctuation">.</span><span class="code-variable">controller</span><span class="code-punctuation">;</span>
                     </div>
@@ -101,7 +101,7 @@
             <!-- Row 2: Middle Row Code Snippets (Right to Left) -->
             <div class="code-row-2">
                 <!-- Node.js Path Traversal -->
-                <div class="code-block code-snippet row-2-snippet-1" data-direction="right-to-left" style="display: none;">
+                <div class="code-block code-snippet row-2-snippet-1 code-snippet-hidden" data-direction="right-to-left">
                     <div class="code-line">
                         <span class="code-keyword">const</span> <span class="code-variable">express</span> <span class="code-operator">=</span> <span class="code-function">require</span><span class="code-punctuation">(</span><span class="code-string">'express'</span><span class="code-punctuation">);</span>
                     </div>
@@ -142,7 +142,7 @@
                 </div>
 
                 <!-- Go Authorization Bypass -->
-                <div class="code-block code-snippet row-2-snippet-2" data-direction="right-to-left" style="display: none;">
+                <div class="code-block code-snippet row-2-snippet-2 code-snippet-hidden" data-direction="right-to-left">
                     <div class="code-line">
                         <span class="code-keyword">package</span> <span class="code-variable">main</span>
                     </div>
@@ -181,7 +181,7 @@
             <!-- Row 3: Bottom Row Code Snippets (Left to Right) -->
             <div class="code-row-3">
                 <!-- C Buffer Overflow -->
-                <div class="code-block code-snippet row-3-snippet-1" data-direction="left-to-right" style="display: none;">
+                <div class="code-block code-snippet row-3-snippet-1 code-snippet-hidden" data-direction="left-to-right">
                     <div class="code-line">
                         <span class="code-keyword">#include</span> <span class="code-string">&lt;stdio.h&gt;</span>
                     </div>
@@ -220,7 +220,7 @@
                 </div>
 
                 <!-- Python File Upload -->
-                <div class="code-block code-snippet row-3-snippet-2" data-direction="left-to-right" style="display: none;">
+                <div class="code-block code-snippet row-3-snippet-2 code-snippet-hidden" data-direction="left-to-right">
                     <div class="code-line">
                         <span class="code-keyword">from</span> <span class="code-variable">flask</span> <span class="code-keyword">import</span> <span class="code-function">Flask</span><span class="code-punctuation">,</span> <span class="code-function">request</span><span class="code-punctuation">,</span> <span class="code-function">redirect</span>
                     </div>
@@ -280,7 +280,7 @@
                         </h1>
                         
                         <p class="guidance-hero-subtitle animate-fadeInUp delay-1">
-                            Expert security guidance integrated directly into your development workflow
+                            Find, fix, and prevent vulnerabilities before they reach production, not after.
                         </p>
                         
                         <div class="guidance-see-more animate-fadeInUp delay-2">
@@ -335,6 +335,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 2;
+        opacity: 0.15;
         pointer-events: none;
     }
     
@@ -342,7 +343,6 @@
         width: 400px;
         height: auto;
         filter: invert(1) brightness(1.5);
-        opacity: 0.15;
         /* animation: subtle-float 8s ease-in-out infinite; */
     }
     

@@ -2,9 +2,9 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2 style="color: #f1f5f9;">{{ site.sections.contact.title }}</h2>
-                <p style="color: #cbd5e1;">{{ site.sections.contact.description }}</p>
-                <p><a href="mailto:{{ site.sections.contact.email }}" style="color: rgb(147, 197, 253);">{{ site.sections.contact.email }}</a>
+                <h2 class="text-light-gray">{{ site.sections.contact.title }}</h2>
+                <p class="text-medium-gray">{{ site.sections.contact.description }}</p>
+                <p><a href="mailto:{{ site.sections.contact.email }}" class="text-blue-light">{{ site.sections.contact.email }}</a>
                 </p>
                 <ul class="list-inline banner-social-buttons">
                     {% for network in site.sections.contact.social %}
