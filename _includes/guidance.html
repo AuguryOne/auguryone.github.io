@@ -1,10 +1,22 @@
 <section id="guidance" class="content-section guidance-background">
     <div class="container">        
         <div class="guidance-features-container">
+            <!-- Headline Section 0 -->
+            <div class="guidance-headline-section">
+                <div class="headline-content">
+                    <h2>The platform to scale secure outcomes</h2>
+                    <p>We break the mold of traditional software security services to help you ship features, not vulnerabilities.</p>
+                </div>
+            </div>
+            <div class="base-text">
+                <p class="text-left">Augury One provides cost-effective software security guidance, augmenting and supplementing software security capabilities through embedding expert security engineers into the development process. Augury One breaks away from the traditional consultancy model, providing on-demand access to traditional software security services through a single unified platform. Direct integrations with software version control systems allow for engagements to be requested directly through code repository issues, pull requests, or the Augury One platform.</p>
+                <p class="text-left">Whether engineers need implementation guidance when developing new features, or stakeholders are requiring secure code review before new features are deployed to production, Augury One can support engagements of all sizes to help ensure vulnerable code doesn’t make it to production.</p>
+            </div>
+
             <!-- Capabilities Section -->
             <div class="guidance-capabilities-section">
                 <div class="capabilities-content">
-                    <h2>Services designed for diverse stakeholder needs</h2>
+                    <h2>Designed for the needs of your entire organization</h2>
                     
                     <!-- Pill Selector -->
                     <div class="capabilities-selector">
@@ -16,7 +28,7 @@
                     <!-- Content Panels -->
                     <div class="capabilities-panels">
                         <div class="capabilities-panel active" data-panel="developers">
-                            <h3>Let engineers ship safely</h3>
+                            <h3>Ship code you can count on</h3>
                             <p>Whether they're building features, fixing bugs, or refactoring, engineers can access on-demand security expertise within days, not weeks.</p>
                             <div class="features-grid">
                                  <div class="feature-column">
@@ -55,14 +67,14 @@
                         </div>
                         
                         <div class="capabilities-panel" data-panel="security">
-                            <h3>Scale beyond the busy work</h3>
+                            <h3>Scale security outcomes</h3>
                             <p>Positioned between staff augmentation and supplementation, we fill the gap for organizations without a dedicated software security team, and extend the capabilities of those who do.</p>
                             <div class="features-grid">
                                  <div class="feature-column">
                                      <div class="feature-item">
                                          <span class="feature-bullet">•</span>
                                          <div class="feature-text">
-                                             <h4>Regain autonomy</h4>
+                                             <h4>Proactive code review</h4>
                                              <p>Let us burn down your backlog of code review and implementation guidance requests, so you can focus on critical security initiatives.</p>
                                          </div>
                                      </div>
@@ -78,7 +90,7 @@
                                      <div class="feature-item">
                                          <span class="feature-bullet">•</span>
                                          <div class="feature-text">
-                                             <h4>Strategic oversight</h4>
+                                             <h4>Managed engagements</h4>
                                              <p>We can manage the entire engagement process directly with stakeholders, while you retain final approval authority.</p>
                                          </div>
                                      </div>
@@ -137,8 +149,8 @@
             <!-- Headline Section 1 -->
             <div class="guidance-headline-section">
                 <div class="headline-content">
-                    <h2>Integrated by design</h2>
-                    <p>Engage with expert security engineers from within the Augury One platform or natively within GitHub.</p>
+                    <h2>Built for development velocity</h2>
+                    <p>Engage with expert security engineers from within the Augury One platform and natively within GitHub.</p>
                 </div>
             </div>
             
@@ -148,8 +160,8 @@
             <!-- Headline Section 3 -->
             <div class="guidance-headline-section mobile-margin">
                 <div class="headline-content">
-                    <h2>Ditch the "hurry up and wait"</h2>
-                    <p>Security guidance is continuously delivered as it's prepared, accelerating the software development lifecycle.</p>
+                    <h2>Guidance continuously delivered</h2>
+                    <p>Maintain development momentum with security guidance delivered as soon as it's prepared.</p>
                 </div>
             </div>
             
@@ -159,7 +171,7 @@
             <!-- Pricing and Features Section -->
             <div class="guidance-pricing-section">
                 <div class="pricing-content">
-                    <h2>With pricing that scales with you...</h2>
+                    <h2>Transparent pricing</h2>
                     
                     <!-- Pricing Structure -->
                     <div class="pricing-structure">
@@ -194,7 +206,7 @@
                     
                     <!-- Features Included -->
                     <div class="features-section">
-                        <h3>... and the capabilities you expect</h3>
+                        <h3>With the basics included</h3>
                         <div class="features-grid">
                             <div class="feature-column">
                                 <div class="feature-item">
@@ -264,10 +276,13 @@
         background: linear-gradient(135deg, rgba(147, 197, 253, 0.1) 0%, rgba(15, 23, 42, 0.95) 100%);
         border-top: 1px solid rgba(147, 197, 253, 0.2);
         border-bottom: 1px solid rgba(147, 197, 253, 0.2);
-        padding: 4rem 0;
+        padding: 2rem 0;
         margin-bottom: 3rem;
         position: relative;
         overflow: hidden;
+        display: flex;
+        align-items: center;
+        min-height: 125px;
     }
     
     .guidance-headline-section::before {
@@ -298,6 +313,23 @@
         text-align: center;
         position: relative;
         z-index: 2;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .base-text {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     
     .headline-content h2 {
@@ -313,15 +345,16 @@
         font-size: 1.25rem;
         color: #cbd5e1;
         max-width: 700px;
-        margin: 0 auto;
+        margin: 0 auto 0 auto;
         line-height: 1.6;
     }
     
     /* Responsive adjustments for headline sections */
     @media (max-width: 768px) {
         .guidance-headline-section {
-            padding: 3rem 0;
+            padding: 1.5rem 0;
             margin-bottom: 2rem;
+            min-height: 150px;
         }
         
         .headline-content {
@@ -342,7 +375,8 @@
     
     @media (max-width: 480px) {
         .guidance-headline-section {
-            padding: 2.5rem 0;
+            padding: 1rem 0;
+            min-height: 120px;
         }
         
         .headline-content h2 {
