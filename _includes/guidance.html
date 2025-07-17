@@ -4,19 +4,50 @@
             <!-- Headline Section 0 -->
             <div class="guidance-headline-section">
                 <div class="headline-content">
-                    <h2>The platform to scale secure outcomes</h2>
-                    <p>We break the mold of traditional software security services to help you ship features, not vulnerabilities.</p>
+                    <h2>Secure your software at every stage of development</h2>
+                    <p>Go beyond annual security reviews with on-demand guidance and secure code review.</p>
                 </div>
             </div>
-            <div class="base-text">
-                <p class="text-left">Augury One provides cost-effective software security guidance, augmenting and supplementing software security capabilities through embedding expert security engineers into the development process. Augury One breaks away from the traditional consultancy model, providing on-demand access to traditional software security services through a single unified platform. Direct integrations with software version control systems allow for engagements to be requested directly through code repository issues, pull requests, or the Augury One platform.</p>
-                <p class="text-left">Whether engineers need implementation guidance when developing new features, or stakeholders are requiring secure code review before new features are deployed to production, Augury One can support engagements of all sizes to help ensure vulnerable code doesn’t make it to production.</p>
+            <div class="platform-highlights">
+                <div class="highlights-grid">
+                    <div class="highlight-item">
+                        <div class="highlight-icon">⚡</div>
+                        <div class="highlight-content">
+                            <h4>Ship features, not vulnerabilities</h4>
+                            <span>Embed real security engineers into your development process to find and help fix vulnerabilities before they reach production.</span>
+                        </div>
+                    </div>
+                    
+                    <div class="highlight-item">
+                        <div class="highlight-icon">🔗</div>
+                        <div class="highlight-content">
+                            <h4>Integrated with where you work</h4>
+                            <span>Engage with security engineers directly through GitHub issues, pull requests, or our platform.</span>
+                        </div>
+                    </div>
+                    
+                    <div class="highlight-item">
+                        <div class="highlight-icon">🎯</div>
+                        <div class="highlight-content">
+                            <h4>Engagements scoped with pinpoint precision</h4>
+                            <span>From implementation guidance for a new feature, to comprehensive code review, we support engagements of all sizes.</span>
+                        </div>
+                    </div>
+                    
+                    <div class="highlight-item">
+                        <div class="highlight-icon">🛡️</div>
+                        <div class="highlight-content">
+                            <h4>Remediation regardless of source</h4>
+                            <span>Bring your own tools and existing vulnerabilities and we'll help you triage and remediate them.</span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Capabilities Section -->
             <div class="guidance-capabilities-section">
                 <div class="capabilities-content">
-                    <h2>Designed for the needs of your entire organization</h2>
+                    <h2>Designed for multi-disciplinary needs</h2>
                     
                     <!-- Pill Selector -->
                     <div class="capabilities-selector">
@@ -150,7 +181,7 @@
             <div class="guidance-headline-section">
                 <div class="headline-content">
                     <h2>Built for development velocity</h2>
-                    <p>Engage with expert security engineers from within the Augury One platform and natively within GitHub.</p>
+                    <p>Engage with expert security engineers within the Augury One platform and natively within GitHub.</p>
                 </div>
             </div>
             
@@ -160,8 +191,8 @@
             <!-- Headline Section 3 -->
             <div class="guidance-headline-section mobile-margin">
                 <div class="headline-content">
-                    <h2>Guidance continuously delivered</h2>
-                    <p>Maintain development momentum with security guidance delivered as soon as it's prepared.</p>
+                    <h2>Guidance you can trust</h2>
+                    <p>Go beyond standard security guidance with expert-validated security insights rooted in deep technical analysis.</p>
                 </div>
             </div>
             
@@ -285,26 +316,7 @@
         min-height: 125px;
     }
     
-    .guidance-headline-section::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(90deg, 
-            transparent 0%, 
-            rgba(147, 197, 253, 0.05) 25%, 
-            rgba(147, 197, 253, 0.1) 50%, 
-            rgba(147, 197, 253, 0.05) 75%, 
-            transparent 100%);
-        animation: headlineShimmer 3s ease-in-out infinite;
-    }
-    
-    @keyframes headlineShimmer {
-        0%, 100% { transform: translateX(-100%); }
-        50% { transform: translateX(100%); }
-    }
+
     
     .headline-content {
         max-width: 1200px;
@@ -319,17 +331,101 @@
         justify-content: center;
     }
 
-    .base-text {
-        max-width: 800px;
-        margin: 0 auto;
+    .platform-highlights {
+        max-width: 1200px;
+        margin: 3rem auto;
         padding: 0 2rem;
-        text-align: center;
         position: relative;
         z-index: 2;
-        width: 100%;
+    }
+
+    .highlights-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .highlight-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.25rem;
+        padding: 1.5rem;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(147, 197, 253, 0.15);
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+    }
+
+    .highlight-item:hover {
+        transform: translateY(-2px);
+        border-color: rgba(147, 197, 253, 0.3);
+        box-shadow: 0 8px 32px rgba(147, 197, 253, 0.1);
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .highlight-icon {
+        font-size: 2rem;
+        flex-shrink: 0;
+        margin-top: 0.25rem;
+        filter: grayscale(0.3);
+        transition: filter 0.3s ease;
+    }
+
+    .highlight-item:hover .highlight-icon {
+        filter: grayscale(0);
+    }
+
+    .highlight-content {
+        flex: 1;
+    }
+
+    .highlight-content h4 {
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: #f1f5f9;
+        margin: 0 0 0.5rem 0;
+        line-height: 1.4;
+    }
+
+    .highlight-content span {
+        font-size: 1rem;
+        color: #cbd5e1;
+        line-height: 1.6;
+        display: block;
+    }
+
+    .platform-summary {
+        text-align: center;
+        padding: 2rem;
+        background: linear-gradient(135deg, rgba(147, 197, 253, 0.1) 0%, rgba(147, 197, 253, 0.05) 100%);
+        border: 1px solid rgba(147, 197, 253, 0.2);
+        border-radius: 16px;
+        backdrop-filter: blur(10px);
+    }
+
+    .summary-content {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .summary-label {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #93c5fd;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .summary-text {
+        font-size: 1.25rem;
+        font-weight: 500;
+        color: #f1f5f9;
+        line-height: 1.5;
+        max-width: 600px;
     }
     
     .headline-content h2 {
@@ -371,6 +467,42 @@
         .guidance-headline-section.mobile-margin {
             margin-top: 2rem;
         }
+
+        .platform-highlights {
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .highlights-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .highlight-item {
+            padding: 1.25rem;
+            gap: 1rem;
+        }
+
+        .highlight-icon {
+            font-size: 1.75rem;
+        }
+
+        .highlight-content h4 {
+            font-size: 1rem;
+        }
+
+        .highlight-content span {
+            font-size: 0.95rem;
+        }
+
+        .platform-summary {
+            padding: 1.5rem;
+        }
+
+        .summary-text {
+            font-size: 1.125rem;
+        }
     }
     
     @media (max-width: 480px) {
@@ -384,6 +516,45 @@
         }
         
         .headline-content p {
+            font-size: 1rem;
+        }
+
+        .platform-highlights {
+            margin: 1.5rem auto;
+            padding: 0 0.75rem;
+        }
+
+        .highlights-grid {
+            gap: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight-item {
+            padding: 1rem;
+            gap: 0.875rem;
+        }
+
+        .highlight-icon {
+            font-size: 1.5rem;
+        }
+
+        .highlight-content h4 {
+            font-size: 0.95rem;
+        }
+
+        .highlight-content span {
+            font-size: 0.9rem;
+        }
+
+        .platform-summary {
+            padding: 1.25rem;
+        }
+
+        .summary-label {
+            font-size: 0.875rem;
+        }
+
+        .summary-text {
             font-size: 1rem;
         }
     }
