@@ -31,7 +31,7 @@
                         Rapid, expert-driven vulnerability response and remediation.
                     </p>
                     <div class="response-see-more animate-fadeInUp delay-2">
-                        <a href="#response" class="btn-see-more page-scroll">
+                        <a href="#response" class="btn-see-more">
                             <div class="chevron-double">
                                 <i class="fa fa-chevron-down chevron-1"></i>
                                 <i class="fa fa-chevron-down chevron-2"></i>
@@ -46,5 +46,39 @@
         </div>
     </div>
 </header>
+
+<script>
+// Smooth scroll functionality for the "See More" button
+document.addEventListener('DOMContentLoaded', function() {
+    const seeMoreButton = document.querySelector('.response-see-more .btn-see-more');
+    
+    if (seeMoreButton) {
+        seeMoreButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector('#response');
+            if (target) {
+                // Calculate navbar height with some extra padding
+                const navbar = document.querySelector('.navbar-fixed-top');
+                let navbarHeight = 0;
+                if (navbar) {
+                    navbarHeight = navbar.offsetHeight;
+                }
+                
+                // Add extra offset to ensure title is clearly visible
+                const extraOffset = 20;
+                
+                // Get target position and subtract navbar height plus extra offset
+                const targetPosition = target.offsetTop - navbarHeight - extraOffset;
+                
+                // Smooth scroll to the adjusted position
+                window.scrollTo({
+                    top: Math.max(0, targetPosition), // Ensure we don't scroll to negative position
+                    behavior: 'smooth'
+                });
+            }
+        });
+    }
+});
+</script>
 
  
