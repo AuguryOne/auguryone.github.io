@@ -4,41 +4,53 @@
             <!-- Headline Section 0 -->
             <div class="guidance-headline-section">
                 <div class="headline-content">
-                    <h2>Secure your software at every stage of development</h2>
+                    <h2>Secure your software at <span class="glow-text">every stage of development</span></h2>
                     <p>Go beyond annual security reviews with on-demand guidance and secure code review delivered by expert security engineers.</p>
                 </div>
             </div>
             <div class="platform-highlights">
                 <div class="highlights-grid">
                     <div class="highlight-item">
-                        <div class="highlight-icon">⚡</div>
+                        <div class="highlight-separator"></div>
+                        <div class="highlight-visual">
+                            <div class="visual-element visual-element--lightning"></div>
+                        </div>
                         <div class="highlight-content">
                             <h4>Ship features, not vulnerabilities</h4>
-                            <span>Embed real security engineers into your development process to find and help fix vulnerabilities before they reach production.</span>
+                            <p>Embed real security engineers into your development process to find and help fix vulnerabilities before they reach production.</p>
                         </div>
                     </div>
                     
                     <div class="highlight-item">
-                        <div class="highlight-icon">🔗</div>
+                        <div class="highlight-separator"></div>
+                        <div class="highlight-visual">
+                            <div class="visual-element visual-element--integration"></div>
+                        </div>
                         <div class="highlight-content">
                             <h4>Integrated with where you work</h4>
-                            <span>Engage with security engineers directly through GitHub issues, pull requests, or our platform.</span>
+                            <p>Engage with security engineers directly through GitHub issues, pull requests, or our platform.</p>
                         </div>
                     </div>
                     
                     <div class="highlight-item">
-                        <div class="highlight-icon">🎯</div>
+                        <div class="highlight-separator"></div>
+                        <div class="highlight-visual">
+                            <div class="visual-element visual-element--precision"></div>
+                        </div>
                         <div class="highlight-content">
                             <h4>Engagements scoped with pinpoint precision</h4>
-                            <span>From implementation guidance for a new feature, to comprehensive code review, we support engagements of all sizes.</span>
+                            <p>From implementation guidance for a new feature, to comprehensive code review, we support engagements of all sizes.</p>
                         </div>
                     </div>
                     
                     <div class="highlight-item">
-                        <div class="highlight-icon">🛡️</div>
+                        <div class="highlight-separator"></div>
+                        <div class="highlight-visual">
+                            <div class="visual-element visual-element--security"></div>
+                        </div>
                         <div class="highlight-content">
                             <h4>Remediation regardless of source</h4>
-                            <span>Bring your own tools and existing vulnerabilities and we'll help you triage and remediate them.</span>
+                            <p>Bring your own tools and existing vulnerabilities and we'll help you triage and remediate them.</p>
                         </div>
                     </div>
                 </div>
@@ -59,7 +71,7 @@
                     <!-- Content Panels -->
                     <div class="capabilities-panels">
                         <div class="capabilities-panel active" data-panel="developers">
-                            <h3>Ship code you can count on</h3>
+                            <h3>Accelerate secure development</h3>
                             <p>Whether they're building features, fixing bugs, or refactoring, engineers can access on-demand security expertise within days, not weeks.</p>
                             <div class="features-grid">
                                  <div class="feature-column">
@@ -137,7 +149,7 @@
                         </div>
                         
                         <div class="capabilities-panel" data-panel="legal">
-                            <h3>Deliverables you can trust</h3>
+                            <h3>Deliverables you can depend on</h3>
                             <p>Every engagement provides independent, expert-validated guidance that cuts through internal bias, giving you objective analysis of your actual security posture for confident legal and compliance decisions.</p>
                             <div class="features-grid">
                                  <div class="feature-column">
@@ -180,7 +192,7 @@
             <!-- Headline Section 1 -->
             <div class="guidance-headline-section">
                 <div class="headline-content">
-                    <h2>Built for development velocity</h2>
+                    <h2>Maintain development <span class="glow-text">velocity</span></h2>
                     <p>Engage with expert security engineers within the Augury One platform and natively within GitHub.</p>
                 </div>
             </div>
@@ -191,7 +203,7 @@
             <!-- Headline Section 3 -->
             <div class="guidance-headline-section mobile-margin">
                 <div class="headline-content">
-                    <h2>Guidance you can trust</h2>
+                    <h2><span class="glow-text">Guidance</span> you can trust</h2>
                     <p>Go beyond standard security guidance with expert-validated security insights rooted in deep technical analysis.</p>
                 </div>
             </div>
@@ -237,7 +249,7 @@
                     
                     <!-- Features Included -->
                     <div class="features-section">
-                        <h3>With the basics included</h3>
+                        <h3>With the <span class="glow-text">basics included</span></h3>
                         <div class="features-grid">
                             <div class="feature-column">
                                 <div class="feature-item">
@@ -341,59 +353,266 @@
 
     .highlights-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-        margin-bottom: 2.5rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 3rem 4rem;
+        max-width: 1000px;
+        margin: 0 auto 2rem auto;
+        padding: 2rem 0;
     }
 
     .highlight-item {
+        position: relative;
         display: flex;
         align-items: flex-start;
-        gap: 1.25rem;
-        padding: 1.5rem;
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(147, 197, 253, 0.15);
-        border-radius: 12px;
-        transition: all 0.3s ease;
-        backdrop-filter: blur(10px);
+        gap: 1.5rem;
+        transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+        padding-left: 1rem;
     }
 
     .highlight-item:hover {
         transform: translateY(-2px);
-        border-color: rgba(147, 197, 253, 0.3);
-        box-shadow: 0 8px 32px rgba(147, 197, 253, 0.1);
-        background: rgba(255, 255, 255, 0.05);
     }
 
-    .highlight-icon {
-        font-size: 2rem;
+    .highlight-separator {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: linear-gradient(180deg, 
+            rgba(59, 130, 246, 0.8) 0%, 
+            rgba(147, 197, 253, 0.6) 50%, 
+            rgba(59, 130, 246, 0.8) 100%);
+        border-radius: 2px;
+        transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+
+    .highlight-item:hover .highlight-separator {
+        background: linear-gradient(180deg, 
+            rgba(16, 185, 129, 1) 0%, 
+            rgba(5, 150, 105, 0.8) 50%, 
+            rgba(16, 185, 129, 1) 100%);
+        transform: scaleY(1.05);
+        box-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
+    }
+
+    .highlight-visual {
         flex-shrink: 0;
-        margin-top: 0.25rem;
-        filter: grayscale(0.3);
-        transition: filter 0.3s ease;
+        width: 64px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
     }
 
-    .highlight-item:hover .highlight-icon {
-        filter: grayscale(0);
+    .visual-element {
+        width: 56px;
+        height: 56px;
+        position: relative;
+        transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .visual-element::before,
+    .visual-element::after {
+        content: '';
+        position: absolute;
+        transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+
+    .highlight-item:hover .visual-element {
+        transform: scale(1.1);
+    }
+
+    /* Green hover effects for visual elements */
+    .highlight-item:hover .visual-element--lightning {
+        background: linear-gradient(135deg, rgba(16, 185, 129, 0.25) 0%, rgba(5, 150, 105, 0.15) 100%);
+    }
+
+    .highlight-item:hover .visual-element--lightning::before {
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        box-shadow: 0 4px 16px rgba(16, 185, 129, 0.4);
+    }
+
+    .highlight-item:hover .visual-element--integration {
+        background: linear-gradient(135deg, rgba(5, 150, 105, 0.2) 0%, rgba(4, 120, 87, 0.1) 100%);
+    }
+
+    .highlight-item:hover .visual-element--integration::before {
+        background: linear-gradient(135deg, #059669 0%, #047857 100%);
+        box-shadow: 0 2px 8px rgba(5, 150, 105, 0.4);
+    }
+
+    .highlight-item:hover .visual-element--integration::after {
+        background: linear-gradient(135deg, #059669 0%, #047857 100%);
+        box-shadow: 0 1px 4px rgba(5, 150, 105, 0.5);
+    }
+
+    .highlight-item:hover .visual-element--precision {
+        background: linear-gradient(135deg, rgba(16, 185, 129, 0.25) 0%, rgba(6, 182, 212, 0.15) 100%);
+    }
+
+    .highlight-item:hover .visual-element--precision::before {
+        border-color: #10b981;
+        box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
+    }
+
+    .highlight-item:hover .visual-element--precision::after {
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        box-shadow: 0 1px 4px rgba(16, 185, 129, 0.5);
+    }
+
+    .highlight-item:hover .visual-element--security {
+        background: linear-gradient(135deg, rgba(4, 120, 87, 0.2) 0%, rgba(6, 95, 70, 0.1) 100%);
+    }
+
+    .highlight-item:hover .visual-element--security::before {
+        background: linear-gradient(135deg, #047857 0%, #065f46 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        filter: drop-shadow(0 4px 16px rgba(4, 120, 87, 0.4));
+    }
+
+    /* Lightning Visual */
+    .visual-element--lightning {
+        background: linear-gradient(135deg, rgba(59, 130, 246, 0.25) 0%, rgba(37, 99, 235, 0.15) 100%);
+    }
+
+    .visual-element--lightning::before {
+        width: 22px;
+        height: 28px;
+        background: linear-gradient(135deg, #93c5fd 0%, #60a5fa 100%);
+        clip-path: polygon(40% 0%, 40% 40%, 100% 40%, 60% 100%, 60% 60%, 0% 60%);
+        box-shadow: 0 4px 16px rgba(147, 197, 253, 0.4);
+    }
+
+    /* Integration Visual - Grid/Network Pattern */
+    .visual-element--integration {
+        background: linear-gradient(135deg, rgba(29, 78, 216, 0.2) 0%, rgba(30, 64, 175, 0.1) 100%);
+    }
+
+    .visual-element--integration::before {
+        width: 24px;
+        height: 24px;
+        background: linear-gradient(135deg, #60a5fa 0%, #93c5fd 100%);
+        clip-path: polygon(
+            0% 0%, 20% 0%, 20% 20%, 80% 20%, 80% 0%, 100% 0%,
+            100% 20%, 80% 20%, 80% 80%, 100% 80%, 100% 100%,
+            80% 100%, 80% 80%, 20% 80%, 20% 100%, 0% 100%,
+            0% 80%, 20% 80%, 20% 20%, 0% 20%
+        );
+        box-shadow: 0 2px 8px rgba(96, 165, 250, 0.4);
+    }
+
+    .visual-element--integration::after {
+        width: 8px;
+        height: 8px;
+        background: linear-gradient(135deg, #60a5fa 0%, #93c5fd 100%);
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 1px 4px rgba(96, 165, 250, 0.5);
+    }
+
+    /* Precision Visual */
+    .visual-element--precision {
+        background: linear-gradient(135deg, rgba(147, 197, 253, 0.25) 0%, rgba(96, 165, 250, 0.15) 100%);
+    }
+
+    .visual-element--precision::before {
+        width: 22px;
+        height: 22px;
+        border: 2px solid #93c5fd;
+        border-radius: 50%;
+        background: transparent;
+        box-shadow: 0 2px 8px rgba(147, 197, 253, 0.4);
+    }
+
+    .visual-element--precision::after {
+        width: 7px;
+        height: 7px;
+        background: linear-gradient(135deg, #93c5fd 0%, #60a5fa 100%);
+        border-radius: 50%;
+        box-shadow: 0 1px 4px rgba(147, 197, 253, 0.5);
+    }
+
+    /* Remediation Visual - Font Awesome Wrench */
+    .visual-element--security {
+        background: linear-gradient(135deg, rgba(30, 58, 138, 0.2) 0%, rgba(30, 64, 175, 0.1) 100%);
+    }
+
+    .visual-element--security::before {
+        content: '\f0ad';
+        font-family: 'FontAwesome';
+        font-weight: normal;
+        font-size: 28px;
+        color: #60a5fa;
+        background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        width: auto;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        filter: drop-shadow(0 4px 16px rgba(96, 165, 250, 0.4));
     }
 
     .highlight-content {
         flex: 1;
+        text-align: left;
     }
 
     .highlight-content h4 {
-        font-size: 1.125rem;
-        font-weight: 600;
+        font-size: 1.25rem;
+        font-weight: 700;
         color: #f1f5f9;
-        margin: 0 0 0.5rem 0;
-        line-height: 1.4;
+        margin: 0 0 0.75rem 0;
+        line-height: 1.3;
+        letter-spacing: -0.01em;
+        transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
     }
 
-    .highlight-content span {
-        font-size: 1rem;
-        color: #cbd5e1;
-        line-height: 1.6;
-        display: block;
+    .highlight-item:hover .highlight-content h4 {
+        color: #10b981;
+        text-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+    }
+
+    .highlight-content p {
+        font-size: 1.125rem;
+        color: #e2e8f0;
+        line-height: 1.7;
+        margin: 0;
+        transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+        font-weight: 400;
+    }
+
+        .highlight-item:hover .highlight-content p {
+        color: #e2e8f0;
+    }
+
+    /* Green glow text effect matching hero header */
+    .glow-text {
+        color: #10b981;
+        text-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+        animation: glowPulse 3s ease-in-out infinite;
+    }
+
+    @keyframes glowPulse {
+        0%, 100% { 
+            text-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+        }
+        50% { 
+            text-shadow: 0 0 30px rgba(16, 185, 129, 0.8), 0 0 40px rgba(16, 185, 129, 0.4);
+        }
     }
 
     .platform-summary {
@@ -475,25 +694,35 @@
 
         .highlights-grid {
             grid-template-columns: 1fr;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
+            gap: 2.5rem;
+            padding: 1.5rem 1rem;
+            margin-bottom: 1.5rem;
         }
 
         .highlight-item {
-            padding: 1.25rem;
-            gap: 1rem;
+            gap: 1.25rem;
         }
 
-        .highlight-icon {
-            font-size: 1.75rem;
+        .highlight-visual {
+            width: 56px;
+            height: 56px;
+        }
+
+        .visual-element {
+            width: 48px;
+            height: 48px;
+        }
+
+        .visual-element--security::before {
+            font-size: 24px;
         }
 
         .highlight-content h4 {
-            font-size: 1rem;
+            font-size: 1.125rem;
         }
 
-        .highlight-content span {
-            font-size: 0.95rem;
+        .highlight-content p {
+            font-size: 1.05rem;
         }
 
         .platform-summary {
@@ -525,25 +754,60 @@
         }
 
         .highlights-grid {
-            gap: 1.25rem;
-            margin-bottom: 1.5rem;
+            gap: 2rem;
+            padding: 1.25rem 0.75rem;
+            margin-bottom: 1.25rem;
         }
 
         .highlight-item {
-            padding: 1rem;
-            gap: 0.875rem;
+            gap: 1rem;
         }
 
-        .highlight-icon {
-            font-size: 1.5rem;
+        .highlight-visual {
+            width: 52px;
+            height: 52px;
+        }
+
+        .visual-element {
+            width: 44px;
+            height: 44px;
+        }
+
+        .visual-element--lightning::before {
+            width: 18px;
+            height: 22px;
+        }
+
+        .visual-element--integration::before {
+            width: 20px;
+            height: 20px;
+        }
+
+        .visual-element--integration::after {
+            width: 6px;
+            height: 6px;
+        }
+
+        .visual-element--precision::before {
+            width: 18px;
+            height: 18px;
+        }
+
+        .visual-element--precision::after {
+            width: 6px;
+            height: 6px;
+        }
+
+        .visual-element--security::before {
+            font-size: 20px;
         }
 
         .highlight-content h4 {
-            font-size: 0.95rem;
+            font-size: 1rem;
         }
 
-        .highlight-content span {
-            font-size: 0.9rem;
+        .highlight-content p {
+            font-size: 1rem;
         }
 
         .platform-summary {
@@ -1231,6 +1495,39 @@
     .guidance-features-container {
         margin-top: 0 !important;
         padding-top: 0 !important;
+    }
+
+    /* Header text capitalization and styling enhancements */
+    .guidance-background h2,
+    .guidance-background h3,
+    .guidance-background h4 {
+        text-transform: uppercase;
+        font-weight: 800;
+        letter-spacing: 0.025em;
+    }
+
+    /* Enhanced styling for main headline h2 elements */
+    .guidance-background h2 {
+        font-weight: 900;
+        letter-spacing: -0.01em;
+    }
+
+    /* Enhanced styling for section h3 elements */
+    .guidance-background h3 {
+        font-weight: 700;
+        letter-spacing: 0.02em;
+    }
+
+    /* Enhanced styling for feature h4 elements */
+    .guidance-background h4 {
+        font-weight: 700;
+        letter-spacing: 0.03em;
+    }
+
+    /* Specific adjustments for glow text elements to maintain readability */
+    .guidance-background .glow-text {
+        font-weight: 900;
+        letter-spacing: 0.01em;
     }
 </style>
 
