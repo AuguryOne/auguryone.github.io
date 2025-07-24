@@ -2183,6 +2183,7 @@ body {
     color: #f1f5f9;
     margin-bottom: 30px;
     line-height: 1.1;
+    text-transform: uppercase;
 }
 
 .highlight-text {
@@ -2202,6 +2203,8 @@ body {
     max-width: 700px;
     margin: 0 auto 50px;
     line-height: 1.6;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 .intelligence-see-more {
