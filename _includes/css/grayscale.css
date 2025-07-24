@@ -2187,14 +2187,14 @@ body {
 }
 
 .highlight-text {
-    color: #3b82f6;
-    text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+    color: rgba(147, 197, 253, 1);
+    text-shadow: 0 0 20px rgba(147, 197, 253, 0.3);
     animation: intelligencePulse 3s ease-in-out infinite;
 }
 
 @keyframes intelligencePulse {
-    0%, 100% { text-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
-    50% { text-shadow: 0 0 30px rgba(59, 130, 246, 0.8), 0 0 40px rgba(59, 130, 246, 0.4); }
+    0%, 100% { text-shadow: 0 0 20px rgba(147, 197, 253, 0.3); }
+    50% { text-shadow: 0 0 30px rgba(147, 197, 253, 0.6), 0 0 40px rgba(147, 197, 253, 0.2); }
 }
 
 .intelligence-hero-subtitle {
