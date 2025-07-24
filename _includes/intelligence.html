@@ -976,7 +976,7 @@
     /* Scroll-triggered animation styles */
     .scroll-animate {
         opacity: 0;
-        transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        transition: all 0.4s cubic-bezier(0.2, 0, 0.2, 1);
     }
     
     .scroll-animate.animate-in {
@@ -1022,7 +1022,7 @@
     /* Responsive adjustments */
     @media (max-width: 768px) {
         .scroll-animate {
-            transition: all 0.6s ease-out;
+            transition: all 0.3s ease-out;
         }
         
         .scroll-animate[data-animation="slideInLeft"] {
@@ -1076,15 +1076,15 @@
     document.addEventListener('DOMContentLoaded', function() {
         // Intersection Observer for scroll-triggered animations
         const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+            threshold: 0.05,
+            rootMargin: '0px 0px 100px 0px'
         };
         
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     // Add a slight delay based on position for stagger effect
-                    const delay = Array.from(entry.target.parentElement.children).indexOf(entry.target) * 200;
+                    const delay = Array.from(entry.target.parentElement.children).indexOf(entry.target) * 50;
                     
                     setTimeout(() => {
                         entry.target.classList.add('animate-in');
@@ -1105,7 +1105,7 @@
         // Handle reduced motion preference
         if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
             animateElements.forEach((element) => {
-                element.style.transition = 'opacity 0.3s ease';
+                element.style.transition = 'opacity 0.2s ease';
                 element.style.transform = 'none';
             });
         }
