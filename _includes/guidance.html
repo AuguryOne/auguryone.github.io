@@ -327,6 +327,16 @@
         align-items: center;
         min-height: 125px;
     }
+
+    @media (max-width: 768px) {
+        .guidance-headline-section {
+            width: 100%;
+            margin-left: calc(-50vw + 50%);
+            margin-right: calc(-50vw + 50%);
+            max-width: none;
+            box-sizing: border-box;
+        }
+    }
     
 
     
@@ -837,6 +847,16 @@
          margin-top: 3rem;
          position: relative;
      }
+
+     @media (max-width: 768px) {
+         .guidance-pricing-section {
+             width: 100%;
+             margin-left: calc(-50vw + 50%);
+             margin-right: calc(-50vw + 50%);
+             max-width: none;
+             box-sizing: border-box;
+         }
+     }
      
      .pricing-content {
          max-width: 1200px;
@@ -923,6 +943,8 @@
          font-weight: 700;
          color: #93c5fd;
          line-height: 1;
+         word-break: keep-all;
+         white-space: nowrap;
      }
      
      .pricing-amount .period {
@@ -1080,6 +1102,7 @@
          .pricing-structure {
              flex-direction: column;
              margin-bottom: 3rem;
+             align-items: center;
          }
          
          .pricing-card {
@@ -1227,6 +1250,16 @@
         padding: 5rem 0;
         margin-top: 3rem;
         position: relative;
+    }
+
+    @media (max-width: 768px) {
+        .guidance-capabilities-section {
+            width: 100%;
+            margin-left: calc(-50vw + 50%);
+            margin-right: calc(-50vw + 50%);
+            max-width: none;
+            box-sizing: border-box;
+        }
     }
     
     .capabilities-content {
@@ -1490,7 +1523,51 @@
     /* Remove top padding above the first headline section on the guidance page */
     .guidance-background {
         padding-top: 0 !important;
+        overflow-x: hidden;
+        max-width: 100%;
+        width: 100%;
     }
+
+    .guidance-background * {
+        box-sizing: border-box;
+    }
+
+    /* Override Bootstrap container constraints for guidance page */
+    .guidance-background .container {
+        max-width: none !important;
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* Add proper padding for non-full-width content */
+    .guidance-features-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* Reset padding for full-width sections */
+    .guidance-headline-section,
+    .guidance-pricing-section,
+    .guidance-capabilities-section {
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+        width: 100vw;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    @media (max-width: 768px) {
+        .guidance-features-container {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+
     /* Remove top padding from the guidance feature container */
     .guidance-features-container {
         margin-top: 0 !important;
