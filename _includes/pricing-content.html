@@ -189,8 +189,8 @@
                         <div class="features-grid">
                             <div class="feature-item"><i class="fa fa-check"></i>Billing troubleshooting</div>
                             <div class="feature-item"><i class="fa fa-check"></i>Service inquiries</div>
-                            <div class="feature-item"><i class="fa fa-check"></i>Onboarding assistance</div>
                             <div class="feature-item"><i class="fa fa-check"></i>Platform issues</div>
+                            <div class="feature-item"><i class="fa fa-check"></i>Onboarding assistance</div>
                         </div>
                     </div>
                 </div>
@@ -646,6 +646,9 @@
     grid-template-rows: 1fr 1fr;
     gap: 1rem;
     margin-top: 1.5rem;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .feature-item {
@@ -653,14 +656,16 @@
     font-size: 1.1rem;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    text-align: left;
+    padding: 0 0.5rem;
 }
 
 .feature-item i {
     color: rgb(147, 197, 253);
+    width: 20px;
     margin-right: 0.75rem;
     flex-shrink: 0;
+    text-align: center;
 }
 
 @media (max-width: 991px) {
@@ -754,6 +759,7 @@
     
     .features-grid {
         gap: 0.75rem;
+        max-width: 350px;
     }
     
     .feature-item {
@@ -851,6 +857,7 @@
         grid-template-rows: repeat(4, auto);
         gap: 0.5rem;
         margin-top: 1rem;
+        max-width: 300px;
     }
     
     .feature-item {
