@@ -1,0 +1,187 @@
+.intelligence-capabilities-section {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.intelligence-capabilities-section .capabilities-content {
+    text-align: left;
+}
+
+.intelligence-capabilities-section .capabilities-container {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.intelligence-capabilities-section .capabilities-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 280px;
+    flex-shrink: 0;
+}
+
+
+.intelligence-capabilities-section .capabilities-panels {
+    position: relative;
+    min-height: 250px;
+    flex: 1;
+}
+
+.intelligence-capabilities-section .capabilities-panel {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.intelligence-capabilities-section .capabilities-panel.active {
+    display: block;
+    opacity: 1;
+}
+
+.intelligence-capabilities-section .capabilities-panel h3 {
+    color: #f1f5f9;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: left;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.intelligence-capabilities-section .capabilities-panel > p {
+    color: #cbd5e1;
+    font-size: 1.1rem;
+    text-align: left;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+.intelligence-capabilities-section .tab-item {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(147, 197, 253, 0.2);
+    color: #cbd5e1;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.intelligence-capabilities-section .tab-item:hover {
+    border-color: rgba(147, 197, 253, 0.4);
+    background: rgba(147, 197, 253, 0.05);
+    transform: translateX(2px);
+}
+
+.intelligence-capabilities-section .tab-item.active {
+    background: rgba(147, 197, 253, 0.15);
+    border-color: rgba(147, 197, 253, 0.6);
+    color: #f1f5f9;
+    border-left: 3px solid rgba(147, 197, 253, 1);
+}
+
+.intelligence-capabilities-section .features-section {
+    margin-top: 3rem;
+}
+
+.intelligence-capabilities-section .features-section h3 {
+    color: #f1f5f9;
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    text-transform: uppercase;
+}
+
+.intelligence-capabilities-section .features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.intelligence-capabilities-section .feature-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.intelligence-capabilities-section .feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    text-align: left;
+}
+
+.intelligence-capabilities-section .feature-bullet {
+    color: rgba(147, 197, 253, 1);
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 0.25rem;
+    flex-shrink: 0;
+}
+
+.intelligence-capabilities-section .feature-text h4 {
+    color: #f1f5f9;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    text-transform: uppercase;
+}
+
+.intelligence-capabilities-section .feature-text p {
+    color: #cbd5e1;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .intelligence-capabilities-section .capabilities-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .intelligence-capabilities-section .capabilities-tabs {
+        min-width: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .intelligence-capabilities-section .tab-item {
+        font-size: 0.85rem;
+        padding: 0.75rem 1rem;
+        flex: 1;
+        min-width: 120px;
+    }
+
+    .intelligence-capabilities-section .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .intelligence-capabilities-section .capabilities-panel h3 {
+        font-size: 1.5rem;
+    }
+    .intelligence-capabilities-section .features-section h3 {
+        font-size: 1.5rem;
+    }
+}

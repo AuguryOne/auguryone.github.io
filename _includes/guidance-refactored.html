@@ -1,0 +1,74 @@
+<!-- Refactored Guidance Content using modular components -->
+<section id="guidance" class="content-section guidance-background">
+    <div class="container">        
+        <div class="guidance-features-container">
+            
+            <!-- Headline Section 0 -->
+            {% include components/common/headline-section.html
+               headline="Secure your software at every stage of development"
+               subtext="Go beyond annual security reviews with on-demand guidance and secure code review delivered by expert security engineers."
+               glow_text="every stage of development"
+               section_class="guidance-headline-section"
+            %}
+            
+            <!-- Platform Highlights Grid -->
+            {% assign guidance_highlights = site.data.guidance.highlights %}
+            {% include components/common/grid-2x2.html
+               items=guidance_highlights
+               grid_class="guidance-platform-highlights"
+            %}
+
+            <!-- Tabbed Capabilities Section -->
+            {% include components/sections/guidance/tabbed-capabilities.html %}
+
+            <!-- Headline Section 1 -->
+            {% include components/common/headline-section.html
+               headline="Maintain development velocity"
+               subtext="Engage with expert security engineers within the Augury One platform and natively within GitHub."
+               glow_text="velocity"
+               section_class="guidance-headline-section"
+            %}
+            
+            <!-- Feature Components -->
+            {% include components/features/feature-left.html
+               title="GitHub Integration"
+               description="Seamlessly integrate security reviews into your development workflow with native GitHub integration."
+               svg_include="features/guidance-github-integration.html"
+               feature_class="guidance-github-feature"
+            %}
+            
+            {% include components/features/feature-right.html
+               title="Scoped Reviews"
+               description="Get targeted security reviews precisely scoped to your specific needs and timeline."
+               svg_include="features/guidance-scope-reviews.html"
+               feature_class="guidance-scope-feature"
+            %}
+            
+            <!-- Headline Section 3 -->
+            {% include components/common/headline-section.html
+               headline="Guidance you can trust"
+               subtext="Go beyond standard security guidance with expert-validated security insights rooted in deep technical analysis."
+               glow_text="Guidance"
+               section_class="guidance-headline-section mobile-margin"
+            %}
+            
+            {% include components/features/feature-left.html
+               title="Vulnerability Delivery"
+               description="Receive detailed vulnerability analysis with actionable remediation guidance."
+               svg_include="features/guidance-vulnerability-delivery.html"
+               feature_class="guidance-vulnerability-feature"
+            %}
+            
+            {% include components/features/feature-right.html
+               title="Expert Collaboration"
+               description="Work directly with security engineers to validate and implement secure solutions."
+               svg_include="features/guidance-collaboration.html"
+               feature_class="guidance-collaboration-feature"
+            %}
+            
+            <!-- Pricing Section -->
+            {% include components/sections/guidance/pricing.html %}
+            
+        </div>
+    </div>
+</section> 

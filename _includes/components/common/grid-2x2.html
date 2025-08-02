@@ -1,0 +1,34 @@
+<!-- Parameterized 2x2 highlights grid -->
+<div class="platform-highlights {{ include.grid_class | default: '' }}">
+    <div class="highlights-grid">
+        {% for item in include.items %}
+        <div class="highlight-item">
+            <div class="highlight-separator" style="background-color: {{ item.separator_color | default: '#16a34a' }};"></div>
+            <div class="highlight-visual">
+                <div class="visual-element {{ item.visual_class }}"
+                     style="
+                       border-color: {{ item.icon_border_color | default: '#16a34a' }};
+                       background-color: {{ item.icon_bg_color | default: 'transparent' }};
+                       color: {{ item.icon_color | default: '#16a34a' }};
+                     "
+                     onmouseover="
+                       this.style.borderColor='{{ item.icon_border_hover | default: item.icon_border_color | default: '#16a34a' }}';
+                       this.style.backgroundColor='{{ item.icon_bg_hover | default: item.icon_bg_color | default: 'transparent' }}';
+                       this.style.color='{{ item.icon_color_hover | default: item.icon_color | default: '#16a34a' }}';
+                     "
+                     onmouseout="
+                       this.style.borderColor='{{ item.icon_border_color | default: '#16a34a' }}';
+                       this.style.backgroundColor='{{ item.icon_bg_color | default: 'transparent' }}';
+                       this.style.color='{{ item.icon_color | default: '#16a34a' }}';
+                     ">
+                    <i class="{{ item.icon_class }}"></i>
+                </div>
+            </div>
+            <div class="highlight-content">
+                <h4>{{ item.title }}</h4>
+                <p>{{ item.description }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div> 

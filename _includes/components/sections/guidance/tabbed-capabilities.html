@@ -1,0 +1,158 @@
+<!-- Guidance Capabilities Section -->
+<div class="guidance-capabilities-section">
+    <div class="capabilities-content">
+        <h2>Designed for multi-disciplinary needs</h2>
+        
+        <!-- Pill Selector -->
+        <div class="capabilities-selector">
+            <button class="selector-pill active" data-tab="developers">Engineering</button>
+            <button class="selector-pill" data-tab="security">Security</button>
+            <button class="selector-pill" data-tab="legal">Legal & Compliance</button>
+        </div>
+        
+        <!-- Content Panels -->
+        <div class="capabilities-panels">
+            <div class="capabilities-panel active" data-panel="developers">
+                <h3>Accelerate secure development</h3>
+                <p>Whether they're building features, fixing bugs, or refactoring, engineers can access on-demand security expertise within days, not weeks.</p>
+                <div class="features-grid">
+                     <div class="feature-column">
+                         <div class="feature-item">
+                             <span class="feature-bullet">•</span>
+                             <div class="feature-text">
+                                 <h4>Vulnerability patch guidance and verification</h4>
+                                 <p>We partner with engineers to triage, plan, and validate patch implementations to help ensure correctness.</p>
+                             </div>
+                         </div>
+                         <div class="feature-item">
+                             <span class="feature-bullet">•</span>
+                             <div class="feature-text">
+                                 <h4>Secure implementation guidance</h4>
+                                 <p>We partner with engineers during development to help ensure the features they're building are secure by design and implementation.</p>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="feature-column">
+                         <div class="feature-item">
+                             <span class="feature-bullet">•</span>
+                             <div class="feature-text">
+                                 <h4>Code review and offensive testing</h4>
+                                 <p>We collaborate with engineers to ensure their changes are secure through hands-on secure code reviews and testing.</p>
+                             </div>
+                         </div>
+                         <div class="feature-item">
+                            <span class="feature-bullet">•</span>
+                            <div class="feature-text">
+                                <h4>Artifacts and documentation by default</h4>
+                                <p>Any code written (e.g. testing harnesses, static analysis rules, etc.) as part of a review is provided to the engineer for their use in their codebase.</p>
+                            </div>
+                        </div>
+                     </div>
+                 </div>
+            </div>
+            
+            <div class="capabilities-panel" data-panel="security">
+                <h3>Scale security outcomes</h3>
+                <p>Positioned between staff augmentation and supplementation, we fill the gap for organizations without a dedicated software security team, and extend the capabilities of those who do.</p>
+                <div class="features-grid">
+                     <div class="feature-column">
+                         <div class="feature-item">
+                             <span class="feature-bullet">•</span>
+                             <div class="feature-text">
+                                 <h4>Proactive code review</h4>
+                                 <p>Let us burn down your backlog of code review and implementation guidance requests, so you can focus on critical security initiatives.</p>
+                             </div>
+                         </div>
+                         <div class="feature-item">
+                             <span class="feature-bullet">•</span>
+                             <div class="feature-text">
+                                 <h4>Centralized deliverables</h4>
+                                 <p>Find all engagements and their discussions, documentation, and artifacts in one place, ensuring you are always in the loop.</p>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="feature-column">
+                         <div class="feature-item">
+                             <span class="feature-bullet">•</span>
+                             <div class="feature-text">
+                                 <h4>Managed engagements</h4>
+                                 <p>We can manage the entire engagement process directly with stakeholders, while you retain final approval authority.</p>
+                             </div>
+                         </div>
+                         <div class="feature-item">
+                            <span class="feature-bullet">•</span>
+                            <div class="feature-text">
+                                <h4>On-demand expertise</h4>
+                                <p>We staff security engineers with a variety of different specialties to ensure you have the right expertise when you need it.</p>
+                            </div>
+                        </div>
+                     </div>
+                 </div>
+            </div>
+            
+            <div class="capabilities-panel" data-panel="legal">
+                <h3>Deliverables you can depend on</h3>
+                <p>Every engagement provides independent, expert-validated guidance that cuts through internal bias, giving you objective analysis of your actual security posture for confident legal and compliance decisions.</p>
+                <div class="features-grid">
+                     <div class="feature-column">
+                         <div class="feature-item">
+                             <span class="feature-bullet">•</span>
+                             <div class="feature-text">
+                                 <h4>Objective risk assessment</h4>
+                                 <p>Backed by deep technical analysis, we help ensure you are informed of the objective risks in your organization's and code.</p>
+                             </div>
+                         </div>
+                         <div class="feature-item">
+                             <span class="feature-bullet">•</span>
+                             <div class="feature-text">
+                                 <h4>Informed prioritization</h4>
+                                 <p>We help educate you on vulnerability risks and available mitigations so you can make informed prioritization decisions.</p>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="feature-column">
+                         <div class="feature-item">
+                             <span class="feature-bullet">•</span>
+                             <div class="feature-text">
+                                 <h4>Documented due-dilligence</h4>
+                                 <p>We provide comprehensive documentation for all engagements, including the findings, remediation, and engagement artifacts.</p>
+                             </div>
+                         </div>
+                         <div class="feature-item">
+                            <span class="feature-bullet">•</span>
+                            <div class="feature-text">
+                                <h4>Vulnerability disclosure support</h4>
+                                <p>We can help you prepare and publish vulnerability disclosures to relevant vulnerability databases when necessary.</p>
+                            </div>
+                        </div>
+                     </div>
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Capabilities tabs functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const pills = document.querySelectorAll('.selector-pill');
+    const panels = document.querySelectorAll('.capabilities-panel');
+    
+    pills.forEach(pill => {
+        pill.addEventListener('click', function() {
+            const targetTab = this.getAttribute('data-tab');
+            
+            // Remove active class from all pills and panels
+            pills.forEach(p => p.classList.remove('active'));
+            panels.forEach(panel => panel.classList.remove('active'));
+            
+            // Add active class to clicked pill and corresponding panel
+            this.classList.add('active');
+            const targetPanel = document.querySelector(`[data-panel="${targetTab}"]`);
+            if (targetPanel) {
+                targetPanel.classList.add('active');
+            }
+        });
+    });
+});
+</script> 
