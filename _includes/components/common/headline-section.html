@@ -1,0 +1,13 @@
+<!-- Parameterized headline section -->
+<div class="headline-section {{ include.section_class | default: '' }}">
+    <div class="headline-content">
+        <h2>
+            {% if include.glow_text %}
+                {{ include.headline | replace: include.glow_text, '<span class="glow-text">' | append: include.glow_text | append: '</span>' }}
+            {% else %}
+                {{ include.headline }}
+            {% endif %}
+        </h2>
+        <p>{{ include.subtext }}</p>
+    </div>
+</div> 

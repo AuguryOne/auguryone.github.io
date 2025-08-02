@@ -1,49 +1,7 @@
 <!-- Scope-guided Reviews -->
 <div class="guidance-feature scroll-animate" data-animation="slideInRight">
     <div class="feature-animation">
-        <svg class="scope-review-svg" viewBox="0 0 660 460" xmlns="http://www.w3.org/2000/svg">
-            <!-- Scope Discussion Container -->
-            <rect x="2" y="2" width="656" height="456" rx="12" fill="#000000" stroke="#16a34a" stroke-width="3"/>
-            
-            <!-- Developer Initial Description -->
-            <g class="scope-question fade-in-scope anim-delay-05">
-                <circle cx="60" cy="70" r="20" fill="rgb(147, 197, 253)"/>
-                <text x="60" y="77" font-family="system-ui" font-size="12" fill="#0f172a" text-anchor="middle">DEV</text>
-                <rect x="100" y="45" width="530" height="60" rx="8" fill="#0f172a" stroke="#334155" stroke-width="2"/>
-                <text x="115" y="67" font-family="system-ui" font-size="13" fill="#cbd5e1">This PR adds a new payment processing endpoint that handles direct bank</text>
-                <text x="115" y="87" font-family="system-ui" font-size="13" fill="#cbd5e1">transfers. I think we should focus on problems with input validation & authorization.</text>
-            </g>
-            
-            <!-- Security Engineer Response -->
-            <g class="scope-response fade-in-scope anim-delay-15">
-                <circle cx="60" cy="140" r="20" fill="#94a3b8"/>
-                <text x="60" y="147" font-family="system-ui" font-size="12" fill="#0f172a" text-anchor="middle">SEC</text>
-                <rect x="100" y="115" width="530" height="75" rx="8" fill="#0f172a" stroke="#334155" stroke-width="2"/>
-                <text x="115" y="137" font-family="system-ui" font-size="13" fill="#cbd5e1">That sounds good. I think we should also take a look at error handling to ensure</text>
-                <text x="115" y="157" font-family="system-ui" font-size="13" fill="#cbd5e1">there are no unexpected failure modes, given this is a money movement endpoint.</text>
-            </g>
-            
-            <!-- Developer Agreement -->
-            <g class="dev-agreement fade-in-scope anim-delay-25">
-                <circle cx="60" cy="220" r="20" fill="rgb(147, 197, 253)"/>
-                <text x="60" y="227" font-family="system-ui" font-size="12" fill="#0f172a" text-anchor="middle">DEV</text>
-                <rect x="100" y="205" width="530" height="40" rx="8" fill="#0f172a" stroke="#334155" stroke-width="2"/>
-                <text x="115" y="227" font-family="system-ui" font-size="13" fill="#cbd5e1">Sure, that makes sense.</text>
-            </g>
-            
-            <!-- Security Engineer Summary -->
-            <g class="scope-summary fade-in-scope anim-delay-35">
-                <circle cx="60" cy="310" r="20" fill="#94a3b8"/>
-                <text x="60" y="317" font-family="system-ui" font-size="12" fill="#0f172a" text-anchor="middle">SEC</text>
-                <rect x="100" y="270" width="530" height="170" rx="8" fill="#0c1420" stroke="rgb(191, 219, 254)" stroke-width="2"/>
-                <text x="115" y="292" font-family="system-ui" font-size="13" fill="#cbd5e1">Great. I've summarized the review's scope below. If everything looks good, feel free</text>
-                <text x="115" y="312" font-family="system-ui" font-size="13" fill="#cbd5e1">to accept the scope and we can get the review started.</text>
-                <text x="115" y="342" font-family="system-ui" font-size="13" fill="#cbd5e1">This pull request introduces a new payment processing endpoint responsible for</text>
-                <text x="115" y="362" font-family="system-ui" font-size="13" fill="#cbd5e1">handling direct bank transfers. The new endpoint will be reviewed for input</text>
-                <text x="115" y="382" font-family="system-ui" font-size="13" fill="#cbd5e1">validation and authorization correctness, with error handling tested to help ensure</text>
-                <text x="115" y="402" font-family="system-ui" font-size="13" fill="#cbd5e1">failure modes are known and result in expected behavior.</text>
-            </g>
-        </svg>
+        {% include components/features/animated-svg/guidance/scope-guided-engagements-svg.html %}
     </div>
     <div class="feature-content">
         <h3>Scope-guided Engagement</h3>

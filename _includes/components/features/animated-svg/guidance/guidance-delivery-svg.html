@@ -1,0 +1,42 @@
+<svg class="vulnerability-svg" viewBox="0 0 660 460" xmlns="http://www.w3.org/2000/svg">
+    <!-- Vulnerability Report Container -->
+    <rect x="0" y="0" width="660" height="460" rx="12" fill="#000000" stroke="#16a34a" stroke-width="3" class="vulnerability-container"/>
+    
+    <!-- Vulnerability Details -->
+    <g class="vuln-details slide-in-content">
+        <!-- Vulnerability Title -->
+        <text x="30" y="50" font-family="system-ui" font-size="16" fill="#f1f5f9" font-weight="600">Race Condition in Fund Transfer Endpoint</text>
+        
+        <!-- Severity and Impact Ratings -->
+        <text x="30" y="75" font-family="system-ui" font-size="11" fill="#94a3b8" font-weight="500">SEVERITY</text>
+        <text x="30" y="95" font-family="system-ui" font-size="13" fill="#ef4444" font-weight="600">CRITICAL</text>
+        <text x="150" y="75" font-family="system-ui" font-size="11" fill="#94a3b8" font-weight="500">IMPACT</text>
+        <text x="150" y="95" font-family="system-ui" font-size="13" fill="#ef4444" font-weight="600">CRITICAL</text>
+        <text x="250" y="75" font-family="system-ui" font-size="11" fill="#94a3b8" font-weight="500">CATEGORY</text>
+        <text x="250" y="95" font-family="system-ui" font-size="13" fill="#e2e8f0" font-weight="600">Timing</text>
+        
+        <!-- Description -->
+        <text x="30" y="125" font-family="system-ui" font-size="14" fill="rgb(147, 197, 253)" font-weight="600">Description</text>
+        <text x="30" y="150" font-family="system-ui" font-size="12" fill="#cbd5e1">Concurrent requests to /api/transfer can bypass balance checks, allowing unauthorized fund transfers</text>
+        <text x="30" y="170" font-family="system-ui" font-size="12" fill="#cbd5e1">exceeding account balance.</text>
+        
+        <!-- Vulnerable Code Block -->
+        <rect x="30" y="190" width="600" height="95" rx="8" fill="#0c1420" stroke="#334155" stroke-width="2"/>
+        <text x="45" y="215" font-family="Monaco, monospace" font-size="11" fill="#e2e8f0">def transfer_funds(from_account, to_account, amount):</text>
+        <text x="65" y="235" font-family="Monaco, monospace" font-size="11" fill="#e2e8f0">balance = </text>
+        <text x="130" y="235" font-family="Monaco, monospace" font-size="11" fill="#ef4444">get_balance</text>
+        <text x="210" y="235" font-family="Monaco, monospace" font-size="11" fill="#e2e8f0">(from_account)</text>
+        <text x="65" y="255" font-family="Monaco, monospace" font-size="11" fill="#e2e8f0">if balance >= amount: </text>
+        <text x="215" y="255" font-family="Monaco, monospace" font-size="11" fill="#ef4444">deduct_funds</text>
+        <text x="300" y="255" font-family="Monaco, monospace" font-size="11" fill="#e2e8f0">(from_account, amount)</text>
+        <text x="65" y="275" font-family="Monaco, monospace" font-size="11" fill="#64748b">...</text>
+        
+        <!-- Remediation -->
+        <text x="30" y="315" font-family="system-ui" font-size="14" fill="rgb(147, 197, 253)" font-weight="600">Remediation</text>
+        <text x="30" y="340" font-family="system-ui" font-size="12" fill="#cbd5e1">Implement atomic database transactions with row-level locking for ledger updates. For example:</text>
+        
+        <!-- Fix Code Block -->
+        <rect x="30" y="360" width="600" height="60" rx="8" fill="#0c1420" stroke="#334155" stroke-width="2"/>
+        <text x="45" y="385" font-family="Monaco, monospace" font-size="11" fill="#22c55e">UPDATE accounts SET balance = balance - ? WHERE id = ? AND balance >= ? FOR UPDATE;</text>
+    </g>
+</svg>

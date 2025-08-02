@@ -132,7 +132,7 @@ sections:
 css:
   color:
     primary-dark: '#000000'
-    links:  rgb(147 197 253);
+    links:  rgb(147 197 253)
 
 # Build settings
 markdown: kramdown

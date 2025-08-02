@@ -1,0 +1,50 @@
+.intelligence-headline-section {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    background: linear-gradient(135deg, rgba(147, 197, 253, 0.1) 0%, #000000 100%);
+    border-top: 1px solid rgba(147, 197, 253, 0.2);
+    border-bottom: 1px solid rgba(147, 197, 253, 0.2);
+    padding: 4rem 0;
+    margin-bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.intelligence-headline-section {
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    width: 100vw;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.intelligence-headline-section .glow-text {
+    color: rgba(147, 197, 253, 1);
+    text-shadow: 0 0 20px rgba(147, 197, 253, 0.3);
+}
+
+@media (max-width: 768px) {
+    .intelligence-headline-section {
+        width: 100%;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+        max-width: none;
+        box-sizing: border-box;
+    }
+
+    .intelligence-headline-section {
+        padding: 3rem 0;
+        margin-bottom: 2rem;
+    }
+
+    .intelligence-headline-section.mobile-margin {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .intelligence-headline-section {
+        padding: 2.5rem 0;
+    }
+}

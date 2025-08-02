@@ -1,0 +1,21 @@
+
+    /* Add proper padding for non-full-width content */
+    .intelligence-features-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+        .intelligence-features-container {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+
+    /* Remove top padding from the intelligence feature container */
+    .intelligence-features-container {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }

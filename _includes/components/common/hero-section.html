@@ -1,0 +1,77 @@
+<!-- Parameterized hero section -->
+<header class="hero-section {{ include.hero_class | default: '' }}">
+    {% if include.background_include %}
+        {% include {{ include.background_include }} %}
+    {% endif %}
+    
+    <div class="hero-content">
+        <div class="hero-container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 class="hero-title animate-fadeInUp">
+                        {% if include.highlight_text %}
+                            {{ include.title | replace: include.highlight_text, '<span class="highlight-text">' | append: include.highlight_text | append: '</span>' }}
+                        {% else %}
+                            {{ include.title }}
+                        {% endif %}
+                    </h1>
+                    
+                    <p class="hero-subtitle animate-fadeInUp delay-1">
+                        {{ include.subtitle }}
+                    </p>
+                    
+                    {% if include.show_scroll_indicator %}
+                    <div class="hero-see-more animate-fadeInUp delay-2">
+                        <a href="#{{ include.scroll_target | default: 'content' }}" class="btn-see-more">
+                            <div class="chevron-double">
+                                <i class="fa fa-chevron-down chevron-1"></i>
+                                <i class="fa fa-chevron-down chevron-2"></i>
+                            </div>
+                        </a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        
+        {% if include.logo_watermark %}
+        <div class="hero-logo-bg">
+            <img src="{{ include.logo_watermark }}" alt="Augury One" class="logo-watermark">
+        </div>
+        {% endif %}
+        
+        {% if include.show_particles %}
+        <div class="floating-particles">
+            <div class="particle particle-1"></div>
+            <div class="particle particle-2"></div>
+            <div class="particle particle-3"></div>
+            <div class="particle particle-4"></div>
+            <div class="particle particle-5"></div>
+        </div>
+        {% endif %}
+    </div>
+</header>
+
+{% if include.show_scroll_indicator %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const seeMoreButton = document.querySelector('.hero-see-more .btn-see-more');
+    if (seeMoreButton) {
+        seeMoreButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector('#{{ include.scroll_target | default: 'content' }}');
+            if (target) {
+                const navbar = document.querySelector('.navbar-fixed-top');
+                let navbarHeight = navbar ? navbar.offsetHeight : 0;
+                const extraOffset = 20;
+                const targetPosition = target.offsetTop - navbarHeight - extraOffset;
+                window.scrollTo({
+                    top: Math.max(0, targetPosition),
+                    behavior: 'smooth'
+                });
+            }
+        });
+    }
+});
+</script>
+{% endif %} 

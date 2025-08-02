@@ -1,0 +1,333 @@
+/* Navigation */
+.navbar-custom {
+    margin-bottom: 0;
+    border-bottom: none;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: transparent;
+    backdrop-filter: none;
+    box-shadow: none;
+    padding: 1.5rem 0;
+    transition: all 0.4s ease;
+}
+
+.navbar-custom .navbar-brand {
+    font-weight: 700;
+    color: rgba(255,255,255,0.95);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    transition: color 0.4s ease;
+}
+
+.navbar-logo {
+    height: 45px;
+    width: auto;
+    margin-right: 0.75rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    filter: invert(1) brightness(1.2);
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.navbar-logo:hover {
+    transform: scale(1.1);
+}
+
+.brand-text {
+    font-weight: 700;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    text-transform: uppercase;
+}
+
+.navbar-custom .navbar-brand:focus {
+    outline: 0;
+}
+
+.navbar-custom .navbar-brand .navbar-toggle {
+    padding: 4px 6px;
+    font-size: 16px;
+    color: #1a202c;
+}
+
+.navbar-custom .navbar-brand .navbar-toggle:focus,
+.navbar-custom .navbar-brand .navbar-toggle:active {
+    outline: 0;
+}
+
+.navbar-custom a {
+    color: rgba(255,255,255,0.9);
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.4s ease;
+}
+
+.navbar-custom .nav li.active {
+    outline: none;
+}
+
+.navbar-custom .nav li a:hover,
+.navbar-custom .nav li a:focus {
+    color: rgb(147, 197, 253);
+    background: transparent !important;
+}
+
+.navbar-custom .nav li a.active {
+    outline: 0;
+    color: rgb(147, 197, 253);
+}
+
+@media(min-width:767px) {
+    .navbar {
+        padding: 1.5rem 0;
+        border-bottom: 0;
+        background: transparent;
+        backdrop-filter: none;
+        transition: all 0.4s ease;
+    }
+
+    .top-nav-collapse {
+        padding: 1rem 0;
+        background-color: rgba(0, 0, 0, 0.95);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        border-bottom: 1px solid rgba(147, 197, 253, 0.1);
+    }
+
+    .navbar-custom.top-nav-collapse {
+        border-bottom: 1px solid rgba(147, 197, 253, 0.1);
+    }
+    
+    .navbar-custom.top-nav-collapse .navbar-brand {
+        color: #f1f5f9;
+    }
+    
+    .navbar-custom.top-nav-collapse .brand-text {
+        text-shadow: none;
+    }
+    
+    .navbar-custom.top-nav-collapse .navbar-logo {
+        filter: invert(1) brightness(1.2);
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+    .navbar-custom.top-nav-collapse a {
+        color: #cbd5e1;
+        text-shadow: none;
+    }
+}
+
+/* Navbar Dropdown Styles */
+.navbar-custom .dropdown-menu {
+    background-color: #000000 !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 0 !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5) !important;
+    backdrop-filter: blur(10px);
+    padding: 0.5rem 0 !important;
+    margin-top: 0.5rem;
+    min-width: 200px !important;
+}
+
+.navbar-custom .dropdown-menu > li > a {
+    color: rgba(255, 255, 255, 0.9) !important;
+    padding: 0.75rem 1.5rem !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    transition: all 0.3s ease !important;
+    border-bottom: none !important;
+    background-color: transparent !important;
+}
+
+.navbar-custom .dropdown-menu > li > a:hover,
+.navbar-custom .dropdown-menu > li > a:focus {
+    background-color: rgba(147, 197, 253, 0.15) !important;
+    color: rgb(147, 197, 253) !important;
+    text-decoration: none !important;
+}
+
+.navbar-custom .dropdown-menu > li:last-child > a {
+    border-bottom: none !important;
+}
+
+.navbar-custom .dropdown-toggle:hover .caret,
+.navbar-custom .dropdown-toggle:focus .caret {
+    border-top-color: rgb(147, 197, 253) !important;
+}
+
+.navbar-custom .caret {
+    border-top-color: rgba(255, 255, 255, 0.9) !important;
+    transition: border-color 0.3s ease;
+}
+
+/* Additional Bootstrap override for dropdown */
+.navbar .dropdown-menu {
+    background-color: #000000 !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 0 !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5) !important;
+}
+
+.navbar .dropdown-menu > li > a {
+    color: rgba(255, 255, 255, 0.9) !important;
+    padding: 0.75rem 1.5rem !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    background-color: transparent !important;
+}
+
+.navbar .dropdown-menu > li > a:hover,
+.navbar .dropdown-menu > li > a:focus {
+    background-color: rgba(147, 197, 253, 0.15) !important;
+    color: rgb(147, 197, 253) !important;
+}
+
+/* Force Black Navbar on Mobile and Tablet */
+@media (max-width: 991px) {
+    .navbar.navbar-custom.navbar-fixed-top {
+        background-color: #000000 !important;
+        background: #000000 !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+        backdrop-filter: none !important;
+    }
+    
+    .navbar.navbar-custom.navbar-fixed-top.top-nav-collapse {
+        background-color: #000000 !important;
+        background: #000000 !important;
+    }
+    
+    .navbar-custom .navbar-brand,
+    .navbar-custom.top-nav-collapse .navbar-brand {
+        color: rgba(255, 255, 255, 0.95) !important;
+    }
+    
+    .navbar-custom .navbar-toggle {
+        border-color: rgba(255, 255, 255, 0.3) !important;
+    }
+    
+    .navbar-custom .navbar-toggle .icon-bar {
+        background-color: rgba(255, 255, 255, 0.9) !important;
+    }
+    
+    .navbar-custom a,
+    .navbar-custom.top-nav-collapse a {
+        color: rgba(255, 255, 255, 0.9) !important;
+    }
+}
+
+/* Mobile Services Section - Black Aesthetic */
+@media (max-width: 767px) {
+    .navbar-custom .mobile-services-header {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+        background-color: #000000 !important;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+    }
+    
+    .navbar-custom .mobile-services-header .navbar-text {
+        color: rgba(255, 255, 255, 0.9) !important;
+        font-weight: 700 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.5px !important;
+        font-size: 0.9rem !important;
+        padding: 0.75rem 1.5rem !important;
+        margin: 0 !important;
+        display: block !important;
+    }
+    
+    .navbar-custom .mobile-service-item a {
+        padding-left: 2.5rem !important;
+        color: rgba(255, 255, 255, 0.9) !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+        background-color: #000000 !important;
+        font-weight: 600 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.5px !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    .navbar-custom .mobile-service-item:last-of-type a {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .navbar-custom .mobile-service-item a:hover,
+    .navbar-custom .mobile-service-item a:focus {
+        background-color: rgba(147, 197, 253, 0.15) !important;
+        color: rgb(147, 197, 253) !important;
+    }
+    
+    /* Mobile navbar background and general styling */
+    .navbar-custom .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.95) !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+    }
+    
+    .navbar-custom .nav > li > a {
+        color: rgba(255, 255, 255, 0.9) !important;
+        background-color: transparent !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    }
+    
+    .navbar-custom .nav > li > a:hover,
+    .navbar-custom .nav > li > a:focus {
+        background-color: rgba(147, 197, 253, 0.15) !important;
+        color: rgb(147, 197, 253) !important;
+    }
+}
+
+@media(max-width:767px) {
+    .navbar-custom {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background-color: rgba(15, 23, 42, 0.95) !important;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        border-bottom: 1px solid rgba(147, 197, 253, 0.1);
+        padding: 0.5rem 0;
+        min-height: auto;
+    }
+
+    .navbar-header {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        position: relative;
+    }
+
+    .navbar-brand {
+        margin-left: 0 !important;
+        padding-left: 15px !important;
+        flex: 0 0 auto;
+    }
+
+    .navbar-toggle {
+        position: absolute !important;
+        right: 15px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        margin: 0 !important;
+        padding: 0.25rem 0.5rem !important;
+        border: none !important;
+        background: transparent !important;
+        float: none !important;
+    }
+    
+    .navbar-logo {
+        height: 28px;
+    }
+    
+    .navbar-brand {
+        font-size: 1.1rem;
+        padding: 0.25rem 0;
+        margin: 0;
+    }
+}

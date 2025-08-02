@@ -1,0 +1,10 @@
+<!-- Feature with text on left, animation on right -->
+<div class="platform-feature scroll-animate {{ include.feature_class | default: '' }}" data-animation="slideInLeft">
+    <div class="feature-content">
+        <h3>{{ include.title }}</h3>
+        <p>{{ include.description }}</p>
+    </div>
+    <div class="feature-animation">
+        {% include {{ include.svg_include }} %}
+    </div>
+</div> 

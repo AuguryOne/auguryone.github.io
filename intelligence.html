@@ -3,5 +3,77 @@ layout: default-page
 title: Augury One - Intelligence
 ---
 
-{% include intelligence-hero.html %}
-{% include intelligence.html %} 
+{% include components/common/hero-section.html
+    hero_class="intelligence-hero"
+    title="Software Security Intelligence"
+    subtitle="Monitor and remediate emerging vulnerabilities before attackers do."
+    highlight_text="Intelligence"
+    show_scroll_indicator=true
+    scroll_target="intelligence"
+    show_particles=false
+    logo_watermark="/img/shh.png"
+    background_include="components/backgrounds/intelligence-hero-bg.html"
+ %}
+ 
+<section id="intelligence" class="content-section intelligence-background">
+    <div class="container">        
+        <div class="intelligence-features-container">
+            {% include components/common/headline-section.html
+                headline="Authoritative guidance for every vulnerability"
+                subtext="Definitively manage your risk with actionable guidance rooted in deep technical analysis."
+                section_class="intelligence-headline-section"
+            %}
+            
+            {% include components/features/feature-left.html
+                title="Timely Advisories"
+                description="Receive curated and digestible advisories for emerging software security vulnerabilities, even if a CVE is not yet assigned."
+                svg_include="components/features/animated-svg/intelligence/timely-advisories-svg.html"
+            %}
+
+            {% include components/features/feature-right.html
+                title="Root-cause analysis and detection guidance"
+                description="Each advisory includes detailed technical analysis and guidance, allowing customers to properly assess, mitigate, and remediate impact."
+                svg_include="components/features/animated-svg/intelligence/analysis-and-detection-guidance-svg.html"
+            %}
+
+            {% include components/common/headline-section.html
+                headline="Extract <span class='glow-text'>signal</span> from the noise"
+                subtext="Transform overwhelming vulnerability data into actionable intelligence."
+                section_class="intelligence-headline-section"
+            %}
+            
+            {% include components/common/grid-2x2.html
+                items=site.data.intelligence_highlights
+                grid_class="intelligence-platform-highlights"
+            %}
+
+            {% include components/common/headline-section.html
+                headline="Maintain realtime situational awareness"
+                subtext="Stay informed with real-time updates and community discussions."
+                section_class="intelligence-headline-section"
+            %}
+            
+            {% include components/features/feature-left.html
+                title="Community Discussions"
+                description="Participate in community discussions about each advisory, and benefit from the knowledge of other researchers and organizations."
+                svg_include="components/features/animated-svg/intelligence/community-discussions-svg.html"
+            %}
+            
+            {% include components/features/feature-right.html
+                title="Advisory Update Notifications"
+                description="Subscribe to stay informed on changes to advisories relevant to you."
+                svg_include="components/features/animated-svg/intelligence/update-notifications-svg.html"
+            %}
+            
+            {% include components/common/headline-section.html
+                headline="Enhance the <span class='glow-text'>capabilities</span> of every discipline"
+                subtext="Equip your organization with the information necessary to secure your organization."
+                section_class="intelligence-headline-section"
+            %}
+            
+            {% include components/sections/intelligence/tabbed-capabilities.html %}
+
+            {% include components/sections/intelligence/pricing.html %}
+        </div>
+    </div>
+</section>
