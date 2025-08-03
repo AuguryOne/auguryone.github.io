@@ -3,4 +3,69 @@ layout: default-page
 title: Augury One - Response
 ---
 
-{% include response.html %} 
+{% include components/common/hero-section.html
+   hero_class="response-hero"
+   title="Software Security Response"
+   subtitle="Contain and remediate software security incidents with confidence."
+   highlight_text="Response"
+   show_scroll_indicator=true
+   scroll_target="response"
+   show_particles=false
+   logo_watermark="/img/shh.png"
+   background_include="components/backgrounds/response-hero-bg.html"
+%}
+
+<section id="response" class="content-section response-background">
+    <div class="container">
+        <div class="response-features-container">
+            {% include components/common/headline-section.html
+                headline="Bring <span class='glow-text'>deep expertise</span> to every response"
+                subtext="Expand your organization's response capabilities with the expert security engineers for every software security incident."
+                section_class="response-headline-section"
+            %}
+            
+            {% include components/features/feature-left.html
+                title="Embedded Response Team"
+                description="We embed directly within an your response structure, augmenting or supplementing existing staff capabilities."
+                svg_include="components/features/animated-svg/response/embedded-response-team-svg.html"
+            %}
+
+            {% include components/features/feature-right.html
+                title="Timely On-Call Support"
+                description="Page us when you need us. Augury One is available to assist with urgent customer engagements."
+                svg_include="components/features/animated-svg/response/on-call-support-svg.html"
+            %}
+
+            {% include components/common/headline-section.html
+                headline="Tailored capabilities for <span class='glow-text'>every emergency</span>"
+                subtext="Equip your organization with the specialized expertise necessary to respond to any situation."
+                section_class="response-headline-section"
+            %}
+            
+            {% include components/common/grid-2x2.html
+                items=site.data.response_highlights
+                grid_class="response-platform-highlights"
+            %}
+
+            {% include components/common/headline-section.html
+                headline="Remove the guesswork from remediation"
+                subtext="Support your engineering teams with expert security research and engineering support."
+                section_class="response-headline-section"
+            %}
+
+            {% include components/features/feature-left.html
+                title="Vulnerability Identification"
+                description="Not sure where to start? We can help triage and identify suspected software vulnerabilities, accelerating the pursuit of mitigation and remediation."
+                svg_include="components/features/animated-svg/response/vulnerability-identification-svg.html"
+            %}
+
+            {% include components/features/feature-right.html
+                title="Resolution Verification"
+                description="When a mitigation or remediation is implemented, we can assess it for thoroughness and completness."
+                svg_include="components/features/animated-svg/response/resolution-verification-svg.html"
+            %}
+
+            {% include components/sections/response/pricing.html %}
+        </div>
+    </div>
+</section>

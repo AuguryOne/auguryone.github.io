@@ -1,0 +1,52 @@
+/* Remove top padding above the first headline section on the response page */
+.response-background {
+    padding-top: 0 !important;
+    background: #000000;
+}
+
+.response-background {
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
+}
+
+.response-background * {
+    box-sizing: border-box;
+}
+
+.response-background .container {
+    max-width: none !important;
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.response-background h2,
+.response-background h3,
+.response-background h4 {
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.025em;
+}
+
+.response-background h2 {
+    font-weight: 900;
+    letter-spacing: -0.01em;
+}
+
+.response-background h3 {
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.response-background h4 {
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+.response-background .glow-text {
+    font-weight: 900;
+    letter-spacing: 0.01em;
+}

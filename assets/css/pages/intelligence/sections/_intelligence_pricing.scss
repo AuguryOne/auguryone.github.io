@@ -159,7 +159,7 @@
     padding-right: 0;
 }
 
-.pricing-content {
+.intelligence-pricing-section .pricing-content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
@@ -168,7 +168,7 @@
     text-align: center;
 }
 
-.pricing-content h2 {
+.intelligence-pricing-section .pricing-content h2 {
     font-size: 2.5rem;
     font-weight: 700;
     color: #f1f5f9;
@@ -180,7 +180,7 @@
     text-transform: uppercase;
 }
 
-.pricing-subtitle {
+.intelligence-pricing-section .pricing-subtitle {
     font-size: 1.25rem;
     color: #cbd5e1;
     max-width: 600px;
@@ -189,7 +189,7 @@
     text-align: center;
 }
 
-.pricing-structure {
+.intelligence-pricing-section .pricing-structure {
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -199,7 +199,7 @@
     margin-right: auto;
 }
 
-.pricing-card {
+.intelligence-pricing-section .pricing-card {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(147, 197, 253, 0.2);
     border-radius: 16px;
@@ -211,7 +211,7 @@
     width: 100%;
 }
 
-.pricing-card.primary {
+.intelligence-pricing-section .pricing-card.primary {
     border-color: rgba(147, 197, 253, 0.5);
     background: rgba(147, 197, 253, 0.1);
     text-align: center;
@@ -220,20 +220,20 @@
     min-height: 200px;
 }
 
-.pricing-card:hover {
+.intelligence-pricing-section .pricing-card:hover {
     transform: translateY(-4px);
     border-color: rgba(147, 197, 253, 0.4);
     box-shadow: 0 12px 40px rgba(147, 197, 253, 0.15);
 }
 
-.pricing-header {
+.intelligence-pricing-section .pricing-header {
     display: flex;
     flex-direction: column;
     height: 100%;
     margin-bottom: 0;
 }
 
-.pricing-amount {
+.intelligence-pricing-section .pricing-amount {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -243,7 +243,7 @@
     margin: 0;
 }
 
-.pricing-amount .price {
+.intelligence-pricing-section .pricing-amount .price {
     font-size: 5rem;
     font-weight: 700;
     color: #93c5fd;
@@ -252,13 +252,13 @@
     white-space: nowrap;
 }
 
-.pricing-amount .period {
+.intelligence-pricing-section .pricing-amount .period {
     font-size: 1.75rem;
     font-weight: 500;
     color: #cbd5e1;
 }
 
-.feature-text h4 {
+.intelligence-pricing-section .feature-text h4 {
     color: #f1f5f9;
     font-size: 1.1rem;
     font-weight: 600;
@@ -267,14 +267,14 @@
     text-transform: uppercase;
 }
 
-.feature-text p {
+.intelligence-pricing-section .feature-text p {
     color: #cbd5e1;
     font-size: 1rem;
     line-height: 1.6;
     margin: 0;
 }
 
-.feature-bullet {
+.intelligence-pricing-section .feature-bullet {
     color: rgba(147, 197, 253, 1);
     font-size: 1.25rem;
     font-weight: bold;
@@ -282,20 +282,20 @@
     flex-shrink: 0;
 }
 
-.feature-item {
+.intelligence-pricing-section .feature-item {
     display: flex;
     align-items: flex-start;
     gap: 1rem;
     text-align: left;
 }
 
-.feature-column {
+.intelligence-pricing-section .feature-column {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-.features-grid {
+.intelligence-pricing-section .features-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
@@ -303,7 +303,7 @@
     margin: 0 auto;
 }
 
-.features-section h3 {
+.intelligence-pricing-section .features-section h3 {
     color: #f1f5f9;
     font-size: 1.75rem;
     font-weight: 600;
@@ -313,7 +313,7 @@
     text-transform: uppercase;
 }
 
-.features-section {
+.intelligence-pricing-section .features-section {
     margin-top: 3rem;
 }
 
