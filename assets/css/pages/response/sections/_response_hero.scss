@@ -1,0 +1,69 @@
+.response-hero {
+}
+.response-hero .hero-background {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    opacity: 0.22;
+    z-index: 1;
+}
+.response-hero .response-grid {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+}
+.response-hero .grid-line {
+    position: absolute;
+    background: linear-gradient(90deg, transparent, #ff3b3b, transparent);
+    opacity: 0.55;
+    box-shadow: 0 0 12px 2px #ef4444aa;
+}
+.response-hero .grid-line.vertical {
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #ff3b3b, transparent);
+}
+.response-hero .grid-line.horizontal {
+    width: 100%; height: 2px;
+}
+.response-hero .pulse-rings {
+    position: absolute; width: 100%; height: 100%; top: 0; left: 0;
+    pointer-events: none;
+}
+.response-hero .pulse-ring {
+    position: absolute;
+    width: 160px; height: 160px;
+    border-radius: 50%;
+    border: 3px solid #ff3b3b;
+    opacity: 0.32;
+    box-shadow: 0 0 32px 8px #ef4444aa;
+    animation: pulse-ring 3.5s cubic-bezier(0.4,0,0.2,1) infinite;
+}
+.response-hero .floating-particles {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 2;
+}
+.response-hero .particle {
+    position: absolute; width: 8px; height: 8px; background: #ff3b3b; border-radius: 50%; animation: float-particle 6s ease-in-out infinite; opacity: 0.85; box-shadow: 0 0 8px 2px #ef4444aa;
+}
+.response-hero .highlight-text {
+    color: #ef4444;
+    text-shadow: 0 0 20px rgba(239, 68, 68, 0.5);
+    animation: responsePulse 3s ease-in-out infinite;
+}
+@keyframes pulse-ring {
+    0% { transform: scale(0.7); opacity: 0.32; }
+    60% { opacity: 0.5; }
+    100% { transform: scale(1.7); opacity: 0; }
+}
+ @keyframes float-particle {
+    0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.5; }
+    50% { transform: translateY(-20px) rotate(180deg); opacity: 1; }
+}
+ @keyframes responsePulse {
+    0%, 100% { text-shadow: 0 0 20px rgba(239, 68, 68, 0.5); }
+    50% { text-shadow: 0 0 30px rgba(239, 68, 68, 0.8), 0 0 40px rgba(239, 68, 68, 0.4); }
+}

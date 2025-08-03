@@ -1,0 +1,299 @@
+/* Features grid styling for pricing section */
+.response-pricing-section .features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.response-pricing-section .feature-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.response-pricing-section .feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    text-align: left;
+}
+
+.response-pricing-section .feature-bullet {
+    color: rgba(239, 68, 68, 1);
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 0.25rem;
+    flex-shrink: 0;
+}
+
+.response-pricing-section .feature-text h4 {
+    color: #f1f5f9;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+.response-pricing-section .feature-text p {
+    color: #cbd5e1;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Response pricing section */
+.response-pricing-section {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, #000000 100%);
+    border-top: 1px solid rgba(239, 68, 68, 0.2);
+    border-bottom: 1px solid rgba(239, 68, 68, 0.2);
+    padding: 5rem 0;
+    margin-top: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.response-pricing-section .pricing-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.response-pricing-section .pricing-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #f1f5f9;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: -0.02em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+}
+
+.response-pricing-section .pricing-structure {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.response-pricing-section .pricing-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: 16px;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    position: relative;
+    max-width: 550px;
+    width: 100%;
+}
+
+.response-pricing-section .pricing-card.primary {
+    border-color: rgba(239, 68, 68, 0.5);
+    background: rgba(239, 68, 68, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+}
+
+.response-pricing-section .pricing-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(239, 68, 68, 0.4);
+    box-shadow: 0 12px 40px rgba(239, 68, 68, 0.15);
+}
+
+.response-pricing-section .pricing-header {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-bottom: 0;
+}
+
+.response-pricing-section .pricing-amount {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    flex: 1;
+    margin: 0;
+}
+
+.response-pricing-section .pricing-amount .price {
+    font-size: 5rem;
+    font-weight: 700;
+    color: #ef4444;
+    line-height: 1;
+    word-break: keep-all;
+    white-space: nowrap;
+}
+
+.response-pricing-section .pricing-amount .period {
+    font-size: 1.75rem;
+    font-weight: 500;
+    color: #cbd5e1;
+}
+
+.response-pricing-section .features-section {
+    margin-top: 3rem;
+}
+
+.response-pricing-section .features-section h3 {
+    color: #f1f5f9;
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.response-pricing-section .pricing-explanation {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(239, 68, 68, 0.15);
+    border-radius: 16px;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    flex: 1;
+}
+
+.response-pricing-section .pricing-explanation:hover {
+    transform: translateY(-4px);
+    border-color: rgba(239, 68, 68, 0.25);
+    box-shadow: 0 12px 40px rgba(239, 68, 68, 0.1);
+}
+
+.response-pricing-section .pricing-explanation h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #f1f5f9;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.response-pricing-section {
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    width: 100vw;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.response-pricing-section .credit-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.response-pricing-section .credit-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(239, 68, 68, 0.1);
+}
+
+.response-pricing-section .credit-label {
+    font-weight: 600;
+    color: #f1f5f9;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+.response-pricing-section .credit-value {
+    font-weight: 500;
+    color: #ef4444;
+    font-size: 0.95rem;
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .response-pricing-section {
+        width: 100%;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+        max-width: none;
+        box-sizing: border-box;
+    }
+
+    .response-pricing-section .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .response-pricing-section {
+        padding: 4rem 0;
+        margin-top: 2rem;
+    }
+
+    .response-pricing-section .pricing-content {
+        padding: 0 1rem;
+    }
+
+    .response-pricing-section .pricing-content h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .response-pricing-section .pricing-structure {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+    
+    .response-pricing-section .pricing-card {
+        max-width: 100%;
+    }
+
+    .response-pricing-section .pricing-amount .price {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .response-pricing-section .pricing-amount .price {
+        font-size: 2.5rem;
+    }
+
+    .response-pricing-section .pricing-amount .period {
+        font-size: 1.25rem;
+    }
+    .response-pricing-section {
+        padding: 3rem 0;
+    }
+
+    .response-pricing-section .pricing-content h2 {
+        font-size: 1.75rem;
+    }
+    .response-pricing-section .features-section h3 {
+        font-size: 1.5rem;
+    }
+}

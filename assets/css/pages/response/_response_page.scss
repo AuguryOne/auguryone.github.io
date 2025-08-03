@@ -1,0 +1,25 @@
+.response-features-container .glow-text {
+    color: rgba(239, 68, 68, 1);
+    text-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+    font-weight: 900;
+    letter-spacing: 0.01em;
+}
+
+.response-features-container {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.response-features-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .response-features-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
