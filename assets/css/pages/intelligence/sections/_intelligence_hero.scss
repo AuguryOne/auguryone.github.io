@@ -57,6 +57,13 @@
     animation: intelligencePulse 3s ease-in-out infinite;
 }
 
+/* Grid Line Positioning - Responsive Square Grid */
+:root {
+    --grid-size: min(100vw, 100vh);
+    --grid-offset-x: calc((100vw - var(--grid-size)) / 2);
+    --grid-offset-y: calc((100vh - var(--grid-size)) / 2);
+}
+
 /* Intelligence Hero Grid - 4 columns, 3 rows */
 .intelligence-hero .grid-line-20 { 
     left: calc(var(--grid-offset-x) + var(--grid-size) * 0.2); 
@@ -104,4 +111,20 @@
 @keyframes intelligencePulse {
     0%, 100% { text-shadow: 0 0 20px rgba(147, 197, 253, 0.3); }
     50% { text-shadow: 0 0 30px rgba(147, 197, 253, 0.6), 0 0 40px rgba(147, 197, 253, 0.2); }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --grid-size: min(100vw, 80vh);
+        --grid-offset-x: calc((100vw - var(--grid-size)) / 2);
+        --grid-offset-y: calc((100vh - var(--grid-size)) / 2 + 10vh);
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --grid-size: 90vw;
+        --grid-offset-x: 5vw;
+        --grid-offset-y: calc((100vh - var(--grid-size)) / 2 + 15vh);
+    }
 }
