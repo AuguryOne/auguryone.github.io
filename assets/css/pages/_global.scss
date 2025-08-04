@@ -1,0 +1,178 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #e2e8f0;
+    background-color: #000000;
+    min-height: 100vh;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 1.5rem;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    color: #f1f5f9;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.875rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin: 0 0 1.5rem;
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: #cbd5e1;
+}
+
+a {
+    color: rgb(147, 197, 253);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    color: rgb(147, 197, 253);
+    opacity: 0.8;
+}
+
+/* Buttons */
+.btn {
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.btn-default {
+    border: 2px solid rgb(147 197 253);
+    color: rgb(147 197 253);
+    background-color: transparent;
+}
+
+.btn-default:hover,
+.btn-default:focus {
+    border: 2px solid rgb(147 197 253);
+    outline: 0;
+    color: #fff;
+    background-color: rgb(147 197 253);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.btn-primary {
+    background: rgb(147 197 253);
+    border: 2px solid rgb(147 197 253);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: transparent;
+    color: rgb(147 197 253);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.3);
+    color: #fff;
+}
+
+.btn-outline:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: #fff;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.btn-see-more {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: rgba(255,255,255,0.9);
+    border: 3px solid rgba(255,255,255,0.9);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+.btn-see-more:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(59,130,246,0.3);
+    background: rgba(255,255,255,1);
+    border-color: rgba(255,255,255,1);
+    text-decoration: none;
+}
+
+.chevron-double {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: -4px;
+}
+
+.chevron-1, .chevron-2 {
+    color: #1e293b;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+    animation: bounce-chevrons 2s ease-in-out infinite;
+}
+
+.chevron-2 {
+    margin-top: -8px;
+    animation-delay: 0.1s;
+}
+
+.btn-see-more:hover .chevron-1,
+.btn-see-more:hover .chevron-2 {
+    transform: translateY(2px);
+}
+
+@keyframes bounce-chevrons {
+    0%, 100% { transform: translateY(0); opacity: 0.8; }
+    50% { transform: translateY(4px); opacity: 1; }
+}
+
+@media(min-width:767px) {
+    p {
+        margin: 0 0 1.75rem;
+        font-size: 1.125rem;
+        line-height: 1.7;
+    }
+}

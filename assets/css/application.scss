@@ -1,12 +1,15 @@
 ---
 ---
 @use 'vendored/bootstrap.min.css';
-@use 'vendored/grayscale.css';
+@use 'pages/global';
 @use 'components/common/platform_feature';
 @use 'components/common/navbar';
 @use 'components/common/headline';
 @use 'components/common/grid_2x2';
 @use 'components/common/hero';
+@use 'pages/homepage/homepage_hero';
+@use 'pages/about/about_page';
+@use 'pages/contact/contact_page';
 @use 'pages/intelligence/intelligence_page';
 @use 'pages/intelligence/sections/intelligence_headline';
 @use 'pages/intelligence/sections/intelligence_tabbed_capabilities';
