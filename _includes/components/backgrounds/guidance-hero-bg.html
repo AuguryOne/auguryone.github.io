@@ -1,18 +1,3 @@
-<!-- Guidance Hero Background Component -->
-<!-- Background Logo Watermark -->
-<div class="guidance-hero-logo-bg">
-    <img src="/img/shh.png" alt="Augury One" class="guidance-logo-watermark">
-</div>
-
-<!-- Floating Particles -->
-<div class="floating-particles">
-    <div class="particle particle-1-alt"></div>
-    <div class="particle particle-2-alt"></div>
-    <div class="particle particle-3-alt"></div>
-    <div class="particle particle-4-alt"></div>
-    <div class="particle particle-5-alt"></div>
-</div>
-
 <!-- Code Editor Background -->
 <div class="code-editor-background">
     <!-- Row 1: Top Row Code Snippets (Left to Right) -->
@@ -55,8 +40,214 @@
             </div>
         </div>
 
-        <!-- Additional code snippets would continue here... -->
-        <!-- Note: Due to length, including just the first snippet as an example -->
-        <!-- The full background would include all the code snippets from the original file -->
+        <!-- Java Deserialization -->
+        <div class="code-block code-snippet row-1-snippet-2 code-snippet-hidden" data-direction="left-to-right">
+            <div class="code-line">
+                <span class="code-keyword">package</span> <span class="code-variable">com</span><span class="code-punctuation">.</span><span class="code-variable">example</span><span class="code-punctuation">.</span><span class="code-variable">api</span><span class="code-punctuation">.</span><span class="code-variable">controller</span><span class="code-punctuation">;</span>
+            </div>
+            <div class="code-line"></div>
+            <div class="code-line">
+                <span class="code-keyword">import</span> <span class="code-variable">org</span><span class="code-punctuation">.</span><span class="code-variable">springframework</span><span class="code-punctuation">.</span><span class="code-variable">web</span><span class="code-punctuation">.</span><span class="code-variable">bind</span><span class="code-punctuation">.</span><span class="code-variable">annotation</span><span class="code-punctuation">.*;</span>
+            </div>
+            <div class="code-line">
+                <span class="code-keyword">import</span> <span class="code-variable">java</span><span class="code-punctuation">.</span><span class="code-variable">io</span><span class="code-punctuation">.*;</span>
+            </div>
+            <div class="code-line">
+                <span class="code-keyword">import</span> <span class="code-variable">java</span><span class="code-punctuation">.</span><span class="code-variable">util</span><span class="code-punctuation">.</span><span class="code-variable">Base64</span><span class="code-punctuation">;</span>
+            </div>
+            <div class="code-line"></div>
+            <div class="code-line">
+                <span class="code-function">@RestController</span>
+            </div>
+            <div class="code-line">
+                <span class="code-function">@RequestMapping</span><span class="code-punctuation">(</span><span class="code-string">"/api/user"</span><span class="code-punctuation">)</span>
+            </div>
+            <div class="code-line">
+                <span class="code-keyword">public</span> <span class="code-keyword">class</span> <span class="code-function">UserController</span> <span class="code-punctuation">{</span>
+            </div>
+            <div class="code-line">
+                <span class="code-indent">    </span><span class="code-function">@PostMapping</span><span class="code-punctuation">(</span><span class="code-string">"/preferences"</span><span class="code-punctuation">)</span>
+            </div>
+            <div class="code-line">
+                <span class="code-indent">    </span><span class="code-keyword">public</span> <span class="code-variable">String</span> <span class="code-function">updatePreferences</span><span class="code-punctuation">(</span><span class="code-function">@RequestBody</span> <span class="code-variable">String</span> <span class="code-variable">data</span><span class="code-punctuation">)</span> <span class="code-punctuation">{</span>
+            </div>
+            <div class="code-line">
+                <span class="code-indent">        </span><span class="code-keyword">try</span> <span class="code-punctuation">{</span>
+            </div>
+            <div class="code-line">
+                <span class="code-indent">            </span><span class="code-keyword">byte</span><span class="code-punctuation">[]</span> <span class="code-variable">decoded</span> <span class="code-operator">=</span> <span class="code-variable">Base64</span><span class="code-punctuation">.</span><span class="code-function">getDecoder</span><span class="code-punctuation">().</span><span class="code-function">decode</span><span class="code-punctuation">(</span><span class="code-variable">data</span><span class="code-punctuation">);</span>
+            </div>
+            <div class="code-line">
+                <span class="code-indent">            </span><span class="code-variable">ObjectInputStream</span> <span class="code-variable">ois</span> <span class="code-operator">=</span> <span class="code-keyword">new</span> <span class="code-function">ObjectInputStream</span><span class="code-punctuation">(</span><span class="code-keyword">new</span> <span class="code-function">ByteArrayInputStream</span><span class="code-punctuation">(</span><span class="code-variable">decoded</span><span class="code-punctuation">));</span>
+            </div>
+        </div>
     </div>
-</div> 
+
+    <!-- Row 2: Middle Row Code Snippets (Right to Left) -->
+    <div class="code-row-2">
+        <!-- Node.js Path Traversal -->
+        <div class="code-block code-snippet row-2-snippet-1 code-snippet-hidden" data-direction="right-to-left">
+            <div class="code-line">
+                <span class="code-keyword">const</span> <span class="code-variable">express</span> <span class="code-operator">=</span> <span class="code-function">require</span><span class="code-punctuation">(</span><span class="code-string">'express'</span><span class="code-punctuation">);</span>
+            </div>
+            <div class="code-line">
+                <span class="code-keyword">const</span> <span class="code-variable">fs</span> <span class="code-operator">=</span> <span class="code-function">require</span><span class="code-punctuation">(</span><span class="code-string">'fs'</span><span class="code-punctuation">);</span>
+            </div>
+            <div class="code-line">
+                <span class="code-keyword">const</span> <span class="code-variable">path</span> <span class="code-operator">=</span> <span class="code-function">require</span><span class="code-punctuation">(</span><span class="code-string">'path'</span><span class="code-punctuation">);</span>
+            </div>
+            <div class="code-line">
+                <span class="code-keyword">const</span> <span class="code-variable">router</span> <span class="code-operator">=</span> <span class="code-variable">express</span><span class="code-punctuation">.</span><span class="code-function">Router</span><span class="code-punctuation">();</span>
+            </div>
+            <div class="code-line"></div>
+            <div class="code-line">
+                <span class="code-variable">router</span><span class="code-punctuation">.</span><span class="code-function">get</span><span class="code-punctuation">(</span><span class="code-string">'/download/:filename'</span><span class="code-punctuation">,</span> <span class="code-keyword">async</span> <span class="code-punctuation">(</span><span class="code-parameter">req</span><span class="code-punctuation">,</span> <span class="code-parameter">res</span><span class="code-punctuation">)</span> <span class="code-operator">=></span> <span class="code-punctuation">{</span>
+            </div>
+            <div class="code-line">
+                <span class="code-indent">    </span><span class="code-keyword">try</span> <span class="code-punctuation">{</span>
+            </div>
+            <div class="code-line">
+                <span class="code-indent">        </span><span class="code-keyword">const</span> <span class="code-punctuation">{</span> <span class="code-variable">filename</span> <span class="code-punctuation">}</span> <span class="code-operator">=</span> <span class="code-variable">req</span><span class="code-punctuation">.</span><span class="code-variable">params</span><span class="code-punctuation">;</span>
+            </div>
+            <div class="code-line">
+                <span class="code-indent">        </span><span class="code-keyword">const</span> <span class="code-variable">filePath</span> <span class="code-operator">=</span> <span class="code-variable">path</span><span class="code-punctuation">.</span><span class="code-function">join</span><span class="code-punctuation">(</span><span class="code-string">'/var/uploads'</span><span class="code-punctuation">,</span> <span class="code-variable">filename</span><span class="code-punctuation">);</span>
+            </div>
+            <div class="code-line">
+                <span class="code-indent">        </span><span class="code-keyword">if</span> <span class="code-punctuation">(</span><span class="code-variable">fs</span><span class="code-punctuation">.</span><span class="code-function">existsSync</span><span class="code-punctuation">(</span><span class="code-variable">filePath</span><span class="code-punctuation">))</span> <span class="code-punctuation">{</span>
+            </div>
+            <div class="code-line">
+                <span class="code-indent">            </span><span class="code-variable">res</span><span class="code-punctuation">.</span><span class="code-function">download</span><span class="code-punctuation">(</span><span class="code-variable">filePath</span><span class="code-punctuation">);</span>
+            </div>
+            <div class="code-line">
+                <span class="code-indent">        </span><span class="code-punctuation">}</span> <span class="code-keyword">else</span> <span class="code-punctuation">{</span>
+            </div>
+            <div class="code-line">
+                <span class="code-indent">            </span><span class="code-variable">res</span><span class="code-punctuation">.</span><span class="code-function">status</span><span class="code-punctuation">(</span><span class="code-number">404</span><span class="code-punctuation">).</span><span class="code-function">send</span><span class="code-punctuation">(</span><span class="code-string">'File not found'</span><span class="code-punctuation">);</span>
+            </div>
+        </div>
+
+        <!-- Go Authorization Bypass -->
+        <div class="code-block code-snippet row-2-snippet-2 code-snippet-hidden" data-direction="right-to-left">
+            <div class="code-line">
+                <span class="code-keyword">package</span> <span class="code-variable">main</span>
+            </div>
+            <div class="code-line"></div>
+            <div class="code-line">
+                <span class="code-keyword">import</span> <span class="code-punctuation">(</span>
+            </div>
+            <div class="code-line">
+                <span class="code-indent">    </span><span class="code-string">"net/http"</span>
+            </div>
+            <div class="code-line">
+                <span class="code-indent">    </span><span class="code-string">"encoding/json"</span>
+            </div>
+            <div class="code-line">
+                <span class="code-indent">    </span><span class="code-string">"strconv"</span>
+            </div>
+            <div class="code-line">
+                <span class="code-punctuation">)</span>
+            </div>
+            <div class="code-line"></div>
+            <div class="code-line">
+                <span class="code-keyword">func</span> <span class="code-function">updateUserRole</span><span class="code-punctuation">(</span><span class="code-variable">w</span> <span class="code-variable">http</span><span class="code-punctuation">.</span><span class="code-variable">ResponseWriter</span><span class="code-punctuation">,</span> <span class="code-variable">r</span> <span class="code-operator">*</span><span class="code-variable">http</span><span class="code-punctuation">.</span><span class="code-variable">Request</span><span class="code-punctuation">)</span> <span class="code-punctuation">{</span>
+            </div>
+            <div class="code-line">
+                <span class="code-indent">    </span><span class="code-variable">userID</span><span class="code-punctuation">,</span> <span class="code-variable">_</span> <span class="code-operator">:=</span> <span class="code-variable">strconv</span><span class="code-punctuation">.</span><span class="code-function">Atoi</span><span class="code-punctuation">(</span><span class="code-variable">r</span><span class="code-punctuation">.</span><span class="code-function">FormValue</span><span class="code-punctuation">(</span><span class="code-string">"user_id"</span><span class="code-punctuation">))</span>
+            </div>
+            <div class="code-line">
+                <span class="code-indent">    </span><span class="code-variable">newRole</span> <span class="code-operator">:=</span> <span class="code-variable">r</span><span class="code-punctuation">.</span><span class="code-function">FormValue</span><span class="code-punctuation">(</span><span class="code-string">"role"</span><span class="code-punctuation">)</span>
+            </div>
+            <div class="code-line">
+                <span class="code-indent">    </span><span class="code-function">updateRole</span><span class="code-punctuation">(</span><span class="code-variable">userID</span><span class="code-punctuation">,</span> <span class="code-variable">newRole</span><span class="code-punctuation">)</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Row 3: Bottom Row Code Snippets (Left to Right) -->
+    <div class="code-row-3">
+        <!-- C Buffer Overflow -->
+        <div class="code-block code-snippet row-3-snippet-1 code-snippet-hidden" data-direction="left-to-right">
+            <div class="code-line">
+                <span class="code-keyword">#include</span> <span class="code-string">&lt;stdio.h&gt;</span>
+            </div>
+            <div class="code-line">
+                <span class="code-keyword">#include</span> <span class="code-string">&lt;string.h&gt;</span>
+            </div>
+            <div class="code-line">
+                <span class="code-keyword">#include</span> <span class="code-string">&lt;stdlib.h&gt;</span>
+            </div>
+            <div class="code-line"></div>
+            <div class="code-line">
+                <span class="code-keyword">void</span> <span class="code-function">processUserInput</span><span class="code-punctuation">(</span><span class="code-keyword">char</span> <span class="code-operator">*</span><span class="code-variable">input</span><span class="code-punctuation">)</span> <span class="code-punctuation">{</span>
+            </div>
+            <div class="code-line">
+                <span class="code-indent">    </span><span class="code-keyword">char</span> <span class="code-variable">buffer</span><span class="code-punctuation">[</span><span class="code-number">100</span><span class="code-punctuation">]</span><span class="code-punctuation">;</span>
+            </div>
+            <div class="code-line">
+                <span class="code-indent">    </span><span class="code-function">strcpy</span><span class="code-punctuation">(</span><span class="code-variable">buffer</span><span class="code-punctuation">,</span> <span class="code-variable">input</span><span class="code-punctuation">)</span><span class="code-punctuation">;</span>
+            </div>
+            <div class="code-line">
+                <span class="code-indent">    </span><span class="code-function">printf</span><span class="code-punctuation">(</span><span class="code-string">"Processing: %s\n"</span><span class="code-punctuation">,</span> <span class="code-variable">buffer</span><span class="code-punctuation">)</span><span class="code-punctuation">;</span>
+            </div>
+            <div class="code-line">
+                <span class="code-punctuation">}</span>
+            </div>
+            <div class="code-line"></div>
+            <div class="code-line">
+                <span class="code-keyword">int</span> <span class="code-function">main</span><span class="code-punctuation">(</span><span class="code-keyword">int</span> <span class="code-variable">argc</span><span class="code-punctuation">,</span> <span class="code-keyword">char</span> <span class="code-operator">*</span><span class="code-variable">argv</span><span class="code-punctuation">[</span><span class="code-punctuation">]</span><span class="code-punctuation">)</span> <span class="code-punctuation">{</span>
+            </div>
+            <div class="code-line">
+                <span class="code-indent">    </span><span class="code-keyword">if</span> <span class="code-punctuation">(</span><span class="code-variable">argc</span> <span class="code-operator">&gt;</span> <span class="code-number">1</span><span class="code-punctuation">)</span> <span class="code-punctuation">{</span>
+            </div>
+            <div class="code-line">
+                <span class="code-indent">        </span><span class="code-function">processUserInput</span><span class="code-punctuation">(</span><span class="code-variable">argv</span><span class="code-punctuation">[</span><span class="code-number">1</span><span class="code-punctuation">]</span><span class="code-punctuation">)</span><span class="code-punctuation">;</span>
+            </div>
+        </div>
+
+        <!-- Python File Upload -->
+        <div class="code-block code-snippet row-3-snippet-2 code-snippet-hidden" data-direction="left-to-right">
+            <div class="code-line">
+                <span class="code-keyword">from</span> <span class="code-variable">flask</span> <span class="code-keyword">import</span> <span class="code-function">Flask</span><span class="code-punctuation">,</span> <span class="code-function">request</span><span class="code-punctuation">,</span> <span class="code-function">redirect</span>
+            </div>
+            <div class="code-line">
+                <span class="code-keyword">import</span> <span class="code-variable">os</span>
+            </div>
+            <div class="code-line"></div>
+            <div class="code-line">
+                <span class="code-variable">app</span> <span class="code-operator">=</span> <span class="code-function">Flask</span><span class="code-punctuation">(</span><span class="code-variable">__name__</span><span class="code-punctuation">)</span>
+            </div>
+            <div class="code-line">
+                <span class="code-variable">UPLOAD_FOLDER</span> <span class="code-operator">=</span> <span class="code-string">'/uploads'</span>
+            </div>
+            <div class="code-line"></div>
+            <div class="code-line">
+                <span class="code-function">@app.route</span><span class="code-punctuation">(</span><span class="code-string">'/upload'</span><span class="code-punctuation">,</span> <span class="code-variable">methods</span><span class="code-operator">=</span><span class="code-punctuation">[</span><span class="code-string">'POST'</span><span class="code-punctuation">]</span><span class="code-punctuation">)</span>
+            </div>
+            <div class="code-line">
+                <span class="code-keyword">def</span> <span class="code-function">upload_file</span><span class="code-punctuation">(</span><span class="code-punctuation">)</span><span class="code-punctuation">:</span>
+            </div>
+            <div class="code-line">
+                <span class="code-indent">    </span><span class="code-keyword">if</span> <span class="code-string">'file'</span> <span class="code-keyword">not</span> <span class="code-keyword">in</span> <span class="code-variable">request</span><span class="code-punctuation">.</span><span class="code-property">files</span><span class="code-punctuation">:</span>
+            </div>
+            <div class="code-line">
+                <span class="code-indent">        </span><span class="code-keyword">return</span> <span class="code-function">redirect</span><span class="code-punctuation">(</span><span class="code-variable">request</span><span class="code-punctuation">.</span><span class="code-property">url</span><span class="code-punctuation">)</span>
+            </div>
+            <div class="code-line">
+                <span class="code-indent">    </span><span class="code-variable">file</span> <span class="code-operator">=</span> <span class="code-variable">request</span><span class="code-punctuation">.</span><span class="code-property">files</span><span class="code-punctuation">[</span><span class="code-string">'file'</span><span class="code-punctuation">]</span>
+            </div>
+            <div class="code-line">
+                <span class="code-indent">    </span><span class="code-variable">filename</span> <span class="code-operator">=</span> <span class="code-variable">file</span><span class="code-punctuation">.</span><span class="code-property">filename</span>
+            </div>
+            <div class="code-line">
+                <span class="code-indent">    </span><span class="code-variable">file</span><span class="code-punctuation">.</span><span class="code-function">save</span><span class="code-punctuation">(</span><span class="code-variable">os</span><span class="code-punctuation">.</span><span class="code-variable">path</span><span class="code-punctuation">.</span><span class="code-function">join</span><span class="code-punctuation">(</span><span class="code-variable">UPLOAD_FOLDER</span><span class="code-punctuation">,</span> <span class="code-variable">filename</span><span class="code-punctuation">))</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Code Flow Lines -->
+<div class="code-flow-lines">
+    <div class="flow-line flow-line-1"></div>
+    <div class="flow-line flow-line-2"></div>
+    <div class="flow-line flow-line-3"></div>
+</div>

@@ -2,310 +2,56 @@
     <div class="container">        
         <div class="guidance-features-container">
             <!-- Headline Section 0 -->
-            <div class="guidance-headline-section">
-                <div class="headline-content">
-                    <h2>Secure your software at <span class="glow-text">every stage of development</span></h2>
-                    <p>Go beyond annual security reviews with on-demand guidance and secure code review delivered by expert security engineers.</p>
-                </div>
-            </div>
-            <div class="platform-highlights">
-                <div class="highlights-grid">
-                    <div class="highlight-item">
-                        <div class="highlight-separator"></div>
-                        <div class="highlight-visual">
-                            <div class="visual-element visual-element--lightning"></div>
-                        </div>
-                        <div class="highlight-content">
-                            <h4>Ship features, not vulnerabilities</h4>
-                            <p>Embed real security engineers into your development process to find and help fix vulnerabilities before they reach production.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="highlight-item">
-                        <div class="highlight-separator"></div>
-                        <div class="highlight-visual">
-                            <div class="visual-element visual-element--integration"></div>
-                        </div>
-                        <div class="highlight-content">
-                            <h4>Integrated with where you work</h4>
-                            <p>Engage with security engineers directly through GitHub issues, pull requests, or our platform.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="highlight-item">
-                        <div class="highlight-separator"></div>
-                        <div class="highlight-visual">
-                            <div class="visual-element visual-element--precision"></div>
-                        </div>
-                        <div class="highlight-content">
-                            <h4>Engagements scoped with pinpoint precision</h4>
-                            <p>From implementation guidance for a new feature, to comprehensive code review, we support engagements of all sizes.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="highlight-item">
-                        <div class="highlight-separator"></div>
-                        <div class="highlight-visual">
-                            <div class="visual-element visual-element--security"></div>
-                        </div>
-                        <div class="highlight-content">
-                            <h4>Remediation regardless of source</h4>
-                            <p>Bring your own tools and existing vulnerabilities and we'll help you triage and remediate them.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% include components/common/headline-section.html
+                headline="Secure your software at <span class='glow-text'>every stage of development</span>"
+                subtext="Go beyond annual security reviews with on-demand guidance and secure code review delivered by expert security engineers."
+                section_class="guidance-headline-section"
+            %}
+            {% include components/common/grid-2x2.html
+                items=site.data.guidance_highlights
+                grid_class="guidance-platform-highlights"
+            %}
 
-            <!-- Capabilities Section -->
-            <div class="guidance-capabilities-section">
-                <div class="capabilities-content">
-                    <h2>Designed for multi-disciplinary needs</h2>
-                    
-                    <!-- Pill Selector -->
-                    <div class="capabilities-selector">
-                        <button class="selector-pill active" data-tab="developers">Engineering</button>
-                        <button class="selector-pill" data-tab="security">Security</button>
-                        <button class="selector-pill" data-tab="legal">Legal & Compliance</button>
-                    </div>
-                    
-                    <!-- Content Panels -->
-                    <div class="capabilities-panels">
-                        <div class="capabilities-panel active" data-panel="developers">
-                            <h3>Accelerate secure development</h3>
-                            <p>Whether they're building features, fixing bugs, or refactoring, engineers can access on-demand security expertise within days, not weeks.</p>
-                            <div class="features-grid">
-                                 <div class="feature-column">
-                                     <div class="feature-item">
-                                         <span class="feature-bullet">•</span>
-                                         <div class="feature-text">
-                                             <h4>Vulnerability patch guidance and verification</h4>
-                                             <p>We partner with engineers to triage, plan, and validate patch implementations to help ensure correctness.</p>
-                                         </div>
-                                     </div>
-                                     <div class="feature-item">
-                                         <span class="feature-bullet">•</span>
-                                         <div class="feature-text">
-                                             <h4>Secure implementation guidance</h4>
-                                             <p>We partner with engineers during development to help ensure the features they're building are secure by design and implementation.</p>
-                                         </div>
-                                     </div>
-                                 </div>
-                                 <div class="feature-column">
-                                     <div class="feature-item">
-                                         <span class="feature-bullet">•</span>
-                                         <div class="feature-text">
-                                             <h4>Code review and offensive testing</h4>
-                                             <p>We collaborate with engineers to ensure their changes are secure through hands-on secure code reviews and testing.</p>
-                                         </div>
-                                     </div>
-                                     <div class="feature-item">
-                                        <span class="feature-bullet">•</span>
-                                        <div class="feature-text">
-                                            <h4>Artifacts and documentation by default</h4>
-                                            <p>Any code written (e.g. testing harnesses, static analysis rules, etc.) as part of a review is provided to the engineer for their use in their codebase.</p>
-                                        </div>
-                                    </div>
-                                 </div>
-                             </div>
-                        </div>
-                        
-                        <div class="capabilities-panel" data-panel="security">
-                            <h3>Scale security outcomes</h3>
-                            <p>Positioned between staff augmentation and supplementation, we fill the gap for organizations without a dedicated software security team, and extend the capabilities of those who do.</p>
-                            <div class="features-grid">
-                                 <div class="feature-column">
-                                     <div class="feature-item">
-                                         <span class="feature-bullet">•</span>
-                                         <div class="feature-text">
-                                             <h4>Proactive code review</h4>
-                                             <p>Let us burn down your backlog of code review and implementation guidance requests, so you can focus on critical security initiatives.</p>
-                                         </div>
-                                     </div>
-                                     <div class="feature-item">
-                                         <span class="feature-bullet">•</span>
-                                         <div class="feature-text">
-                                             <h4>Centralized deliverables</h4>
-                                             <p>Find all engagements and their discussions, documentation, and artifacts in one place, ensuring you are always in the loop.</p>
-                                         </div>
-                                     </div>
-                                 </div>
-                                 <div class="feature-column">
-                                     <div class="feature-item">
-                                         <span class="feature-bullet">•</span>
-                                         <div class="feature-text">
-                                             <h4>Managed engagements</h4>
-                                             <p>We can manage the entire engagement process directly with stakeholders, while you retain final approval authority.</p>
-                                         </div>
-                                     </div>
-                                     <div class="feature-item">
-                                        <span class="feature-bullet">•</span>
-                                        <div class="feature-text">
-                                            <h4>On-demand expertise</h4>
-                                            <p>We staff security engineers with a variety of different specialties to ensure you have the right expertise when you need it.</p>
-                                        </div>
-                                    </div>
-                                 </div>
-                             </div>
-                        </div>
-                        
-                        <div class="capabilities-panel" data-panel="legal">
-                            <h3>Deliverables you can depend on</h3>
-                            <p>Every engagement provides independent, expert-validated guidance that cuts through internal bias, giving you objective analysis of your actual security posture for confident legal and compliance decisions.</p>
-                            <div class="features-grid">
-                                 <div class="feature-column">
-                                     <div class="feature-item">
-                                         <span class="feature-bullet">•</span>
-                                         <div class="feature-text">
-                                             <h4>Objective risk assessment</h4>
-                                             <p>Backed by deep technical analysis, we help ensure you are informed of the objective risks in your organization's and code.</p>
-                                         </div>
-                                     </div>
-                                     <div class="feature-item">
-                                         <span class="feature-bullet">•</span>
-                                         <div class="feature-text">
-                                             <h4>Informed prioritization</h4>
-                                             <p>We help educate you on vulnerability risks and available mitigations so you can make informed prioritization decisions.</p>
-                                         </div>
-                                     </div>
-                                 </div>
-                                 <div class="feature-column">
-                                     <div class="feature-item">
-                                         <span class="feature-bullet">•</span>
-                                         <div class="feature-text">
-                                             <h4>Documented due-dilligence</h4>
-                                             <p>We provide comprehensive documentation for all engagements, including the findings, remediation, and engagement artifacts.</p>
-                                         </div>
-                                     </div>
-                                     <div class="feature-item">
-                                        <span class="feature-bullet">•</span>
-                                        <div class="feature-text">
-                                            <h4>Vulnerability disclosure support</h4>
-                                            <p>We can help you prepare and publish vulnerability disclosures to relevant vulnerability databases when necessary.</p>
-                                        </div>
-                                    </div>
-                                 </div>
-                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Headline Section 1 -->
-            <div class="guidance-headline-section">
-                <div class="headline-content">
-                    <h2>Maintain development <span class="glow-text">velocity</span></h2>
-                    <p>Engage with expert security engineers within the Augury One platform and natively within GitHub.</p>
-                </div>
-            </div>
+            {% include components/sections/guidance/tabbed-capabilities.html %}
+
+            {% include components/common/headline-section.html
+                headline="Maintain development <span class='glow-text'>velocity</span>"
+                subtext="Engage with expert security engineers within the Augury One platform and natively within GitHub."
+                section_class="guidance-headline-section"
+            %}
+
+            {% include components/features/feature-left.html
+                title="Native GitHub Integration"
+                description="Engage with security expertise through a simple mention in a GitHub Issue or Pull Request"
+                svg_include="components/features/animated-svg/guidance/github-integration-svg.html"
+            %}
+
+            {% include components/features/feature-right.html
+                title="Scope-guided Engagement"
+                description="We'll work with your team to define clear deliverables that meet your timeline and budget."
+                svg_include="components/features/animated-svg/guidance/scope-guided-engagements-svg.html"
+            %}
+
+            {% include components/common/headline-section.html
+                headline="<span class='glow-text'>Guidance</span> you can trust"
+                subtext="Go beyond standard security guidance with expert-validated security insights rooted in deep technical analysis."
+                section_class="guidance-headline-section"
+            %}
             
-            {% include features/guidance-github-integration.html %}
-            {% include features/guidance-scope-reviews.html %}
+
+            {% include components/features/feature-left.html
+                title="Immediate Guidance Delivery"
+                description="Relevant vulnerabilities and guidance identified during an engagement is disclosed immediately, allowing for short feedback loopsinstead of having to wait for a final report."
+                svg_include="components/features/animated-svg/guidance/guidance-delivery-svg.html"
+            %}
+
+            {% include components/features/feature-right.html
+                title="Built-in Collaboration"
+                description="Engage with expert security engineers from within GitHub or the Augury One platform."
+                svg_include="components/features/animated-svg/guidance/collaboration-svg.html"
+            %}
             
-            <!-- Headline Section 3 -->
-            <div class="guidance-headline-section mobile-margin">
-                <div class="headline-content">
-                    <h2><span class="glow-text">Guidance</span> you can trust</h2>
-                    <p>Go beyond standard security guidance with expert-validated security insights rooted in deep technical analysis.</p>
-                </div>
-            </div>
-            
-            {% include features/guidance-vulnerability-delivery.html %}
-            {% include features/guidance-collaboration.html %}
-            
-            <!-- Pricing and Features Section -->
-            <div class="guidance-pricing-section">
-                <div class="pricing-content">
-                    <h2>Transparent pricing</h2>
-                    
-                    <!-- Pricing Structure -->
-                    <div class="pricing-structure">
-                        <div class="pricing-card primary">
-                            <div class="pricing-header">
-                                <h3>Annual Retainer</h3>
-                                <div class="pricing-amount">
-                                    <span class="price">25</span>
-                                    <span class="period">credits/month, per organization</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="pricing-explanation">
-                            <h4>Per-engagement costs</h4>
-                            <div class="credit-details">
-                                <div class="credit-item">
-                                    <span class="credit-label">Engagement Inquiries</span>
-                                    <span class="credit-value">Included in retainer</span>
-                                </div>
-                                <div class="credit-item">
-                                    <span class="credit-label">Engagement Scoping</span>
-                                    <span class="credit-value">Included in retainer</span>
-                                </div>
-                                <div class="credit-item">
-                                    <span class="credit-label">Approved Deliverables</span>
-                                    <span class="credit-value">Priced in credits based on scope</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Features Included -->
-                    <div class="features-section">
-                        <h3>With the <span class="glow-text">basics included</span></h3>
-                        <div class="features-grid">
-                            <div class="feature-column">
-                                <div class="feature-item">
-                                    <span class="feature-bullet">•</span>
-                                    <div class="feature-text">
-                                        <h4>Staffed security engineers</h4>
-                                        <p>Services are delivered by Augury One staff. Real humans, and no subcontractors or third parties.</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="feature-item">
-                                    <span class="feature-bullet">•</span>
-                                    <div class="feature-text">
-                                        <h4>Engagement without strings attached</h4>
-                                        <p>Don't burn your deliverable budget on scoping. Engaging with us to scope deliverables is included in your retainer.</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="feature-item">
-                                    <span class="feature-bullet">•</span>
-                                    <div class="feature-text">
-                                        <h4>Exportable deliverables</h4>
-                                        <p>Engagements and individual findings can be exported in PDF format, or published directly through the Augury One platform for external sharing and reporting.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="feature-column">
-                                <div class="feature-item">
-                                    <span class="feature-bullet">•</span>
-                                    <div class="feature-text">
-                                        <h4>Transparent pricing with no hidden fees</h4>
-                                        <p>What you approve is what you pay. No sneaky fees or surprise charges</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="feature-item">
-                                    <span class="feature-bullet">•</span>
-                                    <div class="feature-text">
-                                        <h4>Flexible engagement models</h4>
-                                        <p>Scale up or down based on your needs, with no long-term commitments beyond your retainer.</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="feature-item">
-                                    <span class="feature-bullet">•</span>
-                                    <div class="feature-text">
-                                        <h4>Unlimited reviewable repositories and applications</h4>
-                                        <p>We don't set arbitrary limits on the number of repositories and applications you can engage with us on.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% include components/sections/guidance/pricing.html %}
         </div>
     </div>
 </section>
@@ -337,8 +83,6 @@
             box-sizing: border-box;
         }
     }
-    
-
     
     .headline-content {
         max-width: 1500px;
@@ -1455,94 +1199,6 @@
 
     }
 
-    /* Scroll-triggered animation styles */
-    .scroll-animate {
-        opacity: 0;
-        transition: all 0.4s cubic-bezier(0.2, 0, 0.2, 1);
-    }
-    
-    .scroll-animate.animate-in {
-        opacity: 1;
-    }
-    
-    /* Slide in from left */
-    .scroll-animate[data-animation="slideInLeft"] {
-        transform: translateX(-100px);
-    }
-    
-    .scroll-animate[data-animation="slideInLeft"].animate-in {
-        transform: translateX(0);
-    }
-    
-    /* Slide in from right */
-    .scroll-animate[data-animation="slideInRight"] {
-        transform: translateX(100px);
-    }
-    
-    .scroll-animate[data-animation="slideInRight"].animate-in {
-        transform: translateX(0);
-    }
-    
-    /* Fade in up */
-    .scroll-animate[data-animation="fadeInUp"] {
-        transform: translateY(50px);
-    }
-    
-    .scroll-animate[data-animation="fadeInUp"].animate-in {
-        transform: translateY(0);
-    }
-    
-    /* Scale animation */
-    .scroll-animate[data-animation="scaleIn"] {
-        transform: scale(0.8);
-    }
-    
-    .scroll-animate[data-animation="scaleIn"].animate-in {
-        transform: scale(1);
-    }
-    
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-        .scroll-animate {
-            transition: all 0.3s ease-out;
-        }
-        
-        .scroll-animate[data-animation="slideInLeft"] {
-            transform: translateX(-50px);
-        }
-        
-        .scroll-animate[data-animation="slideInRight"] {
-            transform: translateX(50px);
-        }
-        
-        .scroll-animate[data-animation="fadeInUp"] {
-            transform: translateY(30px);
-        }
-    }
-
-    /* Remove top padding above the first headline section on the guidance page */
-    .guidance-background {
-        padding-top: 0 !important;
-        background: #000000;
-        overflow-x: hidden;
-        max-width: 100%;
-        width: 100%;
-    }
-
-    .guidance-background * {
-        box-sizing: border-box;
-    }
-
-    /* Override Bootstrap container constraints for guidance page */
-    .guidance-background .container {
-        max-width: none !important;
-        width: 100% !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-    }
-
     /* Add proper padding for non-full-width content */
     .guidance-features-container {
         padding-left: 2rem;
@@ -1573,39 +1229,6 @@
     .guidance-features-container {
         margin-top: 0 !important;
         padding-top: 0 !important;
-    }
-
-    /* Header text capitalization and styling enhancements */
-    .guidance-background h2,
-    .guidance-background h3,
-    .guidance-background h4 {
-        text-transform: uppercase;
-        font-weight: 800;
-        letter-spacing: 0.025em;
-    }
-
-    /* Enhanced styling for main headline h2 elements */
-    .guidance-background h2 {
-        font-weight: 900;
-        letter-spacing: -0.01em;
-    }
-
-    /* Enhanced styling for section h3 elements */
-    .guidance-background h3 {
-        font-weight: 700;
-        letter-spacing: 0.02em;
-    }
-
-    /* Enhanced styling for feature h4 elements */
-    .guidance-background h4 {
-        font-weight: 700;
-        letter-spacing: 0.03em;
-    }
-
-    /* Specific adjustments for glow text elements to maintain readability */
-    .guidance-background .glow-text {
-        font-weight: 900;
-        letter-spacing: 0.01em;
     }
 </style>
 
