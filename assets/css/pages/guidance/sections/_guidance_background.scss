@@ -1,0 +1,55 @@
+    /* Remove top padding above the first headline section on the guidance page */
+    .guidance-background {
+        padding-top: 0 !important;
+        background: #000000;
+        overflow-x: hidden;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .guidance-background * {
+        box-sizing: border-box;
+    }
+
+    /* Override Bootstrap container constraints for guidance page */
+    .guidance-background .container {
+        max-width: none !important;
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+/* Header text capitalization and styling enhancements */
+.guidance-background h2,
+.guidance-background h3,
+.guidance-background h4 {
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.025em;
+}
+
+/* Enhanced styling for main headline h2 elements */
+.guidance-background h2 {
+    font-weight: 900;
+    letter-spacing: -0.01em;
+}
+
+/* Enhanced styling for section h3 elements */
+.guidance-background h3 {
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+/* Enhanced styling for feature h4 elements */
+.guidance-background h4 {
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+/* Specific adjustments for glow text elements to maintain readability */
+.guidance-background .glow-text {
+    font-weight: 900;
+    letter-spacing: 0.01em;
+}

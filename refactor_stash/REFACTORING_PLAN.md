@@ -340,7 +340,7 @@ title: Augury One - Guidance
    highlight_text="Guidance"
    show_scroll_indicator=true
    scroll_target="guidance"
-   logo_watermark="/img/shh.png"
+   logo_watermark="/assets/img/augury_one_logo.png"
    show_particles=true
    background_include="components/backgrounds/guidance-hero-bg.html"
 %}

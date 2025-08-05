@@ -1,9 +1,4 @@
-<script src="{{ "/js/jquery.js" | prepend: site.baseurl }}"></script>
-<script src="{{ "/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
-<script src="{{ "/js/jquery.easing.min.js" | prepend: site.baseurl }}"></script>
-<script src="{{ "/js/grayscale.js" | prepend: site.baseurl }}"></script>
 
-<script>
 // SVG Typing Animation
 document.addEventListener('DOMContentLoaded', function() {
     // Multi-line GitHub typing animation
@@ -152,4 +147,3 @@ document.addEventListener('DOMContentLoaded', function() {
     // Update cursor position periodically
     setInterval(updateCursor, 100);
 });
-</script>
