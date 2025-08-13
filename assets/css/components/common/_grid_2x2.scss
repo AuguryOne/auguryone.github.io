@@ -1,7 +1,6 @@
 .highlight-content {
     max-width: 1500px;
     margin: 0 auto;
-    padding: 0 2rem;
     text-align: center;
     position: relative;
     z-index: 2;
@@ -28,7 +27,7 @@
 .highlight-item {
     position: relative;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 1.5rem;
     transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
     padding-left: 1rem;
@@ -44,10 +43,6 @@
     top: 0;
     bottom: 0;
     width: 3px;
-    background: linear-gradient(180deg, 
-        rgba(59, 130, 246, 0.8) 0%, 
-        rgba(147, 197, 253, 0.6) 50%, 
-        rgba(59, 130, 246, 0.8) 100%);
     border-radius: 2px;
     transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
@@ -59,15 +54,12 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    margin-top: 0.5rem;
+    margin-top: 0;
 }
 
 .visual-element {
-    width: 48px;
-    height: 48px;
+    font-size: 2em;
     border-radius: 12px;
-    background: rgba(59, 130, 246, 0.2);
-    border: 2px solid rgba(147, 197, 253, 0.4);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,22 +72,18 @@
     position: absolute;
     width: 24px;
     height: 24px;
-    background: rgba(147, 197, 253, 0.6);
     border-radius: 6px;
 }
 
 .visual-element--ai::before {
-    background: linear-gradient(45deg, rgba(147, 197, 253, 0.8), rgba(59, 130, 246, 0.6));
     transform: rotate(45deg);
 }
 
 .visual-element--verification::before {
-    background: rgba(34, 197, 94, 0.6);
     border-radius: 50%;
 }
 
 .visual-element--community::before {
-    background: rgba(168, 85, 247, 0.6);
     border-radius: 50%;
     box-shadow: 
         8px 0 0 -4px rgba(168, 85, 247, 0.4),
@@ -103,18 +91,14 @@
 }
 
 .visual-element--delivery::before {
-    background: rgba(249, 115, 22, 0.6);
     transform: skew(-15deg);
 }
 
 .highlight-item:hover .visual-element {
     transform: scale(1.1) rotate(5deg);
-    border-color: rgba(147, 197, 253, 0.8);
-    background: rgba(59, 130, 246, 0.3);
 }
 
 .highlight-content h4 {
-    color: #f1f5f9;
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 0.75rem;
