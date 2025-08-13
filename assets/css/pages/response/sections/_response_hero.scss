@@ -1,14 +1,17 @@
-.response-hero .response-grid,
-.response-hero .pulse-rings,
-.response-hero .floating-particles {
+/* Background layer positioning handled by base hero styles */
+/* Removed unused .hero-background; background wrapper uses .response-hero-background in markup */
+/* .response-grid positioning handled by shared rule above */
+
+.hero-section .response-grid,
+.hero-section .pulse-rings,
+.hero-section .floating-particles {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 }
-/* Removed unused .hero-background; background wrapper uses .response-hero-background in markup */
-/* .response-grid positioning handled by shared rule above */
+
 .response-hero .grid-line {
     position: absolute;
     background: linear-gradient(90deg, transparent, #ff3b3b, transparent);
@@ -36,10 +39,7 @@
     box-shadow: 0 0 32px 8px #ef4444aa;
     animation: pulse-ring 3.5s cubic-bezier(0.4,0,0.2,1) infinite;
 }
-.response-hero .floating-particles {
-    pointer-events: none;
-    z-index: 2;
-}
+.response-hero .floating-particles { z-index: 2; }
 .response-hero .particle {
     position: absolute;
     width: 8px;

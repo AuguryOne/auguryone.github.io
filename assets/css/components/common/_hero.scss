@@ -1,3 +1,8 @@
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
 .hero-content {
     position: relative;
     width: 100%;
@@ -13,10 +18,18 @@
 .hero-container {
     position: relative;
     z-index: 2;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+}
+
+/* Align Bootstrap container with previous custom container sizing/padding */
+.hero-container.container {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media (min-width: 1200px) {
+    .hero-container.container {
+        width: 1200px;
+    }
 }
 
 .hero-logo-bg {
@@ -63,4 +76,128 @@
 
 .hero-see-more {
     margin-bottom: 50px;
+}
+
+/* Common overlay layers used by various hero backgrounds */
+.hero-section .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.floating-particles {
+    pointer-events: none;
+}
+
+/* Global hero animations and delays */
+.animate-fadeInUp {
+    animation: fadeInUp 1s ease-out both;
+}
+
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* See More button - shared styles */
+.btn-see-more {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+.btn-see-more:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(59, 130, 246, 0.3);
+    background: rgba(255, 255, 255, 1);
+    border-color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+}
+
+.chevron-double {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: -4px;
+}
+
+.chevron-1,
+.chevron-2 {
+    color: #1e293b;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+    animation: bounce-chevrons 2s ease-in-out infinite;
+}
+
+.chevron-2 {
+    margin-top: -8px;
+    animation-delay: 0.1s;
+}
+
+.btn-see-more:hover .chevron-1,
+.btn-see-more:hover .chevron-2 {
+    transform: translateY(2px);
+}
+
+@keyframes bounce-chevrons {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(4px);
+        opacity: 1;
+    }
+}
+
+/* Responsive tweaks for shared hero elements */
+@media (max-width: 767px) {
+    .hero-content {
+        padding: 5.5rem 0 2rem;
+    }
+
+    .btn-see-more {
+        width: 60px;
+        height: 60px;
+    }
+
+    .chevron-1,
+    .chevron-2 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+    }
 }

@@ -1,13 +1,5 @@
 .guidance-hero-section {
-    height: 100vh;
-    min-height: 600px;
     background: #000000;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 120px 0 80px; /* Match intelligence hero padding */
 }
 
 /* Code Editor Background */
@@ -238,108 +230,10 @@
 }
 
 /* See More Button */
-.guidance-hero-section .btn-see-more {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 80px;
-    height: 80px;
-    background: rgba(255, 255, 255, 0.9);
-    border: 3px solid rgba(255, 255, 255, 0.9);
-    border-radius: 50%;
-    text-decoration: none;
-    transition: all 0.4s ease;
-    cursor: pointer;
-    position: relative;
-    backdrop-filter: blur(10px);
-}
-
-.guidance-hero-section .btn-see-more:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 35px rgba(16, 185, 129, 0.3);
-    background: rgba(255, 255, 255, 1);
-    border-color: rgba(255, 255, 255, 1);
-    text-decoration: none;
-}
-
-.guidance-hero-section .chevron-double {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: -4px;
-}
-
-.guidance-hero-section .chevron-1,
-.guidance-hero-section .chevron-2 {
-    color: #1e293b;
-    font-size: 16px;
-    transition: transform 0.3s ease;
-    animation: bounce-chevrons 2s ease-in-out infinite;
-}
-
-.guidance-hero-section .chevron-2 {
-    margin-top: -8px;
-    animation-delay: 0.1s;
-}
-
-.guidance-hero-section .btn-see-more:hover .chevron-1,
-.guidance-hero-section .btn-see-more:hover .chevron-2 {
-    transform: translateY(2px);
-}
-
-@keyframes bounce-chevrons {
-    0%, 100% {
-        transform: translateY(0);
-        opacity: 0.8;
-    }
-    50% {
-        transform: translateY(4px);
-        opacity: 1;
-    }
-}
-
-/* Animation classes */
-.guidance-hero-section .animate-fadeInUp {
-    animation: fadeInUp 1s ease-out;
-    opacity: 0;
-    animation-fill-mode: forwards;
-}
-
-.guidance-hero-section .delay-1 {
-    animation-delay: 0.2s;
-    opacity: 0;
-    animation-fill-mode: forwards;
-}
-
-.guidance-hero-section .delay-2 {
-    animation-delay: 0.4s;
-    opacity: 0;
-    animation-fill-mode: forwards;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+/* See-more button and animation utilities are shared in base hero styles */
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .guidance-hero-section .btn-see-more {
-        width: 60px;
-        height: 60px;
-    }
-    
-    .guidance-hero-section .chevron-1,
-    .guidance-hero-section .chevron-2 {
-        font-size: 14px;
-    }
-    
     /* Adjust code blocks for mobile */
     .guidance-hero-section .code-block {
         font-size: 10px;

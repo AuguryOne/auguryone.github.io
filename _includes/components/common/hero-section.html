@@ -5,7 +5,7 @@
     {% endif %}
     
     <div class="hero-content">
-        <div class="hero-container">
+        <div class="container hero-container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h1 class="hero-title animate-fadeInUp">
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (seeMoreButton) {
         seeMoreButton.addEventListener('click', function(e) {
             e.preventDefault();
-            const target = document.querySelector('#{{ include.scroll_target | default: 'content' }}');
+            const target = document.querySelector("#{{ include.scroll_target | default: 'content' }}");
             if (target) {
                 const navbar = document.querySelector('.navbar-fixed-top');
                 let navbarHeight = navbar ? navbar.offsetHeight : 0;
