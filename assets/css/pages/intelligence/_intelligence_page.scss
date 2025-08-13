@@ -1,12 +1,6 @@
-
-/* Add proper padding for non-full-width content */
 .intelligence-features-container {
     max-width: 1200px;
     margin: 0 auto;
-}
-
-/* Remove top padding from the intelligence feature container */
-.intelligence-features-container {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
+    margin-top: 0;
+    padding-top: 0;
 }
