@@ -79,12 +79,13 @@
     }
     
     .platform-feature .feature-content {
-        order: 2;
+        order: 2 !important;
         max-width: 500px;
         text-align: center !important;
     }
     
     .platform-feature .feature-animation {
+        order: 1 !important;
         width: 100%;
         max-width: 600px;
         height: 400px;
@@ -107,7 +108,7 @@
     }
     
     .platform-feature .feature-content {
-        order: 2;
+        order: 2 !important;
         max-width: none;
         text-align: center !important;
         padding: 0 1rem;
@@ -125,6 +126,7 @@
     }
     
     .platform-feature .feature-animation {
+        order: 1 !important;
         width: 100%;
         max-width: 100%;
         height: 300px;
