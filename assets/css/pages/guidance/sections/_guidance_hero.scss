@@ -10,47 +10,6 @@
     padding: 120px 0 80px; /* Match intelligence hero padding */
 }
 
-.guidance-hero-section .guidance-hero-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    z-index: 5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Background Logo Watermark */
-.guidance-hero-section .guidance-hero-logo-bg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    opacity: 0.15;
-    pointer-events: none;
-}
-
-.guidance-hero-section .guidance-logo-watermark {
-    width: 400px;
-    height: auto;
-    filter: invert(1) brightness(1.5);
-    /* animation: subtle-float 8s ease-in-out infinite; */
-}
-
-@keyframes subtle-float {
-    0%, 100% {
-        transform: translateY(0px) rotate(0deg);
-        opacity: 0.15;
-    }
-    50% {
-        transform: translateY(-10px) rotate(2deg);
-        opacity: 0.22;
-    }
-}
-
 /* Code Editor Background */
 .guidance-hero-section .code-editor-background {
     position: absolute;
@@ -79,15 +38,6 @@
     opacity: 0;
     white-space: nowrap;
     overflow: hidden;
-}
-
-/* Scrolling Animation Classes */
-.guidance-hero-section .scroll-left-to-right {
-    animation: scrollLeftToRight 30s linear infinite;
-}
-
-.guidance-hero-section .scroll-right-to-left {
-    animation: scrollRightToLeft 35s linear infinite;
 }
 
 /* Code Row Positioning */
@@ -272,27 +222,6 @@
     }
 }
 
-
-
-/* Hero Content */
-.guidance-hero-section .guidance-hero-content {
-    position: relative;
-    z-index: 15;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.guidance-hero-section .guidance-hero-title {
-    font-size: 4rem;
-    font-weight: 700;
-    color: #f1f5f9;
-    margin-bottom: 30px;
-    line-height: 1.1;
-    text-transform: uppercase;
-}
-
 .guidance-hero-section .highlight-text {
     color: #10b981;
     text-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
@@ -308,21 +237,7 @@
     }
 }
 
-.guidance-hero-section .guidance-hero-subtitle {
-    font-size: 1.3rem;
-    color: #cbd5e1;
-    max-width: 700px;
-    margin: 0 auto 50px;
-    line-height: 1.6;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
 /* See More Button */
-.guidance-hero-section .guidance-see-more {
-    margin-bottom: 50px;
-}
-
 .guidance-hero-section .btn-see-more {
     display: inline-flex;
     align-items: center;
@@ -415,18 +330,6 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .guidance-hero-section .guidance-hero-title {
-        font-size: 2.5rem;
-    }
-    
-    .guidance-hero-section .guidance-hero-subtitle {
-        font-size: 1.1rem;
-    }
-    
-    .guidance-hero-section .guidance-logo-watermark {
-        width: 250px;
-    }
-    
     .guidance-hero-section .btn-see-more {
         width: 60px;
         height: 60px;
@@ -464,18 +367,6 @@
 }
 
 @media (max-width: 480px) {
-    .guidance-hero-section .guidance-hero-title {
-        font-size: 2rem;
-    }
-    
-    .guidance-hero-section .guidance-hero-subtitle {
-        font-size: 1rem;
-    }
-    
-    .guidance-hero-section .guidance-logo-watermark {
-        width: 250px;
-    }
-    
     /* Further adjust code blocks for small screens */
     .guidance-hero-section .code-block {
         font-size: 9px;
@@ -496,40 +387,4 @@
         mask: radial-gradient(circle at 50% 50%, transparent 120px, rgba(0,0,0,0.3) 160px, rgba(0,0,0,0.6) 200px, rgba(0,0,0,0.8) 240px, black 280px);
         -webkit-mask: radial-gradient(circle at 50% 50%, transparent 120px, rgba(0,0,0,0.3) 160px, rgba(0,0,0,0.6) 200px, rgba(0,0,0,0.8) 240px, black 280px);
     }
-}
-
-.guidance-hero-section .floating-particles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 4;
-}
-.guidance-hero-section .particle {
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background: #10b981;
-    border-radius: 50%;
-    animation: float-particle 6s ease-in-out infinite;
-    opacity: 0.7;
-}
-@keyframes float-particle {
-    0%, 100% {
-        transform: translateY(0px) rotate(0deg);
-        opacity: 0.5;
-    }
-    50% {
-        transform: translateY(-20px) rotate(180deg);
-        opacity: 1;
-    }
-}
-
-.guidance-hero-section .guidance-logo-watermark:hover {
-    filter: invert(1) brightness(1.5) drop-shadow(0 0 32px #10b981) drop-shadow(0 0 64px #10b981);
-    box-shadow: 0 0 40px 10px #10b981;
-    opacity: 0.22;
-    transition: filter 0.3s, box-shadow 0.3s, opacity 0.3s;
 }

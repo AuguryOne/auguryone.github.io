@@ -1,4 +1,16 @@
-    
+.headline-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 100vw;
+    min-height: 125px;
+    margin-bottom: 3rem;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    padding: 2rem 0;
+}
+
 .headline-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -22,7 +34,7 @@
 .headline-content p {
     font-size: 1.25rem;
     color: #cbd5e1;
-    max-width: 600px;
+    max-width: 1200px;
     margin: 0 auto;
     line-height: 1.6;
 }
