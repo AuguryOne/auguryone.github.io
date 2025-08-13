@@ -5,7 +5,6 @@
   icon_border_color: "#ef4444"
   icon_border_hover: "#ff3b3b"
   icon_bg_color: "transparent"
-  icon_bg_hover: "transparent"
   icon_color: "#ef4444"
   icon_color_hover: "#ff3b3b"
 - title: "Product security incidents"
