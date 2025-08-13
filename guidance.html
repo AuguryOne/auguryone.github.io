@@ -2,6 +2,71 @@
 layout: default-page
 title: Augury One - Guidance
 ---
+{% include components/common/hero-section.html
+    hero_class="guidance-hero-section"
+    title="Software Security Guidance"
+    subtitle="Find and fix vulnerabilities in your software before they reach production."
+    highlight_text="Guidance"
+    show_scroll_indicator=true
+    scroll_target="guidance"
+    show_particles=false
+    logo_watermark="/assets/img/augury_one_logo.png"
+    background_include="components/backgrounds/guidance-hero-bg.html"
+ %}
 
-{% include guidance-hero.html %}
-{% include guidance.html %} 
+<section id="guidance" class="content-section guidance-background">
+    <div class="container">        
+        <div class="guidance-features-container">
+            {% include components/common/headline-section.html
+                headline="Secure your software at <span class='glow-text'>every stage of development</span>"
+                subtext="Go beyond annual security reviews with on-demand guidance and secure code review delivered by expert security engineers."
+                section_class="guidance-headline-section"
+            %}
+            {% include components/common/grid-2x2.html
+                items=site.data.guidance_highlights
+                grid_class="guidance-platform-highlights"
+            %}
+
+            {% include components/sections/guidance/tabbed-capabilities.html %}
+
+            {% include components/common/headline-section.html
+                headline="Maintain development <span class='glow-text'>velocity</span>"
+                subtext="Engage with expert security engineers within the Augury One platform and natively within GitHub."
+                section_class="guidance-headline-section"
+            %}
+
+            {% include components/features/feature-left.html
+                title="Native GitHub Integration"
+                description="Engage with security expertise through a simple mention in a GitHub Issue or Pull Request"
+                svg_include="components/features/animated-svg/guidance/github-integration-svg.html"
+            %}
+
+            {% include components/features/feature-right.html
+                title="Scope-guided Engagement"
+                description="We'll work with your team to define clear deliverables that meet your timeline and budget."
+                svg_include="components/features/animated-svg/guidance/scope-guided-engagements-svg.html"
+            %}
+
+            {% include components/common/headline-section.html
+                headline="<span class='glow-text'>Guidance</span> you can trust"
+                subtext="Go beyond standard security guidance with expert-validated security insights rooted in deep technical analysis."
+                section_class="guidance-headline-section"
+            %}
+            
+
+            {% include components/features/feature-left.html
+                title="Immediate Guidance Delivery"
+                description="Relevant vulnerabilities and guidance identified during an engagement is disclosed immediately, allowing for short feedback loopsinstead of having to wait for a final report."
+                svg_include="components/features/animated-svg/guidance/guidance-delivery-svg.html"
+            %}
+
+            {% include components/features/feature-right.html
+                title="Built-in Collaboration"
+                description="Engage with expert security engineers from within GitHub or the Augury One platform."
+                svg_include="components/features/animated-svg/guidance/collaboration-svg.html"
+            %}
+            
+            {% include components/sections/guidance/pricing.html %}
+        </div>
+    </div>
+</section>
