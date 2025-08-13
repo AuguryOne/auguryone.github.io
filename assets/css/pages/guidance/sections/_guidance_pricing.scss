@@ -1,22 +1,16 @@
-
-    /* Pricing Section Styles */
-    .guidance-pricing-section {
+.guidance-pricing-section {
     width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
+    margin: 3rem calc(-50vw + 50%) 0;
     background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, #000000 100%);
     border-top: 1px solid rgba(16, 185, 129, 0.2);
     border-bottom: 1px solid rgba(16, 185, 129, 0.2);
     padding: 5rem 0;
-    margin-top: 3rem;
     position: relative;
 }
 
 @media (max-width: 768px) {
     .guidance-pricing-section {
         width: 100%;
-        margin-left: calc(-50vw + 50%);
-        margin-right: calc(-50vw + 50%);
         max-width: none;
         box-sizing: border-box;
     }
@@ -30,13 +24,36 @@
     z-index: 2;
 }
 
+.pricing-card, .pricing-explanation, .feature-item {
+    transition: all 0.3s ease;
+}
+
+.pricing-card, .pricing-explanation {
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+}
+
+.pricing-card:hover, .pricing-explanation:hover {
+    transform: translateY(-4px);
+}
+
+.pricing-content h2, .features-section h3 {
+    color: #f1f5f9;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.pricing-header h3, .pricing-explanation h4 {
+    font-weight: 600;
+    color: #f1f5f9;
+    text-align: center;
+}
+
 .pricing-content h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #f1f5f9;
     margin-bottom: 3rem;
-    text-align: center;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     letter-spacing: -0.02em;
 }
 
@@ -44,25 +61,18 @@
     display: flex;
     flex-direction: row;
     gap: 2rem;
-    margin-bottom: 4rem;
+    margin: 0 auto 4rem;
     max-width: 1100px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .pricing-card {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(16, 185, 129, 0.2);
-    border-radius: 16px;
-    padding: 1.5rem;
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
     position: relative;
     flex: 1;
 }
 
 .pricing-card:hover {
-    transform: translateY(-4px);
     border-color: rgba(16, 185, 129, 0.4);
     box-shadow: 0 12px 40px rgba(16, 185, 129, 0.15);
 }
@@ -85,10 +95,7 @@
 
 .pricing-header h3 {
     font-size: 1.75rem;
-    font-weight: 600;
-    color: #f1f5f9;
     margin-bottom: 0;
-    text-align: center;
     flex-shrink: 0;
 }
 
@@ -117,40 +124,20 @@
     color: #cbd5e1;
 }
 
-.pricing-description {
-    margin-top: auto;
-    flex-shrink: 0;
-}
-
-.pricing-description p {
-    font-size: 1.125rem;
-    color: #cbd5e1;
-    margin: 0;
-    line-height: 1.6;
-}
-
 .pricing-explanation {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(16, 185, 129, 0.15);
-    border-radius: 16px;
-    padding: 1.5rem;
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
     flex: 1;
 }
 
 .pricing-explanation:hover {
-    transform: translateY(-4px);
     border-color: rgba(16, 185, 129, 0.25);
     box-shadow: 0 12px 40px rgba(16, 185, 129, 0.1);
 }
 
 .pricing-explanation h4 {
     font-size: 1.5rem;
-    font-weight: 600;
-    color: #f1f5f9;
     margin-bottom: 1.5rem;
-    text-align: center;
 }
 
 .credit-details {
@@ -189,10 +176,7 @@
 .features-section h3 {
     font-size: 2rem;
     font-weight: 600;
-    color: #f1f5f9;
     margin-bottom: 2rem;
-    text-align: center;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .features-grid {
@@ -216,7 +200,6 @@
     padding: 0;
     background: none;
     border: none;
-    transition: all 0.3s ease;
 }
 
 .feature-bullet {
@@ -236,7 +219,7 @@
     font-size: 1.25rem;
     font-weight: 600;
     color: #f1f5f9;
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 0.5rem;
     line-height: 1.4;
 }
 
@@ -269,10 +252,6 @@
         align-items: center;
     }
     
-    .pricing-card {
-        padding: 1.5rem;
-    }
-    
     .pricing-card.primary {
         min-height: 180px;
     }
@@ -283,10 +262,6 @@
     
     .pricing-amount .period {
         font-size: 1.5rem;
-    }
-    
-    .pricing-explanation {
-        padding: 1.5rem;
     }
     
     .pricing-explanation h4 {
@@ -358,10 +333,6 @@
         font-size: 1.125rem;
     }
     
-    .credit-item {
-        padding: 0.75rem;
-    }
-    
     .credit-label {
         font-size: 0.9rem;
     }
@@ -377,13 +348,4 @@
     .feature-item {
         gap: 1rem;
     }
-}
-
-/* Reset padding for full-width sections */
-.guidance-pricing-section {
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-    width: 100vw;
-    padding-left: 0;
-    padding-right: 0;
 }

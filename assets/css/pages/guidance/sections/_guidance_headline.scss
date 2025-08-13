@@ -1,39 +1,14 @@
 /* Headline Section Styles */
 .guidance-headline-section {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, #000000 100%);
     border-top: 1px solid rgba(16, 185, 129, 0.2);
     border-bottom: 1px solid rgba(16, 185, 129, 0.2);
-    padding: 2rem 0;
-    margin-bottom: 3rem;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    min-height: 125px;
-}
-
-
-.guidance-headline-section .headline-content {
-    max-width: 1500px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    text-align: center;
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, #000000 100%);
 }
 
 .guidance-headline-section .headline-content h2 {
     font-size: 2.5rem;
     font-weight: 700;
     color: #f1f5f9;
-    margin-bottom: 1rem;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     letter-spacing: -0.02em;
 }
@@ -41,37 +16,10 @@
 .guidance-headline-section .headline-content p {
     font-size: 1.25rem;
     color: #cbd5e1;
-    max-width: 800px;
-    margin: 0 auto 0 auto;
     line-height: 1.6;
 }
 
-.guidance-headline-section {
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-    width: 100vw;
-    padding-left: 0;
-    padding-right: 0;
-}
-
 @media (max-width: 768px) {
-    .guidance-headline-section {
-        width: 100%;
-        margin-left: calc(-50vw + 50%);
-        margin-right: calc(-50vw + 50%);
-        max-width: none;
-        box-sizing: border-box;
-    }
-    .guidance-headline-section {
-        padding: 1.5rem 0;
-        margin-bottom: 2rem;
-        min-height: 150px;
-    }
-    
-    .guidance-headline-section .headline-content {
-        padding: 0 1rem;
-    }
-    
     .guidance-headline-section .headline-content h2 {
         font-size: 2rem;
     }
@@ -85,10 +33,6 @@
 }
 
 @media (max-width: 480px) {
-    .guidance-headline-section {
-        padding: 1rem 0;
-        min-height: 120px;
-    }
     .guidance-headline-section .headline-content h2 {
         font-size: 1.75rem;
     }

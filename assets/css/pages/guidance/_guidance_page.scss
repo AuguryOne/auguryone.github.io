@@ -1,13 +1,9 @@
-/* Add proper padding for non-full-width content */
+/* Guidance features container layout and spacing */
 .guidance-features-container {
     max-width: 1200px;
     margin: 0 auto;
-}
-
-/* Remove top padding from the guidance feature container */
-.guidance-features-container {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 /* Green glow text effect matching hero header */
