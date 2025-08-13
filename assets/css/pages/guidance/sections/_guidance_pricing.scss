@@ -91,6 +91,10 @@
     flex-direction: column;
     height: 100%;
     margin-bottom: 0;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .pricing-header h3 {
@@ -105,7 +109,7 @@
     align-items: center;
     justify-content: center;
     gap: 0.25rem;
-    flex: 1;
+    flex: 0 0 auto;
     margin: 0;
 }
 
@@ -249,7 +253,12 @@
     .pricing-structure {
         flex-direction: column;
         margin-bottom: 3rem;
-        align-items: center;
+        align-items: stretch;
+    }
+
+    .pricing-structure > .pricing-card,
+    .pricing-structure > .pricing-explanation {
+        width: 100%;
     }
     
     .pricing-card.primary {
