@@ -241,6 +241,10 @@
     flex: 1;
 }
 
+.intelligence-pricing-section .pricing-amount h3 {
+    text-transform: uppercase;
+}
+
 .intelligence-pricing-section .pricing-amount .price {
     font-size: 5rem;
     font-weight: 700;
@@ -248,6 +252,7 @@
     line-height: 1;
     word-break: keep-all;
     white-space: nowrap;
+    text-transform: uppercase;
 }
 
 .intelligence-pricing-section .pricing-amount .period {
