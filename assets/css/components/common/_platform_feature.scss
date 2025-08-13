@@ -4,27 +4,15 @@
    Override conflicting styles for feature-left and feature-right components
    ======================================== */
 
-/* Platform feature container - ensures proper flexbox layout */
+/* Platform feature container */
 .platform-feature {
-    display: flex;
-    align-items: center;
-    gap: 4rem;
     margin: 3rem 0;
-    opacity: 0;
 }
 
-/* Platform feature content - ensures text positioning */
+/* Platform feature content */
 .platform-feature .feature-content {
-    flex: 1;
     max-width: 400px;
-    text-align: left !important;
-    order: unset !important;
-    margin-left: 0 !important;
-    position: static !important;
-    display: block !important;
-    flex-direction: unset !important;
-    justify-content: unset !important;
-    z-index: unset !important;
+    text-align: left;
 }
 
 .platform-feature .feature-content h3 {
@@ -45,8 +33,8 @@
 
 /* Platform feature animation container */
 .platform-feature .feature-animation {
-    flex: 1;
     width: 700px;
+    max-width: 100%;
     height: 500px;
     display: flex;
     align-items: center;
@@ -66,77 +54,6 @@
     filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
     border-radius: 12px;
     transform-origin: center center;
-}
-
-/* Responsive adjustments for platform features */
-@media (max-width: 991px) {
-    .platform-feature {
-        flex-direction: column;
-        text-align: center;
-        gap: 3rem;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .platform-feature .feature-content {
-        order: 2 !important;
-        max-width: 500px;
-        text-align: center !important;
-    }
-    
-    .platform-feature .feature-animation {
-        order: 1 !important;
-        width: 100%;
-        max-width: 600px;
-        height: 400px;
-        padding: 25px;
-        box-sizing: border-box;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-}
-
-@media (max-width: 767px) {
-    .platform-feature {
-        flex-direction: column;
-        text-align: center;
-        gap: 2rem;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .platform-feature .feature-content {
-        order: 2 !important;
-        max-width: none;
-        text-align: center !important;
-        padding: 0 1rem;
-    }
-    
-    .platform-feature .feature-content h3 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-    }
-    
-    .platform-feature .feature-content p {
-        font-size: 1rem;
-        margin-bottom: 0;
-        line-height: 1.6;
-    }
-    
-    .platform-feature .feature-animation {
-        order: 1 !important;
-        width: 100%;
-        max-width: 100%;
-        height: 300px;
-        padding: 20px;
-        box-sizing: border-box;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
 }
 
 /* Scroll-triggered animation styles */
@@ -183,6 +100,67 @@
 
 .scroll-animate[data-animation="scaleIn"].animate-in {
     transform: scale(1);
+}
+
+
+/* Vertically center text column to match animation height on md+ */
+@media (min-width: 992px) {
+    .platform-feature .feature-content {
+        min-height: 500px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+}
+
+/* Responsive adjustments for platform features */
+@media (max-width: 991px) {
+    .platform-feature {
+        text-align: center;
+    }
+    
+    .platform-feature .feature-content {
+        max-width: 500px;
+        text-align: center !important;
+        margin: 0 auto;
+    }
+    
+    .platform-feature .feature-animation {
+        width: 100%;
+        max-width: 600px;
+        height: 400px;
+        padding: 25px;
+        margin: 0 auto 3rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .platform-feature .feature-content {
+        max-width: none;
+        padding: 0 1rem;
+    }
+    
+    .platform-feature .feature-content h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .platform-feature .feature-content p {
+        font-size: 1rem;
+        margin-bottom: 0;
+        line-height: 1.6;
+    }
+    
+    .platform-feature .feature-animation {
+        width: 100%;
+        max-width: 100%;
+        height: 300px;
+        padding: 20px;
+        margin: 0 auto 2rem;
+    }
 }
 
 /* Responsive adjustments */

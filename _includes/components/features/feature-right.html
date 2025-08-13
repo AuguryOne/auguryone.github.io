@@ -1,10 +1,17 @@
-<!-- Feature with animation on left, text on right -->
-<div class="platform-feature scroll-animate {{ include.feature_class | default: '' }}" data-animation="slideInRight">
-    <div class="feature-animation">
-        {% include {{ include.svg_include }} %}
-    </div>
-    <div class="feature-content">
-        <h3>{{ include.title }}</h3>
-        <p>{{ include.description }}</p>
-    </div>
-</div> 
+<!-- Feature with animation on left, text on right (Bootstrap grid) -->
+<div class="platform-feature platform-feature--right scroll-animate {{ include.feature_class | default: '' }}" data-animation="slideInRight">
+	<div class="row">
+		<!-- On small screens stack with animation first; md+ keep animation left -->
+		<div class="col-xs-12 col-md-7">
+			<div class="feature-animation">
+				{% include {{ include.svg_include }} %}
+			</div>
+		</div>
+		<div class="col-xs-12 col-md-5">
+			<div class="feature-content">
+				<h3>{{ include.title }}</h3>
+				<p>{{ include.description }}</p>
+			</div>
+		</div>
+	</div>
+</div>
