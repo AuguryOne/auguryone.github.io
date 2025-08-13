@@ -1,53 +1,44 @@
 /* Header text capitalization and styling enhancements for intelligence page */
-.intelligence-background h2,
-.intelligence-background h3,
-.intelligence-background h4 {
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 0.025em;
-}
-
-.intelligence-background h2 {
-    font-weight: 900;
-    letter-spacing: -0.01em;
-}
-
-/* Enhanced styling for section h3 elements */
-.intelligence-background h3 {
-    font-weight: 700;
-    letter-spacing: 0.02em;
-}
-
-/* Enhanced styling for feature h4 elements */
-.intelligence-background h4 {
-    font-weight: 700;
-    letter-spacing: 0.03em;
-}
-
-/* Specific adjustments for glow text elements to maintain readability */
-.intelligence-background .glow-text {
-    font-weight: 900;
-    letter-spacing: 0.01em;
-}
-
 .intelligence-background {
     padding-top: 0 !important;
-    background: #000000;
+    background: #000;
     overflow-x: hidden;
-    max-width: 100%;
     width: 100%;
-}
 
-.intelligence-background * {
-    box-sizing: border-box;
-}
+    /* Headings */
+    h2,
+    h3,
+    h4 {
+        text-transform: uppercase;
+    }
 
-/* Override Bootstrap container constraints for intelligence page */
-.intelligence-background .container {
-    max-width: none !important;
-    width: 100% !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    h2 {
+        font-weight: 900;
+        letter-spacing: -0.01em;
+    }
+
+    /* Enhanced styling for section h3 and h4 elements */
+    h3,
+    h4 {
+        font-weight: 700;
+    }
+
+    h3 {
+        letter-spacing: 0.02em;
+    }
+
+    /* Enhanced styling for feature h4 elements */
+    h4 {
+        letter-spacing: 0.03em;
+    }
+
+    /* Specific adjustments for glow text elements to maintain readability */
+    .glow-text {
+        font-weight: 900;
+        letter-spacing: 0.01em;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
 }
