@@ -2,51 +2,93 @@
     opacity: .18;
 }
 
+.intelligence-hero .intelligence-hero-background {
+    position: absolute;
+    inset: 0;
+    display: block;
+    pointer-events: none;
+    z-index: 0;
+    /* Apply fade mask to background wrapper so grid and scanning line both fade */
+    -webkit-mask-image: radial-gradient(closest-side at 50% 50%, rgba(255, 255, 255, 1) var(--grid-fade-start, 70%), rgba(255, 255, 255, 0) var(--grid-fade-end, 100%));
+    mask-image: radial-gradient(closest-side at 50% 50%, rgba(255, 255, 255, 1) var(--grid-fade-start, 70%), rgba(255, 255, 255, 0) var(--grid-fade-end, 100%));
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
+
+.intelligence-hero {
+    /* Fixed-size square cells for the grid */
+    --grid-cell: 300px;
+    --grid-line: 2px;
+    --grid-color: rgba(59, 130, 246, 0.1); /* crisp line */
+    --grid-glow-color: rgba(59, 130, 246, 0.1); /* soft glow */
+    --grid-glow-size: 8px;
+    /* Edge fade control (mask) */
+    --grid-fade-start: 70%;
+    --grid-fade-end: 100%;
+}
+
 .intelligence-hero .threat-grid {
-    /* Center the grid when viewport is not square */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    inset: 0;
+    display: block;
+    pointer-events: none;
+    z-index: 0;
+    /* Square grid that reveals more/less on resize without shifting */
+    background-position: 0 0;
+    background-size: var(--grid-cell) var(--grid-cell);
+    background-image:
+        /* crisp vertical lines */
+        repeating-linear-gradient(
+            to right,
+            var(--grid-color) 0 var(--grid-line),
+            transparent var(--grid-line) var(--grid-cell)
+        ),
+        /* crisp horizontal lines */
+        repeating-linear-gradient(
+            to bottom,
+            var(--grid-color) 0 var(--grid-line),
+            transparent var(--grid-line) var(--grid-cell)
+        ),
+        /* glow vertical */
+        repeating-linear-gradient(
+            to right,
+            var(--grid-glow-color) 0 var(--grid-glow-size),
+            transparent var(--grid-glow-size) var(--grid-cell)
+        ),
+        /* glow horizontal */
+        repeating-linear-gradient(
+            to bottom,
+            var(--grid-glow-color) 0 var(--grid-glow-size),
+            transparent var(--grid-glow-size) var(--grid-cell)
+        );
+    /* Fade out grid towards edges on both axes */
+    -webkit-mask-image: radial-gradient(closest-side at 50% 50%, rgba(255, 255, 255, 1) var(--grid-fade-start), rgba(255, 255, 255, 0) var(--grid-fade-end));
+    mask-image: radial-gradient(closest-side at 50% 50%, rgba(255, 255, 255, 1) var(--grid-fade-start), rgba(255, 255, 255, 0) var(--grid-fade-end));
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
+
+.intelligence-hero .scanning-line {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.intelligence-hero .grid-line,
-.intelligence-hero .scanning-line {
-    position: absolute;
-}
-
-.intelligence-hero .grid-line {
-    background: linear-gradient(90deg, transparent, #3ba0f6, transparent);
-    opacity: .30;
-    box-shadow: 0 0 12px 2px #3b82f6aa;
-}
-
-.intelligence-hero .grid-line.vertical,
-.intelligence-hero .scanning-line {
-    width: 2px;
-    height: 100%;
-}
-
-.intelligence-hero .grid-line.vertical {
-    background: linear-gradient(180deg, transparent, #3ba0f6, transparent);
-}
-
-.intelligence-hero .grid-line.horizontal {
-    width: 100%;
-    height: 2px;
-}
-
-.intelligence-hero .scanning-line {
-    top: 0;
+    bottom: 0;
     left: -100%;
+    width: 2px;
+    z-index: 1;
     background: linear-gradient(180deg, transparent, #3b82f6aa, transparent);
     opacity: .50;
     animation: scan 4s linear infinite;
 }
+
+/* removed explicit .grid-line positions in favor of dynamic square grid background */
 
 .intelligence-hero .highlight-text {
     color: rgba(147, 197, 253, 1);
@@ -54,36 +96,7 @@
     animation: intelligencePulse 3s ease-in-out infinite;
 }
 
-/* Grid Line Positioning - Responsive Square Grid */
-:root {
-    --grid-size: min(100vw, 100vh);
-    --grid-offset-x: calc((100vw - var(--grid-size)) / 2);
-    --grid-offset-y: calc((100vh - var(--grid-size)) / 2);
-}
-
-/* Intelligence Hero Grid - 4 columns, 3 rows */
-.intelligence-hero .grid-line-20 { 
-    left: calc(var(--grid-offset-x) + var(--grid-size) * 0.2); 
-}
-.intelligence-hero .grid-line-40 { 
-    left: calc(var(--grid-offset-x) + var(--grid-size) * 0.4); 
-}
-.intelligence-hero .grid-line-60 { 
-    left: calc(var(--grid-offset-x) + var(--grid-size) * 0.6); 
-}
-.intelligence-hero .grid-line-80 { 
-    left: calc(var(--grid-offset-x) + var(--grid-size) * 0.8); 
-}
-
-.intelligence-hero .grid-line-top-25 { 
-    top: calc(var(--grid-offset-y) + var(--grid-size) * 0.25); 
-}
-.intelligence-hero .grid-line-top-50 { 
-    top: calc(var(--grid-offset-y) + var(--grid-size) * 0.5); 
-}
-.intelligence-hero .grid-line-top-75 { 
-    top: calc(var(--grid-offset-y) + var(--grid-size) * 0.75); 
-}
+/* Removed manual grid line positioning in favor of repeating gradients */
 
 @keyframes scan {
     0% {
@@ -110,18 +123,11 @@
     50% { text-shadow: 0 0 30px rgba(147, 197, 253, 0.6), 0 0 40px rgba(147, 197, 253, 0.2); }
 }
 
+/* Optional: tweak grid density on smaller screens if desired */
 @media (max-width: 768px) {
-    :root {
-        --grid-size: min(100vw, 80vh);
-        --grid-offset-x: calc((100vw - var(--grid-size)) / 2);
-        --grid-offset-y: calc((100vh - var(--grid-size)) / 2 + 10vh);
-    }
+    .intelligence-hero { --grid-cell: 64px; }
 }
 
 @media (max-width: 480px) {
-    :root {
-        --grid-size: 90vw;
-        --grid-offset-x: 5vw;
-        --grid-offset-y: calc((100vh - var(--grid-size)) / 2 + 15vh);
-    }
+    .intelligence-hero { --grid-cell: 56px; }
 }

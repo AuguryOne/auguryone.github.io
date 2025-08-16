@@ -1,6 +1,7 @@
 .hero-section {
     position: relative;
     overflow: hidden;
+    // min-height: 100vh;
 }
 
 .hero-content {
@@ -86,6 +87,8 @@
     width: 100%;
     height: 100%;
 }
+
+/* (Background wrapper positioning is defined in page-specific styles) */
 
 .floating-particles {
     pointer-events: none;

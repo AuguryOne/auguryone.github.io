@@ -1,23 +1,13 @@
 <!-- Response Hero Background Component -->
 <div class="response-hero-background">
-    <div class="response-grid">
-        <!-- Grid lines for response theme -->
-        <div class="grid-line vertical" style="left: 20%;"></div>
-        <div class="grid-line vertical" style="left: 40%;"></div>
-        <div class="grid-line vertical" style="left: 60%;"></div>
-        <div class="grid-line vertical" style="left: 80%;"></div>
-        
-        <div class="grid-line horizontal" style="top: 20%;"></div>
-        <div class="grid-line horizontal" style="top: 40%;"></div>
-        <div class="grid-line horizontal" style="top: 60%;"></div>
-        <div class="grid-line horizontal" style="top: 80%;"></div>
-    </div>
+    <div class="response-grid"></div>
     
     <!-- Pulse rings for emergency response theme -->
     <div class="pulse-rings">
-        <div class="pulse-ring" style="top: 15%; left: 15.5%;"></div>
-        <div class="pulse-ring" style="top: 60%; left: 35%;"></div>
-        <div class="pulse-ring" style="top: 40%; left: 70%;"></div>
-        <div class="pulse-ring" style="top: 80%; left: 85%;"></div>
+        <!-- Offsets are in grid cells from the grid origin (top-left) -->
+        <div class="pulse-ring" style="--grid-x: 1; --grid-y: 1;"></div>
+        <div class="pulse-ring" style="--grid-x: 2; --grid-y: 3;"></div>
+        <div class="pulse-ring" style="--grid-x: 4; --grid-y: 2;"></div>
+        <div class="pulse-ring" style="--grid-x: 5; --grid-y: 4;"></div>
     </div>
 </div>
