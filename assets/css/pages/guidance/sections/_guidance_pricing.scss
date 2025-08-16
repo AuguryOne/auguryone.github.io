@@ -1,6 +1,8 @@
 .guidance-pricing-section {
     width: 100vw;
-    margin: 3rem calc(-50vw + 50%) 0;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    margin-top: 3rem;
     background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, #000000 100%);
     border-top: 1px solid rgba(16, 185, 129, 0.2);
     border-bottom: 1px solid rgba(16, 185, 129, 0.2);
@@ -16,7 +18,7 @@
     }
 }
 
-.pricing-content {
+.guidance-pricing-section .pricing-content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
@@ -24,40 +26,40 @@
     z-index: 2;
 }
 
-.pricing-card, .pricing-explanation, .feature-item {
+.guidance-pricing-section .pricing-card, .guidance-pricing-section .pricing-explanation, .guidance-pricing-section .feature-item {
     transition: all 0.3s ease;
 }
 
-.pricing-card, .pricing-explanation {
+.guidance-pricing-section .pricing-card, .guidance-pricing-section .pricing-explanation {
     border-radius: 16px;
     backdrop-filter: blur(10px);
     padding: 1.5rem;
 }
 
-.pricing-card:hover, .pricing-explanation:hover {
+.guidance-pricing-section .pricing-card:hover, .guidance-pricing-section .pricing-explanation:hover {
     transform: translateY(-4px);
 }
 
-.pricing-content h2, .features-section h3 {
+.guidance-pricing-section .pricing-content h2, .guidance-pricing-section .features-section h3 {
     color: #f1f5f9;
     text-align: center;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.pricing-header h3, .pricing-explanation h4 {
+.guidance-pricing-section .pricing-header h3, .guidance-pricing-section .pricing-explanation h4 {
     font-weight: 600;
     color: #f1f5f9;
     text-align: center;
 }
 
-.pricing-content h2 {
+.guidance-pricing-section .pricing-content h2 {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 3rem;
     letter-spacing: -0.02em;
 }
 
-.pricing-structure {
+.guidance-pricing-section .pricing-structure {
     display: flex;
     flex-direction: row;
     gap: 2rem;
@@ -65,19 +67,19 @@
     max-width: 1100px;
 }
 
-.pricing-card {
+.guidance-pricing-section .pricing-card {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(16, 185, 129, 0.2);
     position: relative;
     flex: 1;
 }
 
-.pricing-card:hover {
+.guidance-pricing-section .pricing-card:hover {
     border-color: rgba(16, 185, 129, 0.4);
     box-shadow: 0 12px 40px rgba(16, 185, 129, 0.15);
 }
 
-.pricing-card.primary {
+.guidance-pricing-section .pricing-card.primary {
     border-color: rgba(16, 185, 129, 0.5);
     background: rgba(16, 185, 129, 0.1);
     text-align: center;
@@ -86,7 +88,7 @@
     min-height: 200px;
 }
 
-.pricing-header {
+.guidance-pricing-section .pricing-header {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -97,13 +99,13 @@
     margin-bottom: auto;
 }
 
-.pricing-header h3 {
+.guidance-pricing-section .pricing-header h3 {
     font-size: 1.75rem;
     margin-bottom: 0;
     flex-shrink: 0;
 }
 
-.pricing-amount {
+.guidance-pricing-section .pricing-amount {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -113,7 +115,7 @@
     margin: 0;
 }
 
-.pricing-amount .price {
+.guidance-pricing-section .pricing-amount .price {
     font-size: 5rem;
     font-weight: 700;
     color: #10b981;
@@ -122,35 +124,35 @@
     white-space: nowrap;
 }
 
-.pricing-amount .period {
+.guidance-pricing-section .pricing-amount .period {
     font-size: 1.75rem;
     font-weight: 500;
     color: #cbd5e1;
 }
 
-.pricing-explanation {
+.guidance-pricing-section .pricing-explanation {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(16, 185, 129, 0.15);
     flex: 1;
 }
 
-.pricing-explanation:hover {
+.guidance-pricing-section .pricing-explanation:hover {
     border-color: rgba(16, 185, 129, 0.25);
     box-shadow: 0 12px 40px rgba(16, 185, 129, 0.1);
 }
 
-.pricing-explanation h4 {
+.guidance-pricing-section .pricing-explanation h4 {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
 }
 
-.credit-details {
+.guidance-pricing-section .credit-details {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
 }
 
-.credit-item {
+.guidance-pricing-section .credit-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -160,30 +162,30 @@
     border: 1px solid rgba(16, 185, 129, 0.1);
 }
 
-.credit-label {
+.guidance-pricing-section .credit-label {
     font-weight: 600;
     color: #f1f5f9;
     font-size: 1rem;
 }
 
-.credit-value {
+.guidance-pricing-section .credit-value {
     font-weight: 500;
     color: #10b981;
     font-size: 0.95rem;
     text-align: right;
 }
 
-.features-section {
+.guidance-pricing-section .features-section {
     margin-top: 3rem;
 }
 
-.features-section h3 {
+.guidance-pricing-section .features-section h3 {
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 2rem;
 }
 
-.features-grid {
+.guidance-pricing-section .features-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem 3rem;
@@ -191,13 +193,13 @@
     margin: 0 auto;
 }
 
-.feature-column {
+.guidance-pricing-section .feature-column {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-.feature-item {
+.guidance-pricing-section .feature-item {
     display: flex;
     align-items: flex-start;
     gap: 1.5rem;
@@ -206,7 +208,7 @@
     border: none;
 }
 
-.feature-bullet {
+.guidance-pricing-section .feature-bullet {
     color: #10b981;
     font-size: 2rem;
     font-weight: bold;
@@ -215,11 +217,11 @@
     flex-shrink: 0;
 }
 
-.feature-text {
+.guidance-pricing-section .feature-text {
     flex: 1;
 }
 
-.feature-text h4 {
+.guidance-pricing-section .feature-text h4 {
     font-size: 1.25rem;
     font-weight: 600;
     color: #f1f5f9;
@@ -227,7 +229,7 @@
     line-height: 1.4;
 }
 
-.feature-text p {
+.guidance-pricing-section .feature-text p {
     font-size: 1rem;
     color: #cbd5e1;
     line-height: 1.6;
@@ -239,68 +241,70 @@
     .guidance-pricing-section {
         padding: 4rem 0;
         margin-top: 2rem;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+        width: 100vw;
     }
     
-    .pricing-content {
+    .guidance-pricing-section .pricing-content {
         padding: 0 1rem;
     }
     
-    .pricing-content h2 {
+    .guidance-pricing-section .pricing-content h2 {
         font-size: 2rem;
         margin-bottom: 2rem;
     }
     
-    .pricing-structure {
+    .guidance-pricing-section .pricing-structure {
         flex-direction: column;
         margin-bottom: 3rem;
         align-items: stretch;
     }
 
-    .pricing-structure > .pricing-card,
-    .pricing-structure > .pricing-explanation {
+    .guidance-pricing-section .pricing-structure > .pricing-card,
+    .guidance-pricing-section .pricing-structure > .pricing-explanation {
         width: 100%;
     }
     
-    .pricing-card.primary {
+    .guidance-pricing-section .pricing-card.primary {
         min-height: 180px;
     }
     
-    .pricing-amount .price {
+    .guidance-pricing-section .pricing-amount .price {
         font-size: 4rem;
     }
     
-    .pricing-amount .period {
+    .guidance-pricing-section .pricing-amount .period {
         font-size: 1.5rem;
     }
     
-    .pricing-explanation h4 {
+    .guidance-pricing-section .pricing-explanation h4 {
         font-size: 1.25rem;
     }
     
-    .credit-item {
-        flex-direction: column;
+    .guidance-pricing-section .credit-item {
         text-align: center;
         gap: 0.5rem;
     }
     
-    .credit-value {
+    .guidance-pricing-section .credit-value {
         text-align: center;
     }
     
-    .features-section h3 {
+    .guidance-pricing-section .features-section h3 {
         font-size: 1.75rem;
     }
     
-    .features-grid {
+    .guidance-pricing-section .features-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
     
-    .feature-column {
+    .guidance-pricing-section .feature-column {
         gap: 1.5rem;
     }
     
-    .feature-item {
+    .guidance-pricing-section .feature-item {
         gap: 1.25rem;
     }
 }
@@ -310,51 +314,51 @@
         padding: 3rem 0;
     }
     
-    .pricing-content h2 {
+    .guidance-pricing-section .pricing-content h2 {
         font-size: 1.75rem;
     }
     
-    .pricing-card {
+    .guidance-pricing-section .pricing-card {
         padding: 1.25rem;
     }
     
-    .pricing-card.primary {
+    .guidance-pricing-section .pricing-card.primary {
         min-height: 160px;
     }
     
-    .pricing-header h3 {
+    .guidance-pricing-section .pricing-header h3 {
         font-size: 1.5rem;
     }
     
-    .pricing-amount .price {
+    .guidance-pricing-section .pricing-amount .price {
         font-size: 3rem;
     }
     
-    .pricing-amount .period {
+    .guidance-pricing-section .pricing-amount .period {
         font-size: 1.25rem;
     }
     
-    .pricing-explanation {
+    .guidance-pricing-section .pricing-explanation {
         padding: 1.25rem;
     }
     
-    .pricing-explanation h4 {
+    .guidance-pricing-section .pricing-explanation h4 {
         font-size: 1.125rem;
     }
     
-    .credit-label {
+    .guidance-pricing-section .credit-label {
         font-size: 0.9rem;
     }
     
-    .credit-value {
+    .guidance-pricing-section .credit-value {
         font-size: 0.85rem;
     }
     
-    .features-section h3 {
+    .guidance-pricing-section .features-section h3 {
         font-size: 1.5rem;
     }
     
-    .feature-item {
+    .guidance-pricing-section .feature-item {
         gap: 1rem;
     }
 }

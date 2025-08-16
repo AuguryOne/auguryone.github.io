@@ -12,7 +12,7 @@
     position: relative;
 }
 
-.capabilities-content {
+.guidance-capabilities-section .capabilities-content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
@@ -20,7 +20,7 @@
     z-index: 2;
 }
 
-.capabilities-content h2 {
+.guidance-capabilities-section .capabilities-content h2 {
     font-size: 2.5rem;
     font-weight: 700;
     color: #f1f5f9;
@@ -30,7 +30,7 @@
     letter-spacing: -0.02em;
 }
 
-.capabilities-selector {
+.guidance-capabilities-section .capabilities-selector {
     display: flex;
     justify-content: center;
     margin: 0 auto 3rem;
@@ -42,7 +42,7 @@
     max-width: 500px;
 }
 
-.selector-pill {
+.guidance-capabilities-section .selector-pill {
     background: transparent;
     border: none;
     color: #cbd5e1;
@@ -58,23 +58,23 @@
     text-align: center;
 }
 
-.selector-pill:hover {
+.guidance-capabilities-section .selector-pill:hover {
     color: #f1f5f9;
     background: rgba(16, 185, 129, 0.1);
 }
 
-.selector-pill.active {
+.guidance-capabilities-section .selector-pill.active {
     background: rgba(16, 185, 129, 0.2);
     color: #f1f5f9;
     box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
 }
 
-.capabilities-panels {
+.guidance-capabilities-section .capabilities-panels {
     position: relative;
     min-height: 400px;
 }
 
-.capabilities-panel {
+.guidance-capabilities-section .capabilities-panel {
     position: absolute;
     top: 0;
     left: 0;
@@ -89,13 +89,13 @@
     backdrop-filter: blur(10px);
 }
 
-.capabilities-panel.active {
+.guidance-capabilities-section .capabilities-panel.active {
     opacity: 1;
     visibility: visible;
     position: relative;
 }
 
-.capabilities-panel h3 {
+.guidance-capabilities-section .capabilities-panel h3 {
     font-size: 2rem;
     font-weight: 600;
     color: #f1f5f9;
@@ -104,7 +104,7 @@
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.capabilities-panel p {
+.guidance-capabilities-section .capabilities-panel p {
     font-size: 1.25rem;
     color: #cbd5e1;
     line-height: 1.6;
@@ -114,51 +114,132 @@
     margin-right: auto;
 }
 
+
+.guidance-capabilities-section .features-section {
+    margin-top: 3rem;
+}
+
+.guidance-capabilities-section .features-section h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.guidance-capabilities-section .features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.guidance-capabilities-section .feature-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.guidance-capabilities-section .feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+.guidance-capabilities-section .feature-bullet {
+    color: #10b981;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1;
+    margin-top: 0.25rem;
+    flex-shrink: 0;
+}
+
+.guidance-capabilities-section .feature-text {
+    flex: 1;
+}
+
+.guidance-capabilities-section .feature-text h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #f1f5f9;
+    margin: 0 0 0.5rem;
+    line-height: 1.4;
+}
+
+.guidance-capabilities-section .feature-text p {
+    font-size: 1rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin: 0;
+}
+
 @media (max-width: 768px) {
     .guidance-capabilities-section {
-        width: 100%;
         max-width: none;
         box-sizing: border-box;
         padding: 4rem 0;
         margin-top: 2rem;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+        width: 100vw;
     }
     
-    .capabilities-content {
+    .guidance-capabilities-section .capabilities-content {
         padding: 0 1rem;
     }
     
-    .capabilities-content h2 {
+    .guidance-capabilities-section .capabilities-content h2 {
         font-size: 2rem;
         margin-bottom: 2rem;
     }
     
-    .capabilities-selector {
+    .guidance-capabilities-section .capabilities-selector {
         max-width: 100%;
         margin-bottom: 2rem;
         padding: 0.375rem;
     }
     
-    .selector-pill {
+    .guidance-capabilities-section .selector-pill {
         padding: 0.75rem 1rem;
         font-size: 0.9rem;
         font-weight: 600;
     }
 
-    .capabilities-panels {
+    .guidance-capabilities-section .capabilities-panels {
         min-height: 350px;
     }
     
-    .capabilities-panel {
+    .guidance-capabilities-section .capabilities-panel {
         padding: 2rem;
     }
     
-    .capabilities-panel h3 {
+    .guidance-capabilities-section .capabilities-panel h3 {
         font-size: 1.75rem;
     }
     
-    .capabilities-panel p {
+    .guidance-capabilities-section .capabilities-panel p {
         font-size: 1.125rem;
         margin-bottom: 2rem;
+    }
+
+    .guidance-capabilities-section .features-section h3 {
+        font-size: 1.75rem;
+    }
+    
+    .guidance-capabilities-section .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .guidance-capabilities-section .feature-column {
+        gap: 1.5rem;
+    }
+    
+    .guidance-capabilities-section .feature-item {
+        gap: 1.25rem;
     }
 }
 
@@ -167,34 +248,42 @@
         padding: 3rem 0;
     }
     
-    .capabilities-content h2 {
+    .guidance-capabilities-section .capabilities-content h2 {
         font-size: 1.75rem;
     }
     
-    .capabilities-selector {
+    .guidance-capabilities-section .capabilities-selector {
         max-width: 100%;
         padding: 0.25rem;
     }
     
-    .selector-pill {
+    .guidance-capabilities-section .selector-pill {
         padding: 0.625rem 0.75rem;
         font-size: 0.85rem;
         font-weight: 600;
     }
 
-    .capabilities-panels {
+    .guidance-capabilities-section .capabilities-panels {
         min-height: 320px;
     }
     
-    .capabilities-panel {
+    .guidance-capabilities-section .capabilities-panel {
         padding: 1.5rem;
     }
     
-    .capabilities-panel h3 {
+    .guidance-capabilities-section .capabilities-panel h3 {
         font-size: 1.5rem;
     }
     
-    .capabilities-panel p {
+    .guidance-capabilities-section .capabilities-panel p {
         font-size: 1rem;
+    }
+
+    .guidance-capabilities-section .features-section h3 {
+        font-size: 1.5rem;
+    }
+    
+    .guidance-capabilities-section .feature-item {
+        gap: 1rem;
     }
 }
