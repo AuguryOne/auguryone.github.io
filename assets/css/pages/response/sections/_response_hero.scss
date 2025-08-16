@@ -12,19 +12,80 @@
     height: 100%;
 }
 
-.response-hero .grid-line {
+.response-hero .response-hero-background {
     position: absolute;
-    background: linear-gradient(90deg, transparent, #ff3b3b, transparent);
-    opacity: 0.55;
-    box-shadow: 0 0 12px 2px #ef4444aa;
+    inset: 0;
+    display: block;
+    pointer-events: none;
+    z-index: 0;
+    /* Apply fade mask to background wrapper so grid and rings both fade */
+    -webkit-mask-image: radial-gradient(closest-side at 50% 50%, rgba(255, 255, 255, 1) var(--grid-fade-start), rgba(255, 255, 255, 0) var(--grid-fade-end));
+    mask-image: radial-gradient(closest-side at 50% 50%, rgba(255, 255, 255, 1) var(--grid-fade-start), rgba(255, 255, 255, 0) var(--grid-fade-end));
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
 }
-.response-hero .grid-line.vertical {
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(180deg, transparent, #ff3b3b, transparent);
+
+/* Response square grid (fixed cell size, reveals more/less on resize) */
+.response-hero {
+    --grid-cell: 300px;
+    --grid-line: 2px;
+    --grid-color: rgba(239, 68, 68, 0.1); /* crisp line */
+    --grid-glow-color: rgba(239, 68, 68, 0.1); /* soft glow */
+    --grid-glow-size: 8px;
+    /* Edge fade control (mask) */
+    --grid-fade-start: 70%;
+    --grid-fade-end: 100%;
+    /* Global ring offsets in grid cells */
+    --ring-offset-x: 0;
+    --ring-offset-y: 0;
 }
-.response-hero .grid-line.horizontal {
-    width: 100%; height: 2px;
+
+.response-hero .response-grid {
+    position: absolute;
+    inset: 0;
+    display: block;
+    pointer-events: none;
+    z-index: 0;
+    background-position: 0 0;
+    background-size: var(--grid-cell) var(--grid-cell);
+    background-image:
+        /* crisp vertical lines */
+        repeating-linear-gradient(
+            to right,
+            var(--grid-color) 0 var(--grid-line),
+            transparent var(--grid-line) var(--grid-cell)
+        ),
+        /* crisp horizontal lines */
+        repeating-linear-gradient(
+            to bottom,
+            var(--grid-color) 0 var(--grid-line),
+            transparent var(--grid-line) var(--grid-cell)
+        ),
+        /* glow vertical */
+        repeating-linear-gradient(
+            to right,
+            var(--grid-glow-color) 0 var(--grid-glow-size),
+            transparent var(--grid-glow-size) var(--grid-cell)
+        ),
+        /* glow horizontal */
+        repeating-linear-gradient(
+            to bottom,
+            var(--grid-glow-color) 0 var(--grid-glow-size),
+            transparent var(--grid-glow-size) var(--grid-cell)
+        );
+    /* Fade out grid towards edges on both axes */
+    -webkit-mask-image: radial-gradient(closest-side at 50% 50%, rgba(255, 255, 255, 1) var(--grid-fade-start), rgba(255, 255, 255, 0) var(--grid-fade-end));
+    mask-image: radial-gradient(closest-side at 50% 50%, rgba(255, 255, 255, 1) var(--grid-fade-start), rgba(255, 255, 255, 0) var(--grid-fade-end));
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
 }
 .response-hero .pulse-rings {
     pointer-events: none;
@@ -32,13 +93,19 @@
 }
 .response-hero .pulse-ring {
     position: absolute;
-    width: 160px; height: 160px;
+    width: calc(var(--grid-cell) * 0.6);
+    height: calc(var(--grid-cell) * 0.6);
     border-radius: 50%;
     border: 3px solid #ff3b3b;
     opacity: 0.32;
     box-shadow: 0 0 32px 8px #ef4444aa;
     animation: pulse-ring 3.5s cubic-bezier(0.4,0,0.2,1) infinite;
+    /* Place center of ring at grid intersection anchored to grid origin plus global offsets */
+    top: calc(var(--grid-cell) * (var(--grid-y, 0) + var(--ring-offset-y, 0)));
+    left: calc(var(--grid-cell) * (var(--grid-x, 0) + var(--ring-offset-x, 0)));
+    transform: translate(-50%, -50%);
 }
+
 .response-hero .floating-particles { z-index: 2; }
 .response-hero .particle {
     position: absolute;
@@ -67,4 +134,12 @@
  @keyframes responsePulse {
     0%, 100% { text-shadow: 0 0 20px rgba(239, 68, 68, 0.5); }
     50% { text-shadow: 0 0 30px rgba(239, 68, 68, 0.8), 0 0 40px rgba(239, 68, 68, 0.4); }
+}
+
+@media (max-width: 768px) {
+    .response-hero { --grid-cell: 64px; --ring-offset-x: 1.5; --ring-offset-y: 4.5; }
+}
+
+@media (max-width: 480px) {
+    .response-hero { --grid-cell: 56px; --ring-offset-x: 2; --ring-offset-y: 6; }
 }
