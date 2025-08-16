@@ -1,6 +1,6 @@
 
 /* Pricing Header Styles */
-.pricing-header-section {
+.pricing-page-header-section {
     position: relative;
     background: 
         linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.8) 100%),
@@ -11,7 +11,7 @@
     margin-bottom: -20px;
 }
 
-.pricing-header-section .pricing-header-overlay {
+.pricing-page-header-section .pricing-header-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -23,7 +23,7 @@
     z-index: 1;
 }
 
-.pricing-header-section .pricing-header-content {
+.pricing-page-header-section .pricing-header-content {
     position: relative;
     z-index: 2;
     max-width: 1200px;
@@ -31,7 +31,7 @@
     padding: 0 2rem;
 }
 
-.pricing-header-section .pricing-main-title {
+.pricing-page-header-section .pricing-main-title {
     font-size: 4rem;
     font-weight: 800;
     color: #ffffff;
@@ -42,7 +42,7 @@
     text-transform: uppercase;
 }
 
-.pricing-header-section .pricing-main-subtitle {
+.pricing-page-header-section .pricing-main-subtitle {
     font-size: 1.375rem;
     color: #e2e8f0;
     max-width: 900px;
@@ -55,19 +55,19 @@
 
 
 
-.pricing-content-section {
+.pricing-page-content-section {
     background: linear-gradient(135deg, #111111 0%, #000000 100%);
     padding: 80px 0;
 }
 
-.pricing-perks-section {
+.pricing-page-perks-section {
     background: linear-gradient(135deg, #1a1a1a 0%, #111111 100%);
     padding: 80px 0;
 }
 
 
 
-.pricing-content-section .section-heading {
+.pricing-page-content-section .section-heading {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
@@ -75,18 +75,18 @@
     text-transform: uppercase;
 }
 
-.pricing-perks-section .section-description {
+.pricing-page-perks-section .section-description {
     font-size: 1.25rem;
     color: #cbd5e1;
     margin-bottom: 4rem;
     line-height: 1.6;
 }
 
-.pricing-content-section .pricing-cards-container {
+.pricing-page-content-section .pricing-cards-container {
     margin-bottom: 4rem;
 }
 
-.pricing-content-section .pricing-cards-row {
+.pricing-page-content-section .pricing-cards-row {
     margin-left: -15px;
     margin-right: -15px;
     display: flex;
@@ -94,14 +94,14 @@
     align-items: stretch;
 }
 
-.pricing-content-section .pricing-cards-row > [class*="col-"] {
+.pricing-page-content-section .pricing-cards-row > [class*="col-"] {
     padding-left: 15px;
     padding-right: 15px;
     margin-bottom: 2rem;
     display: flex;
 }
 
-.pricing-content-section .pricing-card {
+.pricing-page-content-section .pricing-card {
     background: rgba(30, 30, 30, 0.6);
     border: 1px solid rgba(147, 197, 253, 0.2);
     border-radius: 12px;
@@ -115,19 +115,19 @@
 
 
 
-.pricing-content-section .pricing-card:hover {
+.pricing-page-content-section .pricing-card:hover {
     transform: translateY(-5px);
     border-color: rgba(147, 197, 253, 0.4);
     box-shadow: 0 10px 30px rgba(147, 197, 253, 0.1);
 }
 
-.pricing-content-section .pricing-card-icon {
+.pricing-page-content-section .pricing-card-icon {
     font-size: 3rem;
     color: rgb(147, 197, 253);
     margin-bottom: 1.5rem;
 }
 
-.pricing-content-section .pricing-card h3 {
+.pricing-page-content-section .pricing-card h3 {
     color: #f1f5f9;
     margin-bottom: 1rem;
     font-size: 1.5rem;
@@ -135,20 +135,20 @@
     text-transform: uppercase;
 }
 
-.pricing-content-section .credit-value {
+.pricing-page-content-section .credit-value {
     font-size: 2.5rem;
     font-weight: 700;
     color: rgb(147, 197, 253);
     margin-bottom: 0.5rem;
 }
 
-.pricing-content-section .credit-label {
+.pricing-page-content-section .credit-label {
     color: #94a3b8;
     font-size: 1rem;
     margin-bottom: 1.5rem;
 }
 
-.pricing-content-section .pricing-options {
+.pricing-page-content-section .pricing-options {
     margin: 1rem 0;
     display: flex;
     align-items: center;
@@ -156,7 +156,7 @@
     gap: 0.75rem;
 }
 
-.pricing-content-section .pricing-option {
+.pricing-page-content-section .pricing-option {
     background: rgba(147, 197, 253, 0.1);
     color: rgb(147, 197, 253);
     padding: 0.5rem 1rem;
@@ -166,31 +166,31 @@
     border: 1px solid rgba(147, 197, 253, 0.2);
 }
 
-.pricing-content-section .pricing-option:hover {
+.pricing-page-content-section .pricing-option:hover {
     background: rgba(147, 197, 253, 0.2);
     border-color: rgba(147, 197, 253, 0.4);
     transform: translateY(-1px);
 }
 
-.pricing-content-section .pricing-divider {
+.pricing-page-content-section .pricing-divider {
     color: #94a3b8;
     font-style: italic;
     font-weight: 600;
     font-size: 0.9rem;
 }
 
-.pricing-content-section .validity-period {
+.pricing-page-content-section .validity-period {
     font-size: 2rem;
     font-weight: 700;
     color: rgb(147, 197, 253);
     margin-bottom: 0.5rem;
 }
 
-.subscription-benefits-section {
+.pricing-page-subscription-benefits-section {
     margin-bottom: 4rem;
 }
 
-.subscription-benefits-section .subscription-benefits-card {
+.pricing-page-subscription-benefits-section .subscription-benefits-card {
     background: rgba(30, 30, 30, 0.8);
     border: 1px solid rgba(147, 197, 253, 0.2);
     border-radius: 12px;
@@ -198,7 +198,7 @@
     backdrop-filter: blur(10px);
 }
 
-.subscription-benefits-section .subscription-benefits-card h3 {
+.pricing-page-subscription-benefits-section .subscription-benefits-card h3 {
     color: #f1f5f9;
     margin-bottom: 1.5rem;
     font-size: 1.75rem;
@@ -206,41 +206,41 @@
     text-transform: uppercase;
 }
 
-.subscription-benefits-section .subscription-benefits-card h3 i {
+.pricing-page-subscription-benefits-section .subscription-benefits-card h3 i {
     color: rgb(147, 197, 253);
     margin-right: 0.75rem;
 }
 
-.subscription-benefits-section .benefits-list {
+.pricing-page-subscription-benefits-section .benefits-list {
     list-style: none;
     padding: 0;
     margin-top: 2rem;
 }
 
-.subscription-benefits-section .benefits-list li {
+.pricing-page-subscription-benefits-section .benefits-list li {
     color: #cbd5e1;
     margin-bottom: 0.75rem;
     font-size: 1.1rem;
 }
 
-.subscription-benefits-section .benefits-list li i {
+.pricing-page-subscription-benefits-section .benefits-list li i {
     color: rgb(147, 197, 253);
     margin-right: 0.75rem;
 }
 
-.subscription-benefits-section .subscription-visual {
+.pricing-page-subscription-benefits-section .subscription-visual {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: right;
     height: 100%;
 }
 
-.pricing-content-section .discount-table-container {
+.pricing-page-content-section .discount-table-container {
     width: 100%;
     max-width: 400px;
 }
 
-.pricing-content-section .discount-table-title {
+.pricing-page-content-section .discount-table-title {
     color: #f1f5f9;
     font-size: 1.25rem;
     font-weight: 700;
@@ -249,7 +249,7 @@
     text-transform: uppercase;
 }
 
-.pricing-content-section .discount-table {
+.pricing-page-content-section .discount-table {
     background: rgba(20, 20, 20, 0.8);
     border: 1px solid rgba(147, 197, 253, 0.3);
     border-radius: 12px;
@@ -257,7 +257,7 @@
     backdrop-filter: blur(10px);
 }
 
-.pricing-content-section .discount-tier {
+.pricing-page-content-section .discount-tier {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -267,16 +267,16 @@
     transition: all 0.3s ease;
 }
 
-.pricing-content-section .discount-tier:last-child {
+.pricing-page-content-section .discount-tier:last-child {
     border-bottom: none;
 }
 
-.pricing-content-section .discount-tier:hover {
+.pricing-page-content-section .discount-tier:hover {
     background: rgba(147, 197, 253, 0.05);
     transform: translateY(-1px);
 }
 
-.pricing-content-section .discount-tier.best-value {
+.pricing-page-content-section .discount-tier.best-value {
     background: rgba(147, 197, 253, 0.1);
     border-radius: 8px;
     margin: 0.5rem 0;
@@ -284,21 +284,21 @@
     border: 1px solid rgba(147, 197, 253, 0.3);
 }
 
-.pricing-content-section .tier-range {
+.pricing-page-content-section .tier-range {
     color: #cbd5e1;
     font-weight: 600;
     font-size: 1rem;
     flex: 1;
 }
 
-.pricing-content-section .tier-price {
+.pricing-page-content-section .tier-price {
     color: rgb(147, 197, 253);
     font-weight: 700;
     font-size: 1.25rem;
     margin-right: 0.5rem;
 }
 
-.pricing-content-section .tier-label {
+.pricing-page-content-section .tier-label {
     color: #94a3b8;
     font-size: 0.875rem;
     font-style: italic;
@@ -306,7 +306,7 @@
     text-align: right;
 }
 
-.pricing-content-section .best-value-badge {
+.pricing-page-content-section .best-value-badge {
     position: absolute;
     top: -8px;
     right: -8px;
@@ -322,11 +322,11 @@
 
 
 
-.pricing-perks-section .perks-row {
+.pricing-page-perks-section .perks-row {
     margin-top: 3rem;
 }
 
-.pricing-perks-section .perk-card {
+.pricing-page-perks-section .perk-card {
     background: rgba(30, 30, 30, 0.6);
     border: 1px solid rgba(147, 197, 253, 0.1);
     border-radius: 12px;
@@ -338,18 +338,18 @@
     margin-bottom: 2rem;
 }
 
-.pricing-perks-section .perk-card:hover {
+.pricing-page-perks-section .perk-card:hover {
     transform: translateY(-5px);
     border-color: rgba(147, 197, 253, 0.3);
 }
 
-.pricing-perks-section .perk-icon {
+.pricing-page-perks-section .perk-icon {
     font-size: 3rem;
     color: rgb(147, 197, 253);
     margin-bottom: 1.5rem;
 }
 
-.pricing-perks-section .perk-card h3 {
+.pricing-page-perks-section .perk-card h3 {
     color: #f1f5f9;
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
@@ -357,16 +357,16 @@
     text-transform: uppercase;
 }
 
-.pricing-perks-section .perk-card p {
+.pricing-page-perks-section .perk-card p {
     color: #cbd5e1;
     line-height: 1.6;
 }
 
-.pricing-perks-section .support-tiers-row {
+.pricing-page-perks-section .support-tiers-row {
     margin-top: 3rem;
 }
 
-.pricing-perks-section .support-tier-card {
+.pricing-page-perks-section .support-tier-card {
     background: rgba(30, 30, 30, 0.6);
     border: 1px solid rgba(147, 197, 253, 0.2);
     border-radius: 12px;
@@ -377,25 +377,25 @@
     margin-bottom: 2rem;
 }
 
-.pricing-perks-section .support-tier-card:hover {
+.pricing-page-perks-section .support-tier-card:hover {
     transform: translateY(-5px);
     border-color: rgba(147, 197, 253, 0.4);
 }
 
 
 
-.pricing-perks-section .support-tier-header {
+.pricing-page-perks-section .support-tier-header {
     text-align: center;
     margin-bottom: 2rem;
 }
 
-.pricing-perks-section .support-tier-icon {
+.pricing-page-perks-section .support-tier-icon {
     font-size: 3rem;
     color: rgb(147, 197, 253);
     margin-bottom: 1rem;
 }
 
-.pricing-perks-section .support-tier-card h3 {
+.pricing-page-perks-section .support-tier-card h3 {
     color: #f1f5f9;
     margin-bottom: 1rem;
     font-size: 1.5rem;
@@ -403,13 +403,13 @@
     text-transform: uppercase;
 }
 
-.pricing-perks-section .support-tier-included {
+.pricing-page-perks-section .support-tier-included {
     color: #94a3b8;
     font-style: italic;
     font-size: 1rem;
 }
 
-.pricing-perks-section .features-grid {
+.pricing-page-perks-section .features-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -420,7 +420,7 @@
     margin-right: auto;
 }
 
-.pricing-perks-section .feature-item {
+.pricing-page-perks-section .feature-item {
     color: #cbd5e1;
     font-size: 1.1rem;
     display: flex;
@@ -429,7 +429,7 @@
     padding: 0 0.5rem;
 }
 
-.pricing-perks-section .feature-item i {
+.pricing-page-perks-section .feature-item i {
     color: rgb(147, 197, 253);
     width: 20px;
     margin-right: 0.75rem;
@@ -438,38 +438,38 @@
 }
 
 @media (max-width: 991px) {
-    .pricing-header-section {
+    .pricing-page-header-section {
         padding: 100px 0 80px 0;
     }
     
-    .pricing-header-section .pricing-header-content {
+    .pricing-page-header-section .pricing-header-content {
         padding: 0 1.5rem;
     }
     
-    .pricing-header-section .pricing-main-title {
+    .pricing-page-header-section .pricing-main-title {
         font-size: 3rem;
     }
     
-    .pricing-header-section .pricing-main-subtitle {
+    .pricing-page-header-section .pricing-main-subtitle {
         font-size: 1.2rem;
     }
     
-    .pricing-content-section .section-heading, .pricing-perks-section .section-heading {
+    .pricing-page-content-section .section-heading, .pricing-page-perks-section .section-heading {
         font-size: 2rem;
     }
     
-    .pricing-perks-section .section-description, .pricing-content-section .section-description {
+    .pricing-page-perks-section .section-description, .pricing-page-content-section .section-description {
         font-size: 1.1rem;
     }
     
-    .pricing-content-section .pricing-cards-row {
+    .pricing-page-content-section .pricing-cards-row {
         display: block !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
     }
     
-    .pricing-content-section .pricing-cards-row .col-lg-4,
-    .pricing-content-section .pricing-cards-row .col-md-6 {
+    .pricing-page-content-section .pricing-cards-row .col-lg-4,
+    .pricing-page-content-section .pricing-cards-row .col-md-6 {
         width: 100% !important;
         float: none !important;
         margin-bottom: 2rem !important;
@@ -480,7 +480,7 @@
         left: auto !important;
     }
     
-    .pricing-content-section .pricing-card {
+    .pricing-page-content-section .pricing-card {
         width: 100% !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
@@ -488,90 +488,90 @@
     
 
     
-    .pricing-content-section .discount-table-container {
+    .pricing-page-content-section .discount-table-container {
         max-width: 100%;
         margin-top: 2rem;
     }
     
-    .pricing-content-section .discount-table {
+    .pricing-page-content-section .discount-table {
         padding: 1rem;
     }
     
-    .pricing-content-section .discount-tier {
+    .pricing-page-content-section .discount-tier {
         padding: 0.75rem 0;
         flex-direction: column;
         text-align: center;
         gap: 0.5rem;
     }
     
-    .pricing-content-section .tier-range {
+    .pricing-page-content-section .tier-range {
         font-size: 0.9rem;
     }
     
-    .pricing-content-section .tier-price {
+    .pricing-page-content-section .tier-price {
         font-size: 1.1rem;
         margin-right: 0;
     }
     
-    .pricing-content-section .tier-label {
+    .pricing-page-content-section .tier-label {
         min-width: auto;
         text-align: center;
     }
     
-    .pricing-content-section .credit-value {
+    .pricing-page-content-section .credit-value {
         font-size: 2rem;
     }
     
-    .pricing-content-section .subscription-benefits-card {
+    .pricing-page-content-section .subscription-benefits-card {
         padding: 2rem;
     }
     
-    .pricing-perks-section .features-grid {
+    .pricing-page-perks-section .features-grid {
         gap: 0.75rem;
         max-width: 350px;
     }
     
-    .pricing-perks-section .feature-item {
+    .pricing-page-perks-section .feature-item {
         font-size: 1rem;
     }
 }
 
 @media (max-width: 480px) {
-    .pricing-header-section {
+    .pricing-page-header-section {
         padding: 80px 0 60px 0;
     }
     
-    .pricing-header-section .pricing-header-content {
+    .pricing-page-header-section .pricing-header-content {
         padding: 0 1rem;
     }
     
-    .pricing-header-section .pricing-main-title {
+    .pricing-page-header-section .pricing-main-title {
         font-size: 2.25rem;
         margin-bottom: 1.5rem;
         line-height: 1.2;
     }
     
-    .pricing-header-section .pricing-main-subtitle {
+    .pricing-page-header-section .pricing-main-subtitle {
         font-size: 1.1rem;
         max-width: 100%;
     }
     
-    .pricing-content-section .pricing-card, .pricing-perks-section .perk-card, .pricing-perks-section .support-tier-card {
+    .pricing-page-content-section .pricing-card, .pricing-page-perks-section .perk-card, .pricing-page-perks-section .support-tier-card {
         padding: 2rem 1rem;
     }
     
-    .pricing-perks-section .section-heading, .pricing-content-section .section-heading {
+    .pricing-page-perks-section .section-heading, .pricing-page-content-section .section-heading {
         font-size: 1.75rem;
     }
     
-    .pricing-content-section .pricing-cards-row {
+    .pricing-page-content-section .pricing-cards-row {
         display: block !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
     }
     
-    .pricing-content-section .pricing-cards-row .col-lg-4,
-    .pricing-content-section .pricing-cards-row .col-md-6 {
+    .pricing-page-content-section .pricing-cards-row .col-lg-4,
+    .pricing-page-content-section .pricing-cards-row .col-md-6 {
         width: 100% !important;
         float: none !important;
         margin-bottom: 1.5rem !important;
@@ -582,7 +582,7 @@
         left: auto !important;
     }
     
-    .pricing-content-section .pricing-card {
+    .pricing-page-content-section .pricing-card {
         width: 100% !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
@@ -590,38 +590,38 @@
     
 
     
-    .pricing-content-section .discount-table-title {
+    .pricing-page-content-section .discount-table-title {
         font-size: 1.1rem;
     }
     
-    .pricing-content-section .discount-table {
+    .pricing-page-content-section .discount-table {
         padding: 0.75rem;
     }
     
-    .pricing-content-section .discount-tier {
+    .pricing-page-content-section .discount-tier {
         padding: 0.5rem 0;
     }
     
-    .pricing-content-section .tier-range {
+    .pricing-page-content-section .tier-range {
         font-size: 0.85rem;
     }
     
-    .pricing-content-section .tier-price {
+    .pricing-page-content-section .tier-price {
         font-size: 1rem;
     }
     
-    .pricing-content-section .tier-label {
+    .pricing-page-content-section .tier-label {
         font-size: 0.8rem;
     }
     
-    .pricing-content-section .best-value-badge {
+    .pricing-page-content-section .best-value-badge {
         font-size: 0.65rem;
         padding: 0.2rem 0.4rem;
         top: -6px;
         right: -6px;
     }
     
-    .pricing-perks-section .features-grid {
+    .pricing-page-perks-section .features-grid {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, auto);
         gap: 0.5rem;
@@ -629,7 +629,7 @@
         max-width: 300px;
     }
     
-    .pricing-perks-section .feature-item {
+    .pricing-page-perks-section .feature-item {
         font-size: 0.95rem;
     }
 }
