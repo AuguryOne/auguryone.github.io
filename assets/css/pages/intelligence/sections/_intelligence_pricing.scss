@@ -230,6 +230,8 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .intelligence-pricing-section .pricing-amount {
@@ -243,6 +245,7 @@
 
 .intelligence-pricing-section .pricing-amount h3 {
     text-transform: uppercase;
+    margin-bottom: 0;
 }
 
 .intelligence-pricing-section .pricing-amount .price {
